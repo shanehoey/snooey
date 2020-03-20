@@ -1,0 +1,81 @@
+backend:
+  name: github
+  repo: shanehoey/jekyll.shanehoey.com
+  branch: master
+  site_domain: jekyll.shanehoey.com
+
+media_folder: "assets/images/uploads"
+publish_mode: editorial_workflow
+display_url:  /
+collections:
+  - name: "post"
+    label: "Post"
+    folder: "_posts" 
+    create: true 
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
+    fields: 
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title",   name: "title", widget: "string"}
+      - {label: "categories", name: "Categories", widget: "select", options: ["uncategorized","docs","code","wizards","video","faq"], multiple: false, default: "uncategorized" }
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "code"
+    label: "Code"
+    folder: "_posts/code" 
+    create: true 
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
+    fields: 
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title",   name: "title", widget: "string"}
+      - {label: "categories", name: "Categories", widget: "select", options: ["uncategorized","docs","code","wizards","video","faq"], multiple: false, default: "code" }
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "docs"
+    label: "docs"
+    folder: "_posts/docs" 
+    create: true 
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
+    fields: 
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title",   name: "title", widget: "string"}
+      - {label: "cateories", name: "Categories", widget: "select", options: ["uncategorized","docs","code","wizards","video","faq"], multiple: false, default: "docs" }
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "wizards"
+    label: "wizards"
+    folder: "_posts/wizards" 
+    create: true 
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
+    fields: 
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title",   name: "title", widget: "string"}
+      - {label: "categories", name: "Categories", widget: "select", options: ["uncategorized","docs","code","wizards","video","faq"], multiple: false, default: "uncategorized" }
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "videos"
+    label: "videos"
+    folder: "_posts/videos" 
+    create: true 
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
+    fields: 
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title",   name: "title", widget: "string"}
+      - {label: "categories", name: "Categories", widget: "select", options: ["uncategorized","docs","code","wizards","video","faq"], multiple: false, default: "video" }
+      - {label: "video-id", name: "video-id", widget: "string" }
+      - {label: "video-title", name: "video-title", widget: "string" }
+      - {label: "video-description", name: "video-description", widget: "string" }
+      - {label: "video-provider", name: "video-provider", widget: "select", options: ["youtube","vimeo"], multiple: false, default: "youtube" }
+      - {label: "Body", name: "body", widget: "markdown"}
+  - label: "Global"
+    name:  "global"
+    files: 
+      - label: "Alerts2"
+        name: "Alerts2"
+        file: "_data/alert.yml2"
+        fields:
+            - {label: type,    name: type,    widget: string, hint: "text"}
+            - {label: message, name: message, widget: string, hint: "text"}
+            - {label: dismiss, name: dismiss, widget: string, hint: "true/false"}
+      - label: "Alerts1"
+        name: "Alerts1"
+        file: "_data/alert1.yml"
+        fields:
+            - {label: type,    name: type,    widget: string, hint: "text"}
+            - {label: message, name: message, widget: string, hint: "text"}
+            - {label: dismiss, name: dismiss, widget: string, hint: "true/false"}

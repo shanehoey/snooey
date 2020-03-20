@@ -1,0 +1,32 @@
+---
+layout: default/default
+---
+<section id = "videos"  class= "{{ site.data.theme.videos.default.class }}" style = "{{ site.data.theme.videos.default.style }}" >
+    {% if page.breadcrumb %} {% include default/breadcrumb.html %} {% endif %}
+    {% if page.alert %} {% include default/alert.html %} {% endif %}
+    {% if page.jumbotron %} {% include default/jumbotron.html %} {% endif %}
+      <div class="container">
+        {% if page.heading %} {% include default/heading.html %} {% endif %}
+        <div class="row">
+            <div class="col-md-8">
+              {% case page.video-provider %}
+                  {% when "youtube" %}
+                     {% include default/youtube.html  id = page.video-id  %}
+                  {% when "ignite" %}
+                      {% include default/ignite.html  id = page.video-id  %} 
+                  {% when "vimeo" 5}
+                      {% include default/vimeo.html  id = page.video-id  %}
+              {% endcase %}
+            </div>
+            <div class="col-md-4">
+              <h3 class="my-3">{{ page.title }}</h3>
+              <p>{{ page.description }}</p>         
+              <h3 class="my-3">Details</h3>
+              <p><b>Conference:</b> {{ page.conference }}</p>
+                <p><b>Year:</b> {{ page.year }}</p>
+                <p><b>Speaker(s):</b> {{ page.speaker }}</p>
+            </div>
+        </div> 
+    </div>
+    {{ content }}
+</section>

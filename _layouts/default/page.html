@@ -1,0 +1,12 @@
+---
+layout: default/default
+---
+<section id = "page"   class= "{{ site.data.theme.page.default.class }}" style = "{{ site.data.theme.page.default.style }}" >
+    {% if page.breadcrumb %} {% include default/breadcrumb.html %} {% endif %}
+    {% if page.alert %} {% include default/alert.html %} {% endif %}
+    {% if page.jumbotron %} {% include default/jumbotron.html %} {% endif %}
+    <div class = "container" >
+        {% if page.heading %} {% include default/heading.html %} {% endif %}
+        {{ content }}
+    </div>
+</section>
