@@ -1,4 +1,4 @@
-# Snooey Template
+# Snooey Theme
 
 Snooey - A simple but extensive Jekyll theme
 
