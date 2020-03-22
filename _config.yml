@@ -1,5 +1,5 @@
-title:                     "Jekyll"
-url:                       "https://jekyll.shanehoey.com"
+title:                     "Snooey Template"
+url:                       "https://snooey-template.netlify.com"
 baseurl:                   "/"
 title_seperator:           " | " 
 locale:                    "en"
@@ -34,39 +34,25 @@ include:
 collections:
     code:
         output: true
-        permalink: /:collection/:path/:name/
-        title:  code title
-        description: code description
+        permalink: /:collection/:path/
     documents:
         output: true
         permalink: /:collection/:path/
-        title: documents title
-        description: documents description
     projects:
         output: true
         permalink: /:collection/:path/
-        title: projects title
-        description: projects description
     snippets:
         output: true
         permalink: /:collection/:path/
-        title: snippets title
-        description: snippets description
     tldr:
         output: true
         permalink: /:collection/:path/
-        title: tldr title
-        description: tldr description
     videos:
         output: true
         permalink: /:collection/:path/
-        title: videos title
-        description: videos description
     wizards:
         output: true
         permalink: /:collection/:path/
-        title: wizards title
-        description: wizards description
 
 collections_dir: collections
 
@@ -74,78 +60,74 @@ defaults:
     -   scope:
             path: ""
         values:
-            title:   
-            subtitle:
-            excerpt:
-            description:
-            author:           Shane Hoey
-            icon:             fas fa-rocket
-            navigation:       default
-            carousel:         #data file
-            jumbotron:        #data file
-            breadcrumb:       true #true false
-            alert:            #data file
-            heading:          false #true false
-            images:           #data file   #CHECK WHAT THIS IS FOR ?
-            footer:           default
+            title:              Lorem ipsum
+            subtitle:           dolor sit amet.
+            description:        Lorem ipsum dolor sit amet. Et unde quaerat aut earum animi aut explicabo saepe qui quibusdam accusamus ut velit asperiores vel natus temporibus. Qui sapiente saepe qui totam saepe est suscipit quia vel error provident cum omnis eius aut galisum rem nulla dolor? Qui internos voluptas est nulla odit est temporibus expedita eos quidem cumque. Ea voluptates eligendi quo rerum libero et molestiae harum vel fugit magni et cupiditate optio At quia consequuntur ut exercitationem laboriosam. Cum blanditiis voluptatibus At amet sunt At quia deleniti id quibusdam neque ut odio placeat.
+            excerpt:            Lorem ipsum dolor sit amet.
+            author:             Shane Hoey
+            icon:               fas fa-rocket
+            navigation:         default
+            carousel:           #data file
+            jumbotron:          #data file
+            breadcrumb:         true #true false
+            alert:              #data file
+            heading:            false #true false
+            images:             #data file   #CHECK WHAT THIS IS FOR ?
+            footer:             default
             image:
-                horizontal:         "/assets/images/default/horizontal.jpg"
-                vertical:           "/assets/images/default/vertical.jpg"
-                square:             "/assets/images/default/square.jpg"
-                random:             "https://source.unsplash.com/random/750x400"
-                background:         "/assets/images/default/background.jpg"
-                profile:            "/assets/images/profile/shanehoey.jpg"
-                mvp:                "/assets/images/profile/MVPLogo-300x475.png"
-            order:             1000
+                horizontal:     /assets/images/default/horizontal.jpg
+                vertical:       /assets/images/default/vertical.jpg
+                square:         /assets/images/default/square.jpg
+                random:         https://source.unsplash.com/random/750x400
+                background:     /assets/images/default/background.jpg
+                profile:        /assets/images/profile/shanehoey.jpg
+                mvp:            /assets/images/profile/MVPLogo-300x475.png
+            order:              1000
     -   scope:
-            path:        ""
-            type:        "pages"
+            path:               ""
+            type:               "pages"
         values:
-            layout:      "page"
-            permalink:   /:basename/
-            theme: 
-                section:
-                    class:
-                    style:
+            layout:             "page"
+            permalink:          /:basename/
     -   scope:
-            path:        ""
-            type:        "posts"
+            path:               ""
+            type:               "posts"
         values:
-            layout:      "post"
+            layout:             "post"
     -   scope:
-            path:        ""
-            type:        "code"
+            path:               ""
+            type:               "code"
         values:
-            layout:      "code"
+            layout:             "code"
     -   scope:
-            path:        ""
-            type:        "documents"
+            path:               ""
+            type:               "documents"
         values:
-            layout:      "documents"
-            icon:        "far fa-file-code"
+            layout:             "documents"
+            icon:               "far fa-file-code"
     -   scope:
-            path:        ""
-            type:        "projects"
+            path:               ""
+            type:               "projects"
         values:
-            layout:      "projects"
-            icon:        "far fa-file-code"
+            layout:             "projects"
+            icon:               "far fa-file-code"
     -   scope:
-            path:        ""
-            type:        "snippets"
+            path:               ""
+            type:               "snippets"
         values:
-            layout:      "snippets"
+            layout:             "snippets"
     -   scope:
-            path:        ""
-            type:        "tldr"
+            path:               ""
+            type:               "tldr"
         values:
-            layout:      "tldr"
+            layout:             "tldr"
     -   scope:
-            path:        ""
-            type:        "videos"
+            path:               ""
+            type:               "videos"
         values:
-            layout:      "videos"
+            layout:             "videos"
     -   scope:
-            path:        ""
-            type:        "wizards"
+            path:               ""
+            type:               "wizards"
         values:
-            layout:      "wizards"
+            layout:             "wizards"
