@@ -1,8 +1,8 @@
 {% if page.jumbotron %}
-    {% assign jumbotron = site.data.jumbotron.[page.jumbotron] %}
+{% assign jumbotron = site.data.jumbotron.[page.jumbotron] %}
 {% endif %}
 {% if include.jumbotron %}
-    {% assign jumbotron = site.data.jumbotron.[include.jumbotron] %}
+{% assign jumbotron = site.data.jumbotron.[include.jumbotron] %}
 {% endif %}
 {% if jumbotron %}
 {% for item in jumbotron %}

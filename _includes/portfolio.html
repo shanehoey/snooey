@@ -8,7 +8,6 @@
     {% else %}
         {% assign type = "card" %}
 {% endcase %}
-
 {% if include.collection %}
     {% assign collection = include.collection | where_exp: "item","item.hide != true"  %}
 {% elsif page.collection %}
@@ -16,7 +15,6 @@
 {% else %}
     {% assign collection = site.collections %}
 {% endif %}
-
 {% if include.url %} 
     {% assign url = include.url %}
 {% else %}
@@ -47,7 +45,6 @@
 {% else %}
     {% assign icon = "icon" %}
 {% endif %}
-
 {% if include.show-image == false %} 
     {% assign show-image = false %}
 {% else %}
@@ -83,7 +80,6 @@
 {% else %}
     {% assign show-titleoverlay = false %}
 {% endif %}
-
 {% if type == "card" %}
     {% case include.columns %}
         {% when 1 %}
@@ -141,7 +137,6 @@
     </div>
 </div>
 {% endif %}
-
 {% if type == "featured" %}
 <div id = "portfolio">
         {% for post in collection limit: 1 %}
@@ -168,7 +163,6 @@
         {% endfor %}
     </div>
 {% endif %}
-
 {% if type == "list" %}
     {% case include.width %}
         {% when 25 %}
@@ -234,7 +228,6 @@
         {% endif %}
     </div>
 {% endif %}
-
 {% if pagination %}
     <div id = "pagination">
         <ul class="pagination justify-content-center">

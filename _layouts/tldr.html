@@ -1,12 +1,12 @@
 ---
 layout: default
 ---
-<section id = "tldr"   class= "{{ site.data.theme.tldr.default.class }}" style = "{{ site.data.theme.tldr.default.style }}" >
-    {% if page.breadcrumb %} {% include breadcrumb.html %}{% endif %}
-    {% if page.alert %} {% include alert.html %} {% endif %}
-	{% if page.jumbotron %} {% include jumbotron.html %} {% endif %}
+<section id = "tldr" class= "{{ site.data.theme.tldr.default.class }}" style = "{{ site.data.theme.tldr.default.style }}" >
+    {% if page.breadcrumb %}{% include breadcrumb.html %}{% endif %}
+    {% if page.alert %}{% include alert.html %}{% endif %}
+	{% if page.jumbotron %}{% include jumbotron.html %}{% endif %}
 		<div class="container">
-			{% if page.heading %} {% include heading.html %} {% endif %}
+			{% if page.heading %}{% include heading.html %}{% endif %}
 			<div class="row">
 				<div class="col-sm-8" id="main">
 					{{ content }}

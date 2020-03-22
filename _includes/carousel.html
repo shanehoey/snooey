@@ -1,10 +1,8 @@
-
-
 {% if page.carousel %}
-    {% assign carousel = site.data.carousel.[page.carousel] %}
+{% assign carousel = site.data.carousel.[page.carousel] %}
 {% endif %}
 {% if include.carousel %}
-    {% assign carousel = site.data.carousel.[include.carousel] %}
+{% assign carousel = site.data.carousel.[include.carousel] %}
 {% endif %}
 {% if carousel %}
 <section id = "carousel">

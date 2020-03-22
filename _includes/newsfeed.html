@@ -1,17 +1,13 @@
 {% assign type = include.type }
 {% assign title = include.title  %}
 {% assign description = include.description %}
-
 {% assign collection = include.collection | where_exp: "item","item.hide != true"  %}
 {% assign limit = include.limit  %}
-
 {% assign collection2 = include.collection2 | where_exp: "item","item.hide != true"  %}
 {% assign limit2 = include.limit2  %}
-
 {% unless type %}
 {% assign type = "newsfeed1" %}
 {% endunless %}
-
 {% if type == "newsfeed1" %}
 <div class="container my-5">
   <section class="magazine-section dark-grey-text">
@@ -36,13 +32,11 @@
       </div>
       {% endif %}
       {% endfor %}
-
       <!--SECOND-->
       <div class="col-lg-6 col-md-12 mb-4">
         <div class=" mb-4">
           <div class="row">
             {% for post in collection offset: 1  limit: 7 %}
-
             <div class="col-md-3">
               <div class="view overlay rounded z-depth-1 mb-4">
                 <a href="{{ post.url }}">
@@ -69,7 +63,6 @@
   </section>
 </div>
 {% endif %}
-
 {% if type == "newsfeed2" %}
 <div class="container my-5">
   <section class="{{ theme.class.section }}">
@@ -156,5 +149,4 @@
     </div>
   </section>
 </div>
-
 {% endif %}

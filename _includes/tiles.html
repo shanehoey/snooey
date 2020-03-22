@@ -1,11 +1,9 @@
-<!--todo-->
 {% if page.tiles %}
-    {% assign tiles = site.data.alert.[page.tiles] %}
+{% assign tiles = site.data.alert.[page.tiles] %}
 {% endif %}
 {% if include.tiles %}
-    {% assign tiles = site.data.tiles.[include.tiles] %}
+{% assign tiles = site.data.tiles.[include.tiles] %}
 {% endif %}
-
 {% if tiles %}
 <section id = "tiles">
     <div class="row">

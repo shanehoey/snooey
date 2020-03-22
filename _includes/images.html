@@ -1,8 +1,8 @@
 {% if page.images %}
-    {% assign images = site.data.images.[page.images].images %}
+{% assign images = site.data.images.[page.images].images %}
 {% endif %}
 {% if include.images %}
-    {% assign images = site.data.images.[include.images].images %}
+{% assign images = site.data.images.[include.images].images %}
 {% endif %}
 {% if images %}
 <Section id = "images" class = "container-fluid">

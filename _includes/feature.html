@@ -4,20 +4,17 @@
 {% assign title         =  include.title %}
 {% assign description   =  include.description %}
 {% assign theme         =  include.theme %}
-
 {% unless collection %}
 {% include alert.html message = "missing Collection param" 
                               theme = site.data.theme.alert.error 
                               %}
 {% endunless %}
-
 {% unless theme %}
 {% include alert.html message = "missing theme param" 
                               theme = site.data.theme.alert.warning 
                               %}
 {% assign theme         =  site.data.theme.feature.default %}
 {% endunless %}
-
 {% if type == "feature1" or type == Null  %}
 <section class="{{ theme.class.section}}">
     {% if title %}<h2 class="{{ theme.class.title }}">{{ title }}</h2>{% endif %}
@@ -33,7 +30,6 @@
     </div>
 </section>
 {% endif %}
-
 {% if type == "feature2" %}
 <section class="{{ theme.class.section }}">
     {% if title %}<h2 class="{{ theme.class.title }}">{{ title }}</h2>{% endif %}

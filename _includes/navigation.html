@@ -1,9 +1,8 @@
 {% if page.navigation %}
-    {% assign navigation = site.data.navigation.[page.navigation] %}
+{% assign navigation = site.data.navigation.[page.navigation] %}
 {% else %}
-    {% assign navigation = site.data.navigation.[include.navigation] %}
+{% assign navigation = site.data.navigation.[include.navigation] %}
 {% endif %}
-
 {% if navigation %}
 <header id="navigation">
     <nav class = "{{ site.data.theme.layout.default.navigation.class }}" style = "{{ site.data.theme.layout.default.navigation.style }}" >

@@ -1,9 +1,9 @@
 {% if include.collection %}
-    {% assign collections = site.collections | where: "label", include.collection %}
+{% assign collections = site.collections | where: "label", include.collection %}
 {% elsif page.collection %}
-    {% assign collections = site.collections | where: "label", page.collection %}
+{% assign collections = site.collections | where: "label", page.collection %}
 {% else %}
-    {% assign collections = site.collections %}
+{% assign collections = site.collections %}
 {% endif %}
 {% comment %}TODO:  make this so an array can be parsed ie [code,documents]{% endcomment %}
 <div id = "list">

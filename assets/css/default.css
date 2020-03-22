@@ -27,7 +27,6 @@ body {
     flex-shrink: none;
 }
 
-
 .jumbotron-square  {
     border-top-left-radius:0;
     border-top-right-radius:0;
@@ -69,10 +68,7 @@ body {
 
 }
 
-
-
 /* Markdown */
-
 .markdown table {
   margin-top: .25rem;
   margin-bottom: .25rem;
@@ -115,11 +111,9 @@ body {
   border-radius: .25rem;
 }
 
-
 .language-mediant code {
   color: white;
 }
-
 
 /* carousel*/
 .carousel-item {
