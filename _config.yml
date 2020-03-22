@@ -47,6 +47,11 @@ collections:
         permalink: /:collection/:path/
         title: projects title
         description: projects description
+    snippets:
+        output: true
+        permalink: /:collection/:path/
+        title: snippets title
+        description: snippets description
     tldr:
         output: true
         permalink: /:collection/:path/
@@ -124,6 +129,11 @@ defaults:
         values:
             layout:      "projects"
             icon:        "far fa-file-code"
+    -   scope:
+            path:        ""
+            type:        "snippets"
+        values:
+            layout:      "snippets"
     -   scope:
             path:        ""
             type:        "tldr"
