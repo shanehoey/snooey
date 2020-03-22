@@ -8,9 +8,9 @@ category:          example
 ---
 <h1>{{ page.title }}</h1>
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/alert.html %}
+{% include alert.html %}
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/alert.html message = "Custom Message" theme = site.data.theme.alert.warning %}
+{% include alert.html message = "Custom Message" theme = site.data.theme.alert.warning %}
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/alert.html message = "Custom Message" theme = site.data.theme.alert.error %}
+{% include alert.html message = "Custom Message" theme = site.data.theme.alert.error %}
 <p class = "text-justify">{{ page.description }}</p>

@@ -8,24 +8,24 @@ category:         example
 ---
 <h1>{{ page.title }}</h1>
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/calltoaction.html %}
+{% include calltoaction.html %}
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/calltoaction.html title = "jekyll.shanehoey.com" 
+{% include calltoaction.html title = "jekyll.shanehoey.com" 
                                      button="visit" 
                                      url="https://jekyll.shanehoey.com"  
                                      %}
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/calltoaction.html button="learn more" 
+{% include calltoaction.html button="learn more" 
                                      url="https://jekyll.shanehoey.com"  
                                      %}
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/calltoaction.html theme  = site.data.theme.calltoaction.primary
+{% include calltoaction.html theme  = site.data.theme.calltoaction.primary
                                      title = "jekyll.shanehoey.com" 
                                      button="visit" 
                                      url="https://jekyll.shanehoey.com" 
                                      %}
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/calltoaction.html theme  = site.data.theme.calltoaction.secondary
+{% include calltoaction.html theme  = site.data.theme.calltoaction.secondary
                                      title = "jekyll.shanehoey.com" 
                                      button="visit" 
                                      url="https://jekyll.shanehoey.com" 

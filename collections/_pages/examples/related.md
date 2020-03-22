@@ -9,7 +9,7 @@ category:         example
 ---
 <h1>{{ page.title }}</h1>
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/related.html  %}
+{% include related.html  %}
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/related.html collection = wizards  %}
+{% include related.html collection = wizards  %}
 <p class = "text-justify">{{ page.description }}</p>

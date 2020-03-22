@@ -6,13 +6,13 @@
 {% assign theme         =  include.theme %}
 
 {% unless collection %}
-{% include default/alert.html message = "missing Collection param" 
+{% include alert.html message = "missing Collection param" 
                               theme = site.data.theme.alert.error 
                               %}
 {% endunless %}
 
 {% unless theme %}
-{% include default/alert.html message = "missing theme param" 
+{% include alert.html message = "missing theme param" 
                               theme = site.data.theme.alert.warning 
                               %}
 {% assign theme         =  site.data.theme.feature.default %}

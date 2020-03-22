@@ -8,5 +8,5 @@ category:          example
 ---
 <h1>{{ page.title }}</h1>
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/social.html %}
+{% include social.html %}
 <p class = "text-justify">{{ page.description }}</p>

@@ -10,14 +10,14 @@ category:          example
 
 <h1>{{ page.title }}</h1>
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/portfolio.html columns = 1 limit = 1 %}
+{% include portfolio.html columns = 1 limit = 1 %}
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/portfolio.html columns = 2  limit = 4 %}
+{% include portfolio.html columns = 2  limit = 4 %}
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/portfolio.html columns = 3 limit = 6 %}
+{% include portfolio.html columns = 3 limit = 6 %}
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/portfolio.html columns = 4 limit = 4 %}
+{% include portfolio.html columns = 4 limit = 4 %}
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/portfolio.html columns = 6 limit = 6 description = "excerpt" %}
+{% include portfolio.html columns = 6 limit = 6 description = "excerpt" %}
 <p class = "text-justify">{{ page.description }}</p>
 

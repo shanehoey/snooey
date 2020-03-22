@@ -10,7 +10,7 @@
         <div class = "{{  site.data.theme.layout.default.navigation.container }}" >
             {% if navigation.url %}<a class="navbar-brand" href="{{ navigation.url }}">{% endif %}
             {% if navigation.title or navigation.icon %}<span>{% endif %}
-            {% if navigation.icon %}{% include default/icon.html icon = navigation.icon %}&nbsp;&nbsp;{% endif %}
+            {% if navigation.icon %}{% include icon.html icon = navigation.icon %}&nbsp;&nbsp;{% endif %}
             {% if navigation.title %}{{ navigation.title }}{% endif %}
             {% if navigation.title or navigation.icon %}</span>{% endif %}
             {% if navigation.url %}</a>{% endif %}

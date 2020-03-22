@@ -1,2 +1,3 @@
 # snooey
-snooey - a simple Jekyle theme
+
+Snooey - A simple but extensive Jekyll theme

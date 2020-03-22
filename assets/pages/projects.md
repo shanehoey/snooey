@@ -11,5 +11,5 @@ hide:              true
 
 {{ page.description }}
 
-{% include default/portfolio.html type = "list" width = 33 show-button = false show-subtitle = false %}
+{% include portfolio.html type = "list" width = 33 show-button = false show-subtitle = false %}
 

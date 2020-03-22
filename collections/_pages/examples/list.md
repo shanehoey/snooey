@@ -8,9 +8,9 @@ category:         example
 ---
 <h1>{{ page.title }}</h1>
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/list.html %}
+{% include list.html %}
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/list.html collection = 'wizards' %}
+{% include list.html collection = 'wizards' %}
 <p class = "text-justify">{{ page.description }}</p>
-{% include default/list.html collection = 'documents' %}
+{% include list.html collection = 'documents' %}
 <p class = "text-justify">{{ page.description }}</p>

@@ -4,7 +4,7 @@
         <div class = "{{ site.data.theme.layout.default.footer.container }}">
             {% if footer.url %}<a href="{{ footer.url }}"  class = 'text-reset text-decoration-none' >{% endif %}
             {% if footer.title or footer.icon %}<span>{% endif %}
-            {% if footer.icon %}{% include default/icon.html icon = footer.icon %}{% endif %}
+            {% if footer.icon %}{% include icon.html icon = footer.icon %}{% endif %}
             {% if footer.title %}{{ footer.title }}{% endif %}
             {% if footer.title or footer.icon %}</span>{% endif %}
             {% if footer.url %}</a>{% endif %}

@@ -11,4 +11,4 @@ collection:        wizards
 
 {{ page.description }}
 
-{% include default/portfolio.html type = "card" columns = 5 show-button = false show-subtitle = false show-description = false  show-title = false show-excerpt = false show-titleoverlay = true  %}
+{% include portfolio.html type = "card" columns = 5 show-button = false show-subtitle = false show-description = false  show-title = false show-excerpt = false show-titleoverlay = true  %}

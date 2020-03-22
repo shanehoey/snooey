@@ -4,12 +4,12 @@ title:             "documents"
 subtitle:          "documents by shanehoey!"
 excerpt:           "Concise collection of projects from Shane Hoey."
 collection:        documents
-layout:            default/page
+layout:            page
 ---
 
 # {{ page.title }}
 
 {{ page.description }}
 
-{% include default/portfolio.html type = "card" columns = 4 show-button = false show-subtitle = false  description="extract"%}
+{% include portfolio.html type = "card" columns = 4 show-button = false show-subtitle = false  description="extract"%}
 

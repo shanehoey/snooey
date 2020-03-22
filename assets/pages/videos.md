@@ -11,4 +11,4 @@ hide:              true
 
 {{ page.description }}
 
-{% include default/portfolio.html type = "card" columns = 3 show-button = false show-subtitle = false show-description = false %}
+{% include portfolio.html type = "card" columns = 3 show-button = false show-subtitle = false show-description = false %}

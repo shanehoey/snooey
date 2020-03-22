@@ -4,7 +4,7 @@
 {% assign button        =  include.button %}
 
 {% unless theme %}
-{% include default/alert.html message = "missing theme param" 
+{% include alert.html message = "missing theme param" 
                               theme = site.data.theme.alert.warning 
                               %}
 {% assign theme = site.data.theme.calltoaction.default %}
