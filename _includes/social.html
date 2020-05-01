@@ -26,14 +26,21 @@
 {% else %}
 {% assign size = "fa-3x" %}
 {% endcase %}
+
+{% if include.author %}
+    {% assign social = site.data.content.social.[include.author] %}
+{% else %}
+    {% assign social = site.data.content.social.site %}
+{% endif %}
+
 <section id = "social" class="container my-5 py-5 text-center text-dark">
-    <h4 class="text-dark pb-3">Follow {{ page.author }} on</h4>
-    {% if site.social.facebook %}<a href="{{ site.social.facebook }}" class="mx-2 "><i class="fab fa-facebook-f {{ size}}"></i></a>{% endif %}
-    {% if site.social.twitter %}<a href="{{ site.social.twitter }}" class="mx-2" ><i class="fab fa-twitter {{ size}}"></i></a>{% endif %}
-    {% if site.social.linkedin %}<a href="{{ site.social.linkedin }}" class="mx-2" ><i class="fab fa-linkedin-in {{ size}}"></i></a>{% endif %}
-    {% if site.social.instagram %}<a href="{{ site.social.instagram }}" class="mx-2" ><i class="fab fa-instagram {{ size}}"></i></a>{% endif %}
-    {% if site.social.pinterest %}<a href="{{ site.social.pinterest }}" class="mx-2" ><i class="fab fa-pinterest {{ size}}"></i></a>{% endif %}
-    {% if site.social.youtube %}<a href="{{ site.social.youtube }}" class="mx-2" ><i class="fab fa-youtube {{ size}}"></i></a>{% endif %}
-    {% if site.social.github %}<a href="{{ site.social.github }}" class="mx-2" ><i class="fab fa-github {{ size}}"></i></a>{% endif %}
-    {% if site.social.stackoverflow %}<a href="{{ site.social.stackoverflow }}" class="mx-2" ><i class="fab fa-stack-overflow {{ size}}"></i></a>{% endif %}
+    <h4 class="text-dark pb-3">{{ title }}</h4>
+    {% if site.data.content.social.[include.author].facebook %}<a href="{{ site.data.content.social.facebook }}" class="mx-2 "><i class="fab fa-facebook-f {{ size}}"></i></a>{% endif %}
+    {% if site.data.content.social.[include.author].twitter %}<a href="{{ site.data.content.social.twitter }}" class="mx-2" ><i class="fab fa-twitter {{ size}}"></i></a>{% endif %}
+    {% if site.data.content.social.[include.author].linkedin %}<a href="{{ site.data.content.social.linkedin }}" class="mx-2" ><i class="fab fa-linkedin-in {{ size}}"></i></a>{% endif %}
+    {% if site.data.content.social.[include.author].instagram %}<a href="{{ site.data.content.social.instagram }}" class="mx-2" ><i class="fab fa-instagram {{ size}}"></i></a>{% endif %}
+    {% if site.data.content.social.[include.author].pinterest %}<a href="{{ site.data.content.social.pinterest }}" class="mx-2" ><i class="fab fa-pinterest {{ size}}"></i></a>{% endif %}
+    {% if site.data.content.social.[include.author].youtube %}<a href="{{ site.data.content.social.youtube }}" class="mx-2" ><i class="fab fa-youtube {{ size}}"></i></a>{% endif %}
+    {% if site.data.content.social.[include.author].github %}<a href="{{ site.data.content.social.github }}" class="mx-2" ><i class="fab fa-github {{ size}}"></i></a>{% endif %}
+    {% if site.data.content.social.[include.author].stackoverflow %}<a href="{{ site.data.content.social.stackoverflow }}" class="mx-2" ><i class="fab fa-stack-overflow {{ size}}"></i></a>{% endif %}
 </section>
