@@ -37,14 +37,14 @@
 {% assign theme = site.data.theme.social.default %}
 {% endunless %}
 
-<section id = "social" class="{{ theme.class.section }}">
-{% if social.title %}<h4 class="{{ theme.class.title }}">{{ social.title }}</h4>{% endif %}
-{% if social.facebook %}<a href="{{ site.data.content.social.facebook }}" class="mx-2 "><i class="fab fa-facebook-f {{ size}}"></i></a>{% endif %}
-{% if social.twitter %}<a href="{{ site.data.content.social.twitter }}" class="mx-2" ><i class="fab fa-twitter {{ size}}"></i></a>{% endif %}
-{% if social.linkedin %}<a href="{{ site.data.content.social.linkedin }}" class="mx-2" ><i class="fab fa-linkedin-in {{ size}}"></i></a>{% endif %}
-{% if social.instagram %}<a href="{{ site.data.content.social.instagram }}" class="mx-2" ><i class="fab fa-instagram {{ size}}"></i></a>{% endif %}
-{% if social.pinterest %}<a href="{{ site.data.content.social.pinterest }}" class="mx-2" ><i class="fab fa-pinterest {{ size}}"></i></a>{% endif %}
-{% if social.youtube %}<a href="{{ site.data.content.social.youtube }}" class="mx-2" ><i class="fab fa-youtube {{ size}}"></i></a>{% endif %}
-{% if social.github %}<a href="{{ site.data.content.social.github }}" class="mx-2" ><i class="fab fa-github {{ size}}"></i></a>{% endif %}
-{% if social.stackoverflow %}<a href="{{ site.data.content.social.stackoverflow }}" class="mx-2" ><i class="fab fa-stack-overflow {{ size}}"></i></a>{% endif %}
+<section id = "social" class = "{{ theme.class.section }}">
+{% if social.title %}<h4 class = "{{ theme.class.title }}">{{ social.title }}</h4>{% endif %}
+{% if social.facebook %}<a href = "{{ site.data.content.social.facebook }}" class = "{{ theme.class.icon }}"><i class = "fab fa-facebook-f {{ size}}"></i></a>{% endif %}
+{% if social.twitter %}<a href = "{{ site.data.content.social.twitter }}" class = "{{ theme.class.icon }}" ><i class = "fab fa-twitter {{ size}}"></i></a>{% endif %}
+{% if social.linkedin %}<a href = "{{ site.data.content.social.linkedin }}" class = "{{ theme.class.icon }}" ><i class = "fab fa-linkedin-in {{ size}}"></i></a>{% endif %}
+{% if social.instagram %}<a href = "{{ site.data.content.social.instagram }}" class = "{{ theme.class.icon }}" ><i class = "fab fa-instagram {{ size}}"></i></a>{% endif %}
+{% if social.pinterest %}<a href = "{{ site.data.content.social.pinterest }}" class = "{{ theme.class.icon }}" ><i class = "fab fa-pinterest {{ size}}"></i></a>{% endif %}
+{% if social.youtube %}<a href = "{{ site.data.content.social.youtube }}" class = "{{ theme.class.icon }}" ><i class = "fab fa-youtube {{ size}}"></i></a>{% endif %}
+{% if social.github %}<a href = "{{ site.data.content.social.github }}" class = "{{ theme.class.icon }}" ><i class = "fab fa-github {{ size}}"></i></a>{% endif %}
+{% if social.stackoverflow %}<a href = "{{ site.data.content.social.stackoverflow }}" class = "{{ theme.class.icon }}" ><i class = "fab fa-stack-overflow {{ size}}"></i></a>{% endif %}
 </section>
