@@ -28,9 +28,9 @@
 {% endcase %}
 
 {% if include.author %}
-    {% assign social = site.data.content.social.[include.author] %}
+    {% assign social = site.data.social.[include.author] %}
 {% else %}
-    {% assign social = site.data.content.social.site %}
+    {% assign social = site.data.social.default %}
 {% endif %}
 
 {% assign theme = include.theme %}
