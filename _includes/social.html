@@ -27,13 +27,12 @@
 {% assign size = "fa-3x" %}
 {% endcase %}
 
-{% if include.author %}
-    {% assign social = site.data.social.[include.author] %}
-{% else %}
-    {% assign social = site.data.social.default %}
-{% endif %}
+{% assign social = site.data.social.[include.author] %}
+{%unless social %}
+{% assign social = site.data.social.default %}
+{% endunless %}
 
-{% assign theme = site.data.theme.social.default.[include.theme] %}
+{% assign theme = site.data.theme.social.[include.theme] %}
 {% unless theme %}
 {% assign theme = site.data.theme.social.default %}
 {% endunless %}
