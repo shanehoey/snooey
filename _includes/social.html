@@ -33,13 +33,13 @@
     {% assign social = site.data.social.default %}
 {% endif %}
 
-{% assign theme = include.theme %}
+{% assign theme = site.data.theme.social.default.[include.theme] %}
 {% unless theme %}
 {% assign theme = site.data.theme.social.default %}
 {% endunless %}
 
-<section id = "social" class="{{ theme.container }}">
-{% if social.title %}<h4 class="{{ theme.title }}">{{ social.title }}</h4>{% endif %}
+<section id = "social" class="{{ theme.class.section }}">
+{% if social.title %}<h4 class="{{ theme.class.title }}">{{ social.title }}</h4>{% endif %}
 {% if social.facebook %}<a href="{{ site.data.content.social.facebook }}" class="mx-2 "><i class="fab fa-facebook-f {{ size}}"></i></a>{% endif %}
 {% if social.twitter %}<a href="{{ site.data.content.social.twitter }}" class="mx-2" ><i class="fab fa-twitter {{ size}}"></i></a>{% endif %}
 {% if social.linkedin %}<a href="{{ site.data.content.social.linkedin }}" class="mx-2" ><i class="fab fa-linkedin-in {{ size}}"></i></a>{% endif %}
