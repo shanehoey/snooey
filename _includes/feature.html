@@ -10,7 +10,11 @@
 {% assign theme         =  site.data.theme.feature.default %}
 {% endunless %}
 
-{% if type == "feature1" or type == Null  %}
+{% unless type %}
+
+{% endif 
+
+{% if type == "feature1"  %}
 <section class="{{ theme.class.section}}">
     {% if title %}<h2 class="{{ theme.class.title }}">{{ title }}</h2>{% endif %}
     {% if description %}<p class="{{ theme.class.description }}">{{ description }}</p>{% endif %}
@@ -25,6 +29,7 @@
     </div>
 </section>
 {% endif %}
+
 {% if type == "feature2" %}
 <section class="{{ theme.class.section }}">
     {% if title %}<h2 class="{{ theme.class.title }}">{{ title }}</h2>{% endif %}
@@ -47,6 +52,7 @@
     </div>
 </section>
 {% endif %}
+
 {% if type == "feature3" %}
 <section class="{{ theme.class.section}}">
     {% if title %}<h2 class="{{ theme.class.title }}">{{ title }}</h2>{% endif %}
@@ -62,6 +68,7 @@
     </div>
 </section>
 {% endif %}
+
 {% if type == "feature4" %}
 <section class="{{ theme.class.section}}">
     {% if title %}<h2 class="{{ theme.class.title }}">{{ title }}</h2>{% endif %}
