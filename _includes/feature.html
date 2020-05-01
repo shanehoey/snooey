@@ -1,11 +1,10 @@
 {% assign type          =  include.type %}
-
 {% assign collection    =  include.collection %}
 {% assign limit         =  include.limit %}
 {% assign title         =  include.title %}
 {% assign description   =  include.description %}
-
 {% assign theme         =  site.data.theme.feature.[include.theme] %}
+
 {% unless theme %}
 {% assign theme         =  site.data.theme.feature.default %}
 {% endunless %}
