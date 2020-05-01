@@ -8,78 +8,93 @@
     {% else %}
         {% assign type = "card" %}
 {% endcase %}
+
 {% if include.collection %}
     {% assign collection = include.collection | where_exp: "item","item.hide != true"  %}
 {% elsif page.collection %}
     {% assign collection = site[page.collection] | where_exp: "item","item.hide != true" %}
 {% else %}
-    {% assign collection = site.collections %}
+    {% include alert.html %}
 {% endif %}
+
 {% if include.url %} 
     {% assign url = include.url %}
 {% else %}
     {% assign url = "url" %}
 {% endif %}
+
 {% if include.title %}
     {% assign title = include.title %}
 {% else %} 
     {% assign title   = "title" %}
 {% endif %}
+
 {% if include.subtitle %}
     {% assign subtitle = include.subtitle %}
 {% else %} 
     {% assign subtitle = "subtitle" %} 
 {% endif %}
+
 {% if include.description %}
     {% assign description = include.description %} 
 {% else %} 
     {% assign description = "description" %} 
 {% endif %}
+
 {% if include.excerpt %} 
     {% assign excerpt = include.excerpt %} 
 {% else %}
     {% assign excerpt = "excerpt" %}
 {% endif %}
+
 {% if include.icon %} 
     {% assign icon = include.icon %} 
 {% else %}
     {% assign icon = "icon" %}
 {% endif %}
+
 {% if include.show-image == false %} 
     {% assign show-image = false %}
 {% else %}
     {% assign show-image = true %}
 {% endif %}
+
 {% if include.show-title == false %} 
     {% assign hide-title = false %}
 {% else %}
     {% assign show-title = true %}
 {% endif %}
+
 {% if include.show-subtitle == false %} 
     {% assign show-subtitle = false %}
 {% else %}
     {% assign show-subtitle = true %}
 {% endif %}
+
 {% if include.show-description == false %} 
     {% assign show-description = false %}
 {% else %}
     {% assign show-description = true %}
 {% endif %}
+
 {% if include.show-excerpt == false %} 
     {% assign show-excerpt = false %}
 {% else %}
     {% assign show-excerpt = true %}
 {% endif %}
+
 {% if include.show-button == false %} 
     {% assign show-button = false %}
 {% else %}
     {% assign show-button = true %}
 {% endif %}
+
 {% if include.show-titleoverlay == true %} 
     {% assign show-titleoverlay = true %}
 {% else %}
     {% assign show-titleoverlay = false %}
 {% endif %}
+
 {% if type == "card" %}
     {% case include.columns %}
         {% when 1 %}

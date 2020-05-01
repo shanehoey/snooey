@@ -12,6 +12,7 @@
         <body class = "{{ site.data.theme.layout.default.body.class }}" style = "{{ site.data.theme.layout.default.body.style }}">
             {% if page.navigation %} {% include navigation.html %} {% endif %}
             {% if page.carousel %} {% include carousel.html %} {% endif %}
+            {% if page.breadcrumb %}{% include breadcrumb.html %}{% endif %}      
             <section id= "content" class = "{{ site.data.theme.layout.default.content.class }}" style = "{{ site.data.theme.layout.default.content.style }}">
                 {{ content }}
             </section>
