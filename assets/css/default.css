@@ -4,7 +4,7 @@ body {
   }
 
 .body-background {
-    background: url('/assets/images/docs/background.jpg') no-repeat center center fixed;
+    background: url('/assets/images/default/background.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
