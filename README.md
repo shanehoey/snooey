@@ -10,7 +10,7 @@ view a live example [snooey.netlify.com](https://snooey.netlify.com)
 
 ##  Usage
 
-IMPORTANT - due to contstant development and potential breaking changes I recommend that you fork this repository to use as the remote theme. 
+IMPORTANT - due to constant development and potential breaking changes I recommend that you fork this repository to use as the remote theme, rather than point at this repository.
 
 Add the following to Gemfile
 
