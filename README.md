@@ -1,10 +1,12 @@
 # Snooey Theme
 
-Snooey - A simple but extensive Jekyll theme
+Snooey - A simple but extensive Jekyll theme that I user accross multiple websites. 
 
 view a live example [snooey.netlify.com](https://snooey.netlify.com)
 
 ##  Usage
+
+IMPORTANT - due to contstant development and potential breaking changes I recommend that you fork this repository to use as the remote theme. 
 
 Add the following to Gemfile
 
