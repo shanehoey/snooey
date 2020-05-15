@@ -12,7 +12,6 @@ For instructions on how to use visit [github](https://github.com/shanehoey/snooe
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/531d26ad-f8c2-412d-900e-e4cfe05603b3/deploy-status)](https://app.netlify.com/sites/snooey/deploys)
 
-
 ##  Usage
 1) fork this site on GitHub
 
