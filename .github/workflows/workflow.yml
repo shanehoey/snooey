@@ -12,6 +12,6 @@ jobs:
           BEFORE: ${{ github.event.before }}
           SHA: ${{ github.sha }}
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LABEL: "# BUG","# ENHANCEMENT","# FIXME","# INVESTIGATE"
+          LABEL: "# BUG"
           COMMENT_MARKER: "#"
         id: "todo"
