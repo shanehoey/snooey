@@ -38,24 +38,27 @@ remote_theme: shanehoey/snooey
 
 ### Enhancements 
 
-ENHANCEMENT  v1.1 migrate theme to scss
-ENHANCEMENT  v1.1 remove style attributes 
-ENHANCEMENT  v1.0x _includes/pagination.html
-ENHANCEMENT  v1.0x _includes/github.html
-ENHANCEMENT  v1.0x _includes/form.html completed 
-
-ENHANCEMENT  vx.x _includes/subscribe.html forms
-ENHANCEMENT  vx.x _includes/steps.html
-ENHANCEMENT  vx.x _includes/faq.html
-ENHANCEMENT  vx.x _includes/counter.html
-ENHANCEMENT  vx.x _includes/list.html
-ENHANCEMENT  vx.x _includes/blog.html
-ENHANCEMENT  vx.x _includes/coverpage.html
-ENHANCEMENT  vx.x _includes/about.html
-ENHANCEMENT  x2.0x Ability to change the description etc on the fly,  eg post.description posts.[include.description] 
+```
+# ENHANCEMENT  v1.1 migrate theme to scss
+# ENHANCEMENT  v1.1 remove style attributes 
+# ENHANCEMENT  v1.0x _includes/pagination.html
+# ENHANCEMENT  v1.0x _includes/github.html
+# ENHANCEMENT  v1.0x _includes/form.html completed 
+# ENHANCEMENT  vx.x _includes/subscribe.html forms
+# ENHANCEMENT  vx.x _includes/steps.html
+# ENHANCEMENT  vx.x _includes/faq.html
+# ENHANCEMENT  vx.x _includes/counter.html
+# ENHANCEMENT  vx.x _includes/list.html
+# ENHANCEMENT  vx.x _includes/blog.html
+# ENHANCEMENT  vx.x _includes/coverpage.html
+# ENHANCEMENT  vx.x _includes/about.html
+# ENHANCEMENT  x2.0x Ability to change the description etc on the fly,  eg post.description posts.[include.description] 
+```
 
 ### Testing 
 
-TESTING perform local deploy
-TESTING perform remote deploy
-TESTING perform remote theme
+```
+# TESTING perform local deploy
+# TESTING perform remote deploy
+# TESTING perform remote theme
+```
