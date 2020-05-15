@@ -64,7 +64,7 @@ remote_theme: shanehoey/snooey
 
 ### Bugs 
 
-
+# BUG workflows now working
 
 
 ## Installation
@@ -79,3 +79,4 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/shaneh
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
