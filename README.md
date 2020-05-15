@@ -77,6 +77,7 @@ remote_theme: shanehoey/snooey
 
 ### Bugs 
 
+. # BUG  ISSUES Not working 
 
 ## Installation
 
