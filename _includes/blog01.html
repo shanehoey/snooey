@@ -75,20 +75,20 @@
     {% for item in collection  limit: {{limit}} %}
         <div class="row">
             <div class="{{ column1 }}">
-                <img src="{{ item.image.horizontal }}" alt="{{ item.excerpt }}" class="{{ theme.class.image }}">
+                <img src="{{ item.image.horizontal }}" alt="{{ item.excerpt }}" class="{{ theme.class.item.image }}">
             </div>
             <div class="{{ column2 }}">
-                {% unless options contains "title" %}<a href="{{ item.url }}"><h3 class=" {{ theme.class.title }}">{{ item.title }}</h3></a>{% endunless %}
-                {% unless options contains "subtitle" %}<h5 class="{{ theme.class.subtitle }}">{{ item.subtitle }}</h5>{% endunless %}
-                {% unless options contains "description" %}<p class="{{ theme.class.description }}">{{ item.description }}</p>{% endunless %}
-               <div class = "row">
-                <div class="col-md-9">
-                {% unless options contains "excerpt" %}<p class="{{ theme.class.excerpt }}">{{ item.excerpt }}</p>{% endunless %}
+                {% unless options contains "title" %}<a href="{{ item.url }}"><h3 class=" {{ theme.class.item.title }}">{{ item.title }}</h3></a>{% endunless %}
+                {% unless options contains "subtitle" %}<h5 class="{{ theme.class.item.subtitle }}">{{ item.subtitle }}</h5>{% endunless %}
+                {% unless options contains "description" %}<p class="{{ theme.class.item.description }}">{{ item.description }}</p>{% endunless %}
+                <div class = "row">
+                    <div class="col-md-9">
+                        {% unless options contains "excerpt" %}<p class="{{ theme.class.item.excerpt }}">{{ item.excerpt }}</p>{% endunless %}
+                    </div>
+                    <div class="col-md-3">
+                        {% unless options contains "button" %}<a class="{{theme.class.item.btn }}" href="{{ item.url }}">visit {{ item.collection }}</a>{% endunless %}
+                    </div>
                 </div>
-                <div class="col-md-3">
-                {% unless options contains "button" %}<a class="{{theme.class.button }}" href="{{ item.url }}">visit {{ item.collection }}</a>{% endunless %}
-                </div>
-            </div>
             </div>
         </div>
     <hr>
