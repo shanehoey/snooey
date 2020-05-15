@@ -62,3 +62,6 @@ remote_theme: shanehoey/snooey
 # TESTING perform remote deploy
 # TESTING perform remote theme
 ```
+
+### Bugs 
+# BUG Todo to issue workflow currently not working
