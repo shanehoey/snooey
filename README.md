@@ -64,7 +64,7 @@ remote_theme: shanehoey/snooey
 
 ### Bugs 
 
-# BUG workflows now working
+# BUG Automatic issues not yet working
 
 
 ## Installation
