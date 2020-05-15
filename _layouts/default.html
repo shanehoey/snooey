@@ -8,14 +8,13 @@
 -->
 {% endcomment %}
 
-{% if page.pagetheme %}
-{% assign pagetheme = site.data.theme.layout.[page.pagetheme] %}
-{% else %}
+{% assign pagetheme = site.data.theme.layout.[include.theme] %}
+{% unless pagetheme %}
 {% assign pagetheme = site.data.theme.layout.default %}
-{% endif %}
+{% endunless %}
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
