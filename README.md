@@ -1,6 +1,6 @@
 # Snooey Theme
 
-Snooey - A simple but extensive Jekyll theme that I user accross multiple websites. 
+Snooey - A simple but extensive Jekyll theme that I use accross multiple websites. 
 
 **IMPORTANT** - This theme is always under active development, to ensure that I dont break something on your website please always fork this site, and use your own fork as the remote_theme
 
@@ -65,6 +65,18 @@ remote_theme: shanehoey/snooey
 
 ### Bugs 
 
-```
-# BUG Todo to issue workflow currently not working
-```
+
+
+
+## Installation
+
+Add this line to your Jekyll site's `Gemfile`:
+
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/shanehoey/snooey. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## License
+
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
