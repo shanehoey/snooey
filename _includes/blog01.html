@@ -69,8 +69,8 @@
 {% endcase %}
 
 <section id="blog01" class="{{ theme.class.section }}" {% if theme.style.section %}style="{{ theme.style.section }}" {% endif %}>
-    {% if title %}<h2 class="mb-4 pb-2 text-center {{ theme.class.title }}">{{ title }}</h2>{% endif %}
-    {% if description %}<p class="mx-auto mb-5 text-justify {{ theme.class.description }}">{{ description }}</p>
+    {% if title %}<h2 class="mb-4 pb-2 {{ theme.class.title }}">{{ title }}</h2>{% endif %}
+    {% if description %}<p class="mx-auto mb-5 {{ theme.class.description }}">{{ description }}</p>
     {% endif %}
     {% for item in collection  limit: {{limit}} %}
         <div class="row">
