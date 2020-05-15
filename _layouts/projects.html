@@ -5,14 +5,13 @@ layout: default
 <!--
 
 	v1.00 _layouts/projects.html
-	
-# TESTING pre-release testing
+
 # DOCUMENTATION Add documentation
 	
 -->
 {% endcomment %}
 
-<section id = "projects"   class= "{{ site.data.theme.projects.default.class }}" style = "{{ site.data.theme.projects.default.style }}" >
+<section id = "projects" class="{{ pagetheme.class.section }}" {% if pagetheme.style.section %}style="{{ pagetheme.style.section }}"{% endif %}>
 		<div class="container">
 			{% if page.heading %}{% include heading.html %}{% endif %}
 			<div class="row">

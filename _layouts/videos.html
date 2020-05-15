@@ -6,13 +6,12 @@ layout: default
 
     v1.00 _layouts/videos.html
     
-# TESTING pre-release testing
 # DOCUMENTATION Add documentation
     
 -->
 {% endcomment %}
 
-<section id="videos" class="{{ site.data.theme.videos.default.class }}" style="{{ site.data.theme.videos.default.style }}">
+<section id="videos"  class="{{ pagetheme.class.section }}" {% if pagetheme.style.section %}style="{{ pagetheme.style.section }}"{% endif %}>
     <div class="container">
         {% if page.heading %}{% include heading.html %}{% endif %}
         <div class="row">

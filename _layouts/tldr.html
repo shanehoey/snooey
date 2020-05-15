@@ -6,13 +6,12 @@ layout: default
 	
 	v1.00 _layouts/tldr.html
 	
-# TESTING pre-release testing
 # DOCUMENTATION Add documentation
 
 -->
 {% endcomment %}
 
-<section id="tldr" class="{{ site.data.theme.tldr.default.class }}" style="{{ site.data.theme.tldr.default.style }}">
+<section id="tldr"  class="{{ pagetheme.class.section }}" {% if pagetheme.style.section %}style="{{ pagetheme.style.section }}"{% endif %}>
 	<div class="container">
 		{% if page.heading %}{% include heading.html %}{% endif %}
 		<div class="row">

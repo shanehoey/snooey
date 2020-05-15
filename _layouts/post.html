@@ -6,13 +6,12 @@ layout: default
 
 	v1.00 _layouts/post.html
 	
-# TESTING pre-release testing
 # DOCUMENTATION Add documentation
 	
 -->
 {% endcomment %}
 
-<section id="post" class="{{ site.data.theme.post.default.class }}" style="{{ site.data.theme.post.default.style }}">
+<section id="post"  class="{{ pagetheme.class.section }}"  {% if pagetheme.style.section %}style="{{ pagetheme.style.section }}"{% endif %}>
 	<div class="container">
 		{% if page.heading %}{% include heading.html %}{% endif %}
 		<div class="row">

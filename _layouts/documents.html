@@ -5,14 +5,13 @@ layout: default
 <!--
 
 	v1.00 _layouts/documents.html
-	
-# TESTING pre-release testing
+
 # DOCUMENTATION Add documentation
 	
 -->
 {% endcomment %}
 
-<section id="documents" class="{{ site.data.theme.collection.documents.default.class }}" style="{{ site.data.theme.collection.documents.default.class }}">
+<section id="documents" class="{{ pagetheme.class.section }}" {% if pagetheme.style.section %}style="{{ pagetheme.style.section }}"{% endif %}>
 	<div class="container">
 		{% if page.heading %} {% include heading.html %} {% endif %}
 		<div class="row">

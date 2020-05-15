@@ -5,14 +5,13 @@ layout: default
 <!--
 
 	v1.00 _layouts/snippets.html
-	
-# TESTING pre-release testing
+
 # DOCUMENTATION Add documentation 
 	
 -->
 {% endcomment %}
 
-<section id="snippets" class="{{ site.data.theme.snippets.default.class }}" style="{{ site.data.theme.snippets.default.style }}"> >
+<section id="snippets"  class="{{ pagetheme.class.section }}" {% if pagetheme.style.section %}style="{{ pagetheme.style.section }}"{% endif %}>
 	<div class="container">
 		{% if page.heading %}{% include heading.html %}{% endif %}
 		<div class="row">

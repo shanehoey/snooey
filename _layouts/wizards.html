@@ -6,13 +6,12 @@ layout: default
 
 	v1.00 _layouts/wizards.html
 	
-# TESTING pre-release testing
 # DOCUMENTATION Add documentation
 
 -->
 {% endcomment %}
 
-<section id="wizards" class="{{ site.data.theme.wizards.default.class }}" style="{{ site.data.theme.wizards.default.style }}">
+<section id="wizards"  class="{{ pagetheme.class.section }}" {% if pagetheme.style.section %}style="{{ pagetheme.style.section }}"{% endif %}>
 	<div class="container">
 		{% if page.heading %}{% include heading.html %}{% endif %}
 		<div class="row">
