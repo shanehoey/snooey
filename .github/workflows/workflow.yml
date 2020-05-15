@@ -5,7 +5,7 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
       - uses: "actions/checkout@master"
-      - name: "TODO to Issue"
+      - name: "BUG to Issue"
         uses: "alstr/todo-to-issue-action@v1.1.1-beta"
         with:
           REPO: ${{ github.repository }}
@@ -14,10 +14,8 @@ jobs:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LABEL: "# BUG"
           COMMENT_MARKER: "#"
-        id: "todo"
-    steps:
-      - uses: "actions/checkout@master"
-      - name: "TODO to Issue"
+      id: "BUG"
+      - name: "ENHANCEMENT to Issue"
         uses: "alstr/todo-to-issue-action@v1.1.1-beta"
         with:
           REPO: ${{ github.repository }}
@@ -26,10 +24,8 @@ jobs:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LABEL: "# BUG"
           COMMENT_MARKER: "#"
-        id: "todo"
-    steps:
-      - uses: "actions/checkout@master"
-      - name: "TODO to Issue"
+        id: "ENHANCEMENT
+      - name: "FIXME to Issue"
         uses: "alstr/todo-to-issue-action@v1.1.1-beta"
         with:
           REPO: ${{ github.repository }}
@@ -38,4 +34,4 @@ jobs:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LABEL: "# BUG"
           COMMENT_MARKER: "#"
-        id: "todo"
+        id: "fixme"
