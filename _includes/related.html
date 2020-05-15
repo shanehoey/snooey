@@ -1,19 +1,46 @@
-{% if page.collection %}
-{% assign collection = site.[page.collection] %}
-{% endif %}
-{% if include.collection %}
-{% assign collection = site[include.collection] %}
-{% endif %}
-<div id = "related">
-    <h3 class="my-4"  >{{ include.title }} <small>{{ include.subtitle }}</small></h3>
-    <div class="row">
-      {% for post in collection limit:4 %}
-      <div class="col-md-3 col-sm-6 mb-4">
-          <a href = "{{ post.url}}" class = 'text-reset text-decoration-none'>
-          <img class="img-fluid" src="{{ post.image.horizontal }}" alt=""/>
-          <h4 >{{ post.title }}</h4>
-          </a>
-      </div>
-      {% endfor %}
+{% comment %}
+<!--
+    v1.00 _includes/related.html
+    
+    DOCUMENTATION Add documentation
+    
+    include related.html  title = [string] (optional)
+                          subtitle = [string] (optional)
+                          collection = [object] (default site.posts)
+                          limit = [integer] (default 4)
+                          theme = [string] (default site.data.theme.portfolio.default)
+                          
+-->
+{% endcomment %}
+
+{% assign title = include.title  %}
+{% assign subtitle = include.subtitle %}
+
+{% assign collection = include.collection %}
+{% unless collection %}
+{% assign collection = site.posts %}
+{% endunless %}
+
+{% assign theme = site.data.theme.related.[include.theme] %}
+{% unless theme %}
+{% assign theme = site.data.theme.related.default %}
+{% endunless %}
+
+{% assign limit       =  include.limit %}
+{% unless limit %}
+{% assign limit       =  4 %}
+{% endunless %}
+
+<section id="related">
+  <h3 class="my-4">{{ title }} <small>{{ subtitle }}</small></h3>
+  <div class="row">
+    {% for item in collection limit: {{limit}} %}
+    <div class="col-md-3 col-sm-6 mb-4">
+      <a href="{{ item.url}}" class='text-reset text-decoration-none'>
+        <img class="img-fluid" src="{{ item.image.horizontal }}" alt="" />
+        <h4>{{ item.title }}</h4>
+      </a>
     </div>
-</div>
+    {% endfor %}
+  </div>
+</section>

@@ -1,23 +1,28 @@
-{% assign images = site.data.images.[include.images] %}
-{% unless images %}
-{% include alert.html %}
-{% endunless %}
+{% comment %}
+<!--
+    v1.00 _includes/images.html
 
-{% if images %}
-<Section id = "images" class = "container-fluid">
-    <div class="row">
-        {% for image in images %}
-           <div class="col-md-2 col-sm-6">
-                <div class="card bg-dark">
-                    {% if image.url %} <a href="{{ image.url }}">{% endif %}
-                    <img class="card-img" src="{{ image.image }}" alt = "{{ image.excerpt }}" title = "{{ image.title }}">
-                    <div class="card-img-overlay text-center text-white" style="padding:5;">
-                        <h5 class="card-title text-white">{{image.title}}</h5>
-                    </div>
-                    {% if image.url %}</a>{% endif %}
-                </div>
-            </div>
-        {% endfor %}
-        </div>
-</Section>
-{% endif %}
+    INVESTIGATE Confirm if used now
+    DELETE decommission if not used 
+
+-->
+{% endcomment %}
+
+{% assign collection = site.data.images.[include.collection] %}
+{% unless images %}
+{% assign collection = site.data.images.default %}
+{% endunless %}
+<hr>
+<h2>Horizontal {{ include.collection }} Image</h2>
+<img src = "{{ collection.horizontal }}"/>
+<h2>vertical  {{ include.collection }} Image</h2>
+<img src = "{{ collection.vertical }}"/>
+<h2>square  {{ include.collection }} Image</h2>
+<img src = "{{ collection.square }}"/>
+<h2>random  {{ include.collection }} Image</h2>
+<img src = "{{ collection.random }}"/>
+<h2>background  {{ include.collection }} Image</h2>
+<img src = "{{ collection.background }}"/>
+<h2>profile  {{ include.collection }} Image</h2>
+<img src = "{{ collection.profile }}"/>
+<hr>

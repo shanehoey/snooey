@@ -1,17 +1,34 @@
-{% assign tiles =  site.data.tiles.[include.tiles] %}
-{% unless tiles %}
-{% include alert.html %}
+{% comment %}
+<!--
+    v1.00 _includes/tiles.html
+    
+    DOCUMENTATION Add documentation
+    ENHANCEMENT layout not 100% correct
+
+    include tiles.html      collection = [object] (default site.data.sponsor.default)
+                            theme = [string] (default site.data.theme.social.default)
+                            
+-->
+{% endcomment %}
+
+{% assign collection = include.collection %}
+{% unless collection %}
+{% assign collection = site.data.tiles.default %}
 {% endunless %}
 
-{% if tiles %}
-<section id = "tiles">
+{% assign theme = site.data.theme.tiles.[include.theme] %}
+{% unless theme %}
+{% assign theme = site.data.theme.tiles.default %}
+{% endunless %}
+
+<section id="collection" >
     <div class="row">
-        {% for item in tiles %}
+        {% for item in collection %}
         <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
+            <div class="card mb-4 shadow-sm {{ theme.class.section }}" {% if theme.style.section %}style="{{ theme.style.section }}"{% endif %}>
                 <div class="card-body">
-                    {% if item.title %}<h5 class="card-title">{{ item.title}}</h5>{% endif %}
-                    <p class="card-text">{{ item.extract}}</p>
+                    {% if item.title %}<h5 class="card-title {{ theme.class.title }}">{{ item.title}}</h5>{% endif %}
+                    <p class="card-text {{ theme.class.description }}">{{ item.extract}}</p>
                     <div class="d-flex justify-content-between align-items-center">
                         {% if item.button %}
                         <div class="btn-group">
@@ -28,4 +45,3 @@
         {% endfor %}
     </div>
 </section>
-{% endif %}

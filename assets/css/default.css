@@ -1,10 +1,19 @@
+{% comment %}
+<!--
+    v1.00 assets/css/default.css
+
+    DOCUMENTATION Add documentation   
+    INVESTIGATE Can I remove these and convert to scss
+-->
+{% endcomment %}
+
 html,
 body {
     height: 100%
   }
 
 .body-background {
-    background: url('/assets/images/default/background.jpg') no-repeat center center fixed;
+    background: url('/assets/images/background.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -118,7 +127,7 @@ body {
 /* carousel*/
 .carousel-item {
   height: 20vh;
-  min-height: 200px;
+  min-height: 230px;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
