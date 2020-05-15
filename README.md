@@ -1,6 +1,6 @@
 # Snooey Theme
 
-Snooey - A simple but extensive Jekyll theme
+Snooey - A simple but extensive Jekyll theme that I user accross multiple websites. 
 
 **IMPORTANT** - This theme is always under active development, to ensure that I dont break something on your website please always fork this site, and use your own fork as the remote_theme
 
@@ -16,7 +16,13 @@ For instructions on how to use visit [github](https://github.com/shanehoey/snooe
 ##  Usage
 1) fork this site on GitHub
 
+<<<<<<< HEAD
 2) Add the following to Gemfile
+=======
+IMPORTANT - due to constant development and potential breaking changes I recommend that you fork this repository to use as the remote theme, rather than point at this repository.
+
+Add the following to Gemfile
+>>>>>>> 6b1bf7daad03949b78befa442bac4b2e6afab663
 
 ```
 
