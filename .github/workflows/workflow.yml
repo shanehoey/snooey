@@ -14,4 +14,4 @@ jobs:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LABEL: "# BUG"
           COMMENT_MARKER: "#"
-        id: "todo"
+        id: "bug"
