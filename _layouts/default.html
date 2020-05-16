@@ -9,7 +9,7 @@
 {% endcomment %}
 
 
-{% assign pagetheme = page.pagetheme %}
+{% assign pagetheme = [page.pagetheme] %}
 {% unless pagetheme %}
 {% assign pagetheme = site.data.theme.layout.default %}
 {% endunless %}
