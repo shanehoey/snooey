@@ -11,7 +11,7 @@ layout: default
 -->
 {% endcomment %}
 
-<section id="snippets" {% ifpagetheme.class.section %}class="{{pagetheme.class.section }}"{% endif %} {% ifpagetheme.style.section %}style="{{pagetheme.style.section }}"{% endif %}>
+<section id="snippets" {% if pagetheme.class.section %}class="{{pagetheme.class.section }}"{% endif %} {% if pagetheme.style.section %}style="{{pagetheme.style.section }}"{% endif %}>
 	<div class="container">
 		{% if page.heading %}{% include heading.html %}{% endif %}
 		<div class="row">
