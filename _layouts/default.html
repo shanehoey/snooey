@@ -8,11 +8,11 @@
 -->
 {% endcomment %}
 
-{% assign pagetheme = site.data.theme.layout.default %}
-{% unless page.pagetheme %}
-{% assign pagetheme = page.pagetheme %}
-{% endunless %}
 
+{% assign pagetheme = page.pagetheme %}
+{% unless page.pagetheme %}
+{% assign pagetheme = site.data.theme.layout.default %}
+{% endunless %}
 
 
 <!DOCTYPE html>
