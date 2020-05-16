@@ -11,4 +11,4 @@ layout: page
 
 page.description
 
-{% include pages/blog01.html  collection = site.snippets width = 33  hidden = "subtitle" %}
+{% include blog01.html  collection = site.snippets width = 33  hidden = "subtitle" %}

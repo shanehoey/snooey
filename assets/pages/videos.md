@@ -11,5 +11,5 @@ layout: page
 
 page.description
 
-{% include pages/portfolio01.html title = page.title description = page.description collection = site.videos theme = "docs" columns = 4 hidden = "description,title" %}
+{% include portfolio01.html title = page.title description = page.description collection = site.videos theme = "docs" columns = 4 hidden = "description,title" %}
 <hr>
