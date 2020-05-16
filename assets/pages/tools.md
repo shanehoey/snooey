@@ -7,4 +7,8 @@ excerpt: Lorem ipsum dolor sit amet. Et unde quaerat aut earum animi aut explica
 layout: page
 ---
 
-{% include pages/wizards.html %}
+# page.title 
+
+page.description
+
+{% include pages/blog01.html  collection = site.tools width = 33  hidden = "subtitle" %}
