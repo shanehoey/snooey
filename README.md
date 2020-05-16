@@ -45,19 +45,8 @@ For instructions on how to use visit [github](https://github.com/shanehoey/snooe
 
 . # TODO Enhancement -   x2.0x Ability to change the description etc on the fly,  eg post.description posts.[include.description] 
 
+### Known Bugs
 
-### TO DO  Testing
-
-. # TODO Testing - perform local deploy
-
-. # TODO Testing - perform remote deploy
-
-. # TODO Testing - perform remote theme
-
-
-### TODO Bug
-
-. # TODO Bug -   ISSUES Not working 
 
 ## Installation
 
