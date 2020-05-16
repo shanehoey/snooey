@@ -11,7 +11,7 @@ permalink: /examples/
 
 {% for page in site.pages %}
     {% if page.path contains 'examples/' %}
-        <h5><a href="{{ page.url }}">{{ page.title }}</a></h5>
+<h5><a href="{{ page.url }}">{{ page.title }}</a></h5>
     {% endif %}
 {% endfor %}
 <p class = "text-justify">{{ page.description }}</p>
