@@ -6,9 +6,12 @@
                   
 -->
 {% endcomment %}
-# {{ page.title }}
 
-{{ page.description }}
+<!-- # TODO Enhancement How can I make title/description come from collection ? --> 
+
+<h1>{{ page.title }}</h1>
+
+<p>{{ page.description }}</p>
 
 {% include portfolio01.html title = page.title description = page.description collection = site.videos theme = "docs" columns = 4 hidden = "description,title" %}
 <hr>
