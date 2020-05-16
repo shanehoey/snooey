@@ -8,8 +8,11 @@ permalink: /examples/
 
 <h1>{{ page.title }}</h1>
 <p class = "text-justify">{{ page.description }}</p>
-{% assign pages = site.pages | where: "category" , "example" %}
-{% for p in pages %}
-<h5><a href="{{ p.url }}">{{ p.name }}</a></h5>
+
+{% for page in site.pages %}
+    {% if page.path contains 'examples/' %}
+        <h5><a href="{{ page.url }}">{{ page.title }}</a></h5>
+    {% endif %}
 {% endfor %}
 <p class = "text-justify">{{ page.description }}</p>
+
