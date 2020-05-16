@@ -1,8 +1,8 @@
-# Snooey Theme
+# Snooey - A Remote Jekll Theme
 
-Snooey - A simple but extensive Jekyll theme that I use accross multiple websites. 
+Snooey - A simple but extensive Jekyll theme that I use across multiple websites, including [shanehoey.com](https://shanehoey.com)
 
-**IMPORTANT** - This theme is always under active development, to ensure that I dont break something on your website please always fork this site, and use your own fork as the remote_theme
+**IMPORTANT** - This theme is always under active development, to ensure that I dont break something on your website please always fork this site, and use your own fork as the remote_theme.
 
 view a live example [snooey.netlify.com](https://snooey.netlify.com)
 
@@ -12,30 +12,10 @@ For instructions on how to use visit [github](https://github.com/shanehoey/snooe
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/531d26ad-f8c2-412d-900e-e4cfe05603b3/deploy-status)](https://app.netlify.com/sites/snooey/deploys)
 
-##  Usage
-1) fork this site on GitHub
 
-2) Add the following to Gemfile
+### Current Issues
 
-```
-
-gem "jekyll-remote-theme"
-
-```
-
-3) Add the following to _config.yml 
-
-```
-
-plugins:
-  - jekyll-remote-theme
-
-remote_theme: shanehoey/snooey
-
-```
-
-
-### TODO Enhancement - s 
+### Enhancements  
 
 . # TODO Enhancement -   v1.1 migrate theme to scss
 
@@ -66,7 +46,7 @@ remote_theme: shanehoey/snooey
 . # TODO Enhancement -   x2.0x Ability to change the description etc on the fly,  eg post.description posts.[include.description] 
 
 
-### TODO Testing - 
+### TO DO  Testing
 
 . # TODO Testing - perform local deploy
 
@@ -75,7 +55,7 @@ remote_theme: shanehoey/snooey
 . # TODO Testing - perform remote theme
 
 
-### TODO Bug - s 
+### TODO Bug
 
 . # TODO Bug -   ISSUES Not working 
 
