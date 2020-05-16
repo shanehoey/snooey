@@ -14,8 +14,8 @@ permalink: /examples/feature05/
 
 {% include feature05.html %}<hr>
 {% include feature05.html   theme = "docs"
-                            title = title1
-                            description = description1
+                            title = title
+                            description = description
  %}<hr>
 {% include feature05.html   theme = "tools"
                             title = page.title
