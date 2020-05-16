@@ -33,6 +33,9 @@
 
 {% assign theme = site.data.theme.portfolio.[include.theme] %}
 {% unless theme %}
+{% assign theme = site.data.theme.portfolio.[page.theme] %}
+{% endunless %}
+{% unless theme %}
 {% assign theme = site.data.theme.portfolio.default %}
 {% endunless %}
 

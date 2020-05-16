@@ -13,22 +13,25 @@
 -->
 {% endcomment %}
 
-{% assign collection  =  include.collection %}
+{% assign collection = include.collection %}
 {% unless collection %}
-{% assign collection  =  site.data.feature.default %}
+{% assign collection = site.data.feature.default %}
 {% endunless %}
 
-{% assign title        =  include.title %}
-{% assign description  =  include.description %}
+{% assign title =  include.title %}
+{% assign description = include.description %}
 
-{% assign limit       =  include.limit %}
+{% assign limit = include.limit %}
 {% unless limit %}
-{% assign limit       =  4 %}
+{% assign limit = 4 %}
 {% endunless %}
 
-{% assign theme       =  site.data.theme.feature.[include.theme] %}
+{% assign theme = site.data.theme.feature.[include.theme] %}
 {% unless theme %}
-{% assign theme       =  site.data.theme.feature.default %}
+{% assign theme = site.data.theme.feature.[page.theme] %}
+{% endunless %}
+{% unless theme %}
+{% assign theme = site.data.theme.feature.default %}
 {% endunless %}
 
 <section id="feature01" class="container p-5 {{ theme.class.section }}" style="{{ theme.style.section}}">

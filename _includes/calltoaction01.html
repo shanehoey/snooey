@@ -12,7 +12,11 @@
 -->
 {% endcomment %}
 
+
 {% assign theme = site.data.theme.calltoaction.[include.theme] %}
+{% unless theme %}
+{% assign theme = site.data.theme.calltoaction.[page.theme] %}
+{% endunless %}
 {% unless theme %}
 {% assign theme = site.data.theme.calltoaction.default %}
 {% endunless %}
@@ -24,7 +28,8 @@
 
 {% assign button = "Read More.." %}
 
-<section id="calltoaction01" class="px-0 {{ theme.class.section }}" {% if theme.style.section %}style="{{ theme.style.section }}"{% endif %}>
+<section id="calltoaction01" class="px-0 {{ theme.class.section }}"
+    {% if theme.style.section %}style="{{ theme.style.section }}" {% endif %}>
     <div class="p-4">
         {% if collection.title %}<h3 class="text-center {{ theme.class.title }}">{{ collection.title }}</h3>{% endif %}
         {% if collection.subtitle %}<p class="text-center {{ theme.class.subtitle }}">{{ collection.subtitle }}</p>

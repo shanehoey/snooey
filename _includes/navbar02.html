@@ -18,6 +18,9 @@
 
 {% assign theme = site.data.theme.navbar.[include.theme] %}
 {% unless theme %}
+{% assign theme = site.data.theme.navbar.[page.theme] %}
+{% endunless %}
+{% unless theme %}
 {% assign theme = site.data.theme.navbar.default %}
 {% endunless %}
 

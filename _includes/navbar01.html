@@ -18,9 +18,11 @@
 
 {% assign theme = site.data.theme.navbar.[include.theme] %}
 {% unless theme %}
+{% assign theme = site.data.theme.navbar.[page.theme] %}
+{% endunless %}
+{% unless theme %}
 {% assign theme = site.data.theme.navbar.default %}
 {% endunless %}
-
 {% comment %}<!-- remove fixed-top to make it stick to top -->{% endcomment %}
 <header id="navigation">
     <nav id="navbar01" class="navbar navbar-expand-lg {{ theme.class.section }}" {% if theme.style.section %}style="{{ theme.style.section }}"{% endif %}>

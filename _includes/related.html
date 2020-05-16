@@ -23,6 +23,9 @@
 
 {% assign theme = site.data.theme.related.[include.theme] %}
 {% unless theme %}
+{% assign theme = site.data.theme.related.[page.theme] %}
+{% endunless %}
+{% unless theme %}
 {% assign theme = site.data.theme.related.default %}
 {% endunless %}
 

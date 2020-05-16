@@ -24,9 +24,11 @@
 
 {% assign theme       =  site.data.theme.jumbotron.[include.theme] %}
 {% unless theme %}
-{% assign theme       =  site.data.theme.jumbotron.default %}
+{% assign theme = site.data.theme.jumbotron.[page.theme] %}
 {% endunless %}
-
+{% unless theme %}
+{% assign theme = site.data.theme.jumbotron.default %}
+{% endunless %}
 {% for item in collection %}
 <section class="jumbotron jumbotron-fluid p-3" class = "{{ theme.class.section }}" {% if theme.style.section %}style = "{{ theme.style.section }}"{% endif %}>
     {{ item.content }}

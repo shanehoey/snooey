@@ -19,12 +19,16 @@
 
 {% assign theme = site.data.theme.calltoaction.[include.theme] %}
 {% unless theme %}
+{% assign theme = site.data.theme.calltoaction.[page.theme] %}
+{% endunless %}
+{% unless theme %}
 {% assign theme = site.data.theme.calltoaction.default %}
 {% endunless %}
 
 {% assign button = "Read More.." %}
 
-<section id="calltoaction02" class="{{ theme.class.section }}" {% if theme.style.section %}style="{{ theme.style.section }}"{% endif %}>
+<section id="calltoaction02" class="{{ theme.class.section }}"
+    {% if theme.style.section %}style="{{ theme.style.section }}" {% endif %}>
     <div class="row {{ theme.class.div }}">
         <div class="col-lg-6 mb-lg-0 mb-md-4">
             <img src="{{ collection.image }}" class="img-fluid float-left">

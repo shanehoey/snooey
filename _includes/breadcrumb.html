@@ -11,14 +11,19 @@
 
 {% assign theme = site.data.theme.breadcrumb.[include.theme] %}
 {% unless theme %}
+{% assign theme = site.data.theme.breadcrumb.[page.theme] %}
+{% endunless %}
+{% unless theme %}
 {% assign theme = site.data.theme.breadcrumb.default %}
 {% endunless %}
 
 {% capture pageurl %}{{ page.url | remove: "/index.html" }}{% endcapture %}
 {% assign spliturl = pageurl | split: '/' | shift %}
 
-<section id="breadcrumb" class=" {{ theme.class.section }}" {% if theme.style.section %}style="{{ theme.style.section }}"{% endif %}>
-    <ol class="breadcrumb {{ theme.class.section }}" {% if theme.style.section %}style="{{ theme.style.section }}"{% endif %}>
+<section id="breadcrumb" class=" {{ theme.class.section }}"
+    {% if theme.style.section %}style="{{ theme.style.section }}" {% endif %}>
+    <ol class="breadcrumb {{ theme.class.section }}" {% if theme.style.section %}style="{{ theme.style.section }}"
+        {% endif %}>
         {% assign url = side.baseurl |append: '/' %}
         <li class="breadcrumb-item"><a href="{{ url }}"><i class="fas fa-home {{theme.class.text}}"></i></a></li>
         {% for split in spliturl %}

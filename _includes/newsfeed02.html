@@ -35,6 +35,9 @@
 
 {% assign theme = site.data.theme.newsfeed.[include.theme] %}
 {% unless theme %}
+{% assign theme = site.data.theme.newsfeed.[page.theme] %}
+{% endunless %}
+{% unless theme %}
 {% assign theme = site.data.theme.newsfeed.default %}
 {% endunless %}
 
