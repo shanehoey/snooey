@@ -11,7 +11,10 @@
 -->
 {% endcomment %}
 
-{% assign collection = site.data.navbar.[include.collection] %}
+{% assign collection = include.collection %}
+{% unless collection %}
+{% assign collection = site.data.navbar.[page.theme] %}
+{% endunless %}
 {% unless collection %}
 {% assign collection = site.data.navbar.default %}
 {% endunless %}

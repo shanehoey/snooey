@@ -14,6 +14,9 @@
 
 {% assign collection = collection.item %}
 {% unless collection %}
+{% assign collection = site.data.calltoaction.[page.theme] %}
+{% endunless %}
+{% unless collection %}
 {% assign collection = site.data.calltoaction.default %}
 {% endunless %}
 

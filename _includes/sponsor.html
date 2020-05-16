@@ -12,6 +12,9 @@
 
 {% assign collection = include.collection %}
 {% unless collection %}
+{% assign collection = site.data.sponsor.[page.theme] %}
+{% endunless %}
+{% unless collection %}
 {% assign collection = site.data.sponsor.default %}
 {% endunless %}
 

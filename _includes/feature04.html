@@ -13,6 +13,9 @@
 
 {% assign collection  =  include.collection %}
 {% unless collection %}
+{% assign collection = site.data.feature.[page.theme] %}
+{% endunless %}
+{% unless collection %}
 {% assign collection  =  site.data.feature.default %}
 {% endunless %}
 

@@ -9,6 +9,9 @@
 {% endcomment %}
 
 {% assign collection = site.data.images.[include.collection] %}
+{% unless collection %}
+{% assign collection = site.data.feature.[page.theme] %}
+{% endunless %}
 {% unless images %}
 {% assign collection = site.data.images.default %}
 {% endunless %}

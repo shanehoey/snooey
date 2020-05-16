@@ -9,7 +9,7 @@
 -->
 {% endcomment %}
 
-{% assign theme         =  site.data.theme.spacer.[include.theme] %}
+{% assign theme = site.data.theme.spacer.[include.theme] %}
 {% unless theme %}
 {% assign theme = site.data.theme.spacer.[page.theme] %}
 {% endunless %}
