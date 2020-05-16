@@ -35,49 +35,49 @@ remote_theme: shanehoey/snooey
 ```
 
 
-### Enhancements 
+### TODO Enhancement - s 
 
-. # ENHANCEMENT  v1.1 migrate theme to scss
+. # TODO Enhancement -   v1.1 migrate theme to scss
 
-. # ENHANCEMENT  v1.1 remove style attributes 
+. # TODO Enhancement -   v1.1 remove style attributes 
 
-. # ENHANCEMENT  v1.0x _includes/pagination.html
+. # TODO Enhancement -   v1.0x _includes/pagination.html
 
-. # ENHANCEMENT  v1.0x _includes/github.html
+. # TODO Enhancement -   v1.0x _includes/github.html
 
-. # ENHANCEMENT  v1.0x _includes/form.html completed 
+. # TODO Enhancement -   v1.0x _includes/form.html completed 
 
-. # ENHANCEMENT  vx.x _includes/subscribe.html forms
+. # TODO Enhancement -   vx.x _includes/subscribe.html forms
 
-. # ENHANCEMENT  vx.x _includes/steps.html
+. # TODO Enhancement -   vx.x _includes/steps.html
 
-. # ENHANCEMENT  vx.x _includes/faq.html
+. # TODO Enhancement -   vx.x _includes/faq.html
 
-. # ENHANCEMENT  vx.x _includes/counter.html
+. # TODO Enhancement -   vx.x _includes/counter.html
 
-. # ENHANCEMENT  vx.x _includes/list.html
+. # TODO Enhancement -   vx.x _includes/list.html
 
-. # ENHANCEMENT  vx.x _includes/blog.html
+. # TODO Enhancement -   vx.x _includes/blog.html
 
-. # ENHANCEMENT  vx.x _includes/coverpage.html
+. # TODO Enhancement -   vx.x _includes/coverpage.html
 
-. # ENHANCEMENT  vx.x _includes/about.html
+. # TODO Enhancement -   vx.x _includes/about.html
 
-. # ENHANCEMENT  x2.0x Ability to change the description etc on the fly,  eg post.description posts.[include.description] 
-
-
-### Testing 
-
-. # TESTING perform local deploy
-
-. # TESTING perform remote deploy
-
-. # TESTING perform remote theme
+. # TODO Enhancement -   x2.0x Ability to change the description etc on the fly,  eg post.description posts.[include.description] 
 
 
-### Bugs 
+### TODO Testing - 
 
-. # BUG  ISSUES Not working 
+. # TODO Testing - perform local deploy
+
+. # TODO Testing - perform remote deploy
+
+. # TODO Testing - perform remote theme
+
+
+### TODO Bug - s 
+
+. # TODO Bug -   ISSUES Not working 
 
 ## Installation
 
