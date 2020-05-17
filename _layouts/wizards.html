@@ -11,16 +11,13 @@ layout: default
 -->
 {% endcomment %}
 
-<section id="wizards"  {% if pagetheme.class.section %}class="{{pagetheme.class.section }}"{% endif %} {% if pagetheme.style.section %}style="{{pagetheme.style.section }}"{% endif %}>
-	<div class="container">
-		{% if page.heading %}{% include heading.html %}{% endif %}
-		<div class="row">
-			<div class="col-sm-8" id="main">
-				{{ content }}
-			</div>
-			<div class="col-sm-4" id="sidebar">
-				{% include toc.html html=content class="list-group sticky-top" item_class="list-group-item  list-group-item-action" h_min=2 h_max=2 sanitize=true %}
-			</div>
+<section id="wizards" {% if pagetheme.class.section %}class="{{pagetheme.class.section }}" {% endif %}{% if pagetheme.style.section %}style="{{pagetheme.style.section }}" {% endif %}>
+	<div class="row">
+		<div class="col-sm-8" id="main">
+			{{ content }}
+		</div>
+		<div class="col-sm-4" id="sidebar">
+			{% include toc.html html=content class="list-group sticky-top" item_class="list-group-item  list-group-item-action" h_min=2 h_max=2 sanitize=true %}
 		</div>
 	</div>
 </section>
