@@ -1,4 +1,4 @@
-# Snooey - A Remote Jekll Theme
+# Snooey - A Remote Jekyll Theme
 
 Snooey - A simple but extensive Jekyll theme that I use across multiple websites, including [shanehoey.com](https://shanehoey.com)
 
@@ -17,33 +17,33 @@ For instructions on how to use visit [github](https://github.com/shanehoey/snooe
 
 ### Enhancements  
 
-. # TODO Enhancement -   v1.1 migrate theme to scss
+[] # TODO Enhancement -   v1.1 migrate theme to scss
 
-. # TODO Enhancement -   v1.1 remove style attributes 
+[] # TODO Enhancement -   v1.1 remove style attributes 
 
-. # TODO Enhancement -   v1.0x _includes/pagination.html
+[] # TODO Enhancement -   v1.0x _includes/pagination.html
 
-. # TODO Enhancement -   v1.0x _includes/github.html
+[] # TODO Enhancement -   v1.0x _includes/github.html
 
-. # TODO Enhancement -   v1.0x _includes/form.html completed 
+[] # TODO Enhancement -   v1.0x _includes/form.html completed 
 
-. # TODO Enhancement -   vx.x _includes/subscribe.html forms
+[] # TODO Enhancement -   vx.x _includes/subscribe.html forms
 
-. # TODO Enhancement -   vx.x _includes/steps.html
+[] # TODO Enhancement -   vx.x _includes/steps.html
 
-. # TODO Enhancement -   vx.x _includes/faq.html
+[] # TODO Enhancement -   vx.x _includes/faq.html
 
-. # TODO Enhancement -   vx.x _includes/counter.html
+[] # TODO Enhancement -   vx.x _includes/counter.html
 
-. # TODO Enhancement -   vx.x _includes/list.html
+[] # TODO Enhancement -   vx.x _includes/list.html
 
-. # TODO Enhancement -   vx.x _includes/blog.html
+[] # TODO Enhancement -   vx.x _includes/blog.html
 
-. # TODO Enhancement -   vx.x _includes/coverpage.html
+[] # TODO Enhancement -   vx.x _includes/coverpage.html
 
-. # TODO Enhancement -   vx.x _includes/about.html
+[] # TODO Enhancement -   vx.x _includes/about.html
 
-. # TODO Enhancement -   x2.0x Ability to change the description etc on the fly,  eg post.description posts.[include.description] 
+[] # TODO Enhancement -   x2.0x Ability to change the description etc on the fly,  eg post.description posts.[include.description] 
 
 ### Known Bugs
 
