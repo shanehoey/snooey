@@ -17,6 +17,8 @@ For instructions on how to use visit [github](https://github.com/shanehoey/snooe
 
 ### Enhancements  
 
+[] # TODO Enhancement -   v1.1 add plugin jekyll-seo-tag
+
 [] # TODO Enhancement -   v1.1 migrate theme to scss
 
 [] # TODO Enhancement -   v1.1 remove style attributes 
