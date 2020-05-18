@@ -28,7 +28,7 @@
 
 {% if message %}
 <section id="alert" class="{{ theme.class }}" style="{{ theme.style }}" role="alert">
-    {% if theme.class.container %}<div id="container" class="{{ pagetheme.class.container }}">{% endif %}
+    {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
     {% if icon %} <i class="{{ icon }}"></i>{% endif %}
     {{ message }}
     {% if theme.class contains "dismiss" %}

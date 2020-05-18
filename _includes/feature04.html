@@ -34,7 +34,7 @@
 
 {% for item in collection limit: {{limit}} %}
 <section id = "feature04" class = "p-4 {{ theme.class.section }}" {% if theme.style.section %}style = "{{ theme.style.section }}"{% endif %}>
-    {% if theme.class.container %}<div id="container" class="{{ pagetheme.class.container }}">{% endif %}
+    {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
     {% if item.title %}<h2 class="{{ theme.class.title }}">{{ item.title }}</h2>{% endif %}
 {% if item.description %}<p class="{{ theme.class.description }}">{{ item.description }}</p>{% endif %}
 </section>

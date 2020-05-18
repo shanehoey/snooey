@@ -28,7 +28,7 @@
 
 {% comment %}<!-- remove fixed-top to make it stick to top -->{% endcomment %}
 <header id="navigation">
-    {% if theme.class.container %}<div id="container" class="{{ pagetheme.class.container }}">{% endif %}
+    {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
     <nav id="navbar02" class = "navbar navbar-expand-lg {{ theme.class.section }}" {% if theme.style.section %}style = "{{ theme.style.section }}"{% endif %}>
             {% if collection.url %}<a class="navbar-brand" href="{{ collection.url }}">{% endif %}
             {% if collection.title or collection.icon %}<span>{% endif %}
