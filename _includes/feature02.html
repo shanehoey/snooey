@@ -40,8 +40,7 @@
 <section id="feature01" class="{{ theme.class.section }}" style="{{ theme.style.section}}">
     {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
     {% if title %}<h2 class="mb-4 pb-2 text-center {{ theme.class.title }}">{{ title }}</h2>{% endif %}
-    {% if description %}<p class="mx-auto mb-5 text-justify {{ theme.class.description }}">{{ description }}</p>
-    {% endif %}
+    {% if description %}<p class="mx-auto mb-5 text-justify {{ theme.class.description }}">{{ description }}</p>{% endif %}
     <div class="row text-center d-flex justify-content-center my-5">
         {% for item in collection limit: {{limit}} %}
         <div class="col-lg-6 col-md-6 mb-4">
