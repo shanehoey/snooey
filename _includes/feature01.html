@@ -42,11 +42,11 @@
     {% if title %}<h2 class="mb-4 pb-2 text-center {{ theme.class.title }}">{{ title }}</h2>{% endif %}
     {% if description %}<p class="mx-auto mb-5 text-justify {{ theme.class.description }}">{{ description }}</p>{% endif %}
     <div class="row text-center d-flex justify-content-center my-5">
-        {% for item in collection.items limit: {{limit}} %}
+        {% for item in collection limit: {{limit}} %}
         <div class="col-lg-3 col-md-6 mb-4">
-            <i class="{{ item.icon }} {{ theme.class.items.icon }} mb-4 "></i>
-            <h5 class="{{ theme.class.items.subtitle }}">{{ item.title }}</h5>
-            <p class="mb-0 {{ theme.class.items.excerpt }}">{{ item.excerpt }}</p>
+            <i class="{{ item.icon }} {{ theme.class.item.icon }} mb-4 "></i>
+            <h5 class="{{ theme.class.item.subtitle }}">{{ item.title }}</h5>
+            <p class="mb-0 {{ theme.class.item.excerpt }}">{{ item.excerpt }}</p>
         </div>
         {% endfor %}
     </div>
