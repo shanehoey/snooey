@@ -31,17 +31,18 @@
 
 {% assign button = "Read More.." %}
 
-<section id="calltoaction03" class="{{ theme.class.section }} p-3"
-    {% if theme.style.section %}style="{{ theme.style.section }}" {% endif %}>
+<section id="calltoaction03" class="{{ theme.class.section }} p-3" {% if theme.style.section %}style="{{ theme.style.section }}" {% endif %}>
+    {% for item in collection  limit: 1 %}
     {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
     <div class="row {{ theme.class.div }}">
         <div class="col-lg-4 mb-lg-0 mb-md-4 align-self-center justify-content-center">
-            <h3 class="{{ theme.class.title }}">{{ collection.title }}</h3>
+            <h3 class="{{ theme.class.title }}">{{ item.title }}</h3>
         </div>
         <div class="col-lg-8">
-            <p class="{{ theme.class.subtitle }}">{{ collection.subtitle }}</p>
-            <a class="{{ theme.class.btn }} float-right" href="{{ collection.url }}" role="button">{{ button }}</a>
+            <p class="{{ theme.class.subtitle }}">{{ item.subtitle }}</p>
+            <a class="{{ theme.class.btn }} float-right" href="{{ item.url }}" role="button">{{ button }}</a>
         </div>
     </div>
     {% if theme.class.container %}</div>{% endif %}
+    {% endfor %}
 </section>

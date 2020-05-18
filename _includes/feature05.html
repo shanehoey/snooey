@@ -37,7 +37,7 @@
 {% assign title         =  include.title %}
 {% assign description   =  include.description %}
 
-{% assign theme         =  include.theme %}
+{% assign theme =  include.theme %}
 {% unless theme %}
 {% assign theme = site.data.theme.feature.[page.theme] %}
 {% endunless %}
@@ -55,13 +55,13 @@
     {% if title %}<h2 class="{{ theme.class.title }}">{{ title }}</h2>{% endif %}
     {% if description %}<p class="{{ theme.class.description }}">{{ description }}</p>{% endif %}
     <div class="row d-flex justify-content-between align-items-center">
-        {% for item in featured.items limit: 1 %}
+        {% for item in featured limit: 1 %}
         <div class="col-md-7 mb-4">
             <h2 class="{{ theme.class.item.title }} mb-3">{{ item.title }}</h2>
             <p class="{{ theme.class.item.description }} text-justify pt-3">{{ item.description }}</p>
         </div>
         <div class="col-md-5 col-lg-4 d-flex justify-content-center mb-md-0 mb-5">
-            <i class="{{ theme.class.item.title }} {{ item.icon }} fa-10x"></i>
+            <i class="{{ theme.class.item.icon }} {{ item.icon }} fa-10x"></i>
         </div>
         {% endfor %}
     </div>

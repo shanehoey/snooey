@@ -17,14 +17,13 @@
 {% assign icon = theme.icon %}
 {% endunless %}
 
-{% assign theme = include.theme %}
+{% assign theme = site.data.theme.alert.[include.theme] %}
 {% unless theme %}
 {% assign theme = site.data.theme.alert.[page.theme] %}
 {% endunless %}
 {% unless theme %}
 {% assign theme = site.data.theme.alert.default %}
 {% endunless %}
-
 
 {% if message %}
 <section id="alert" class="{{ theme.class }}" style="{{ theme.style }}" role="alert">
