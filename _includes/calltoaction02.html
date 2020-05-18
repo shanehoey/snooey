@@ -33,6 +33,7 @@
 
 <section id="calltoaction02" class="{{ theme.class.section }}"
     {% if theme.style.section %}style="{{ theme.style.section }}" {% endif %}>
+    {% if theme.class.container %}<div id="container" class="{{ pagetheme.class.container }}">{% endif %}
     <div class="row {{ theme.class.div }}">
         <div class="col-lg-6 mb-lg-0 mb-md-4">
             <img src="{{ collection.image }}" class="img-fluid float-left">
@@ -40,8 +41,9 @@
         <div class="col-lg-6 p-5 pl-2 ">
             <h3 class="{{ theme.class.title }}">{{ collection.title }}</h3>
             <p class="{{ theme.class.subtitle }}">{{ collection.subtitle }}</p>
-            <a class="{{ theme.class.button }}" href="{{ collection.url }}" role="button">{{ button }}<i
+            <a class="{{ theme.class.btn }}" href="{{ collection.url }}" role="button">{{ button }}<i
                     class="ml-1 {{ item.icon }}"></i></a>
         </div>
     </div>
+    {% if theme.class.container %}</div>{% endif %}
 </section>

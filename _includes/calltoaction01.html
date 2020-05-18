@@ -32,12 +32,14 @@
 
 <section id="calltoaction01" class="px-0 {{ theme.class.section }}"
     {% if theme.style.section %}style="{{ theme.style.section }}" {% endif %}>
+    {% if theme.class.container %}<div id="container" class="{{ pagetheme.class.container }}">{% endif %}
     <div class="p-4">
         {% if collection.title %}<h3 class="text-center {{ theme.class.title }}">{{ collection.title }}</h3>{% endif %}
         {% if collection.subtitle %}<p class="text-center {{ theme.class.subtitle }}">{{ collection.subtitle }}</p>
         {% endif %}
-        {% if collection.url %}<p class="text-center m-0"><a class=" {{ theme.class.button }}"
+        {% if collection.url %}<p class="text-center m-0"><a class=" {{ theme.class.btn }}"
                 href="{{ collection.url }}" role="button">{{ button }}</a></p>
         {% endif %}
     </div>
+    {% if theme.class.container %}</div>{% endif %}
 </section>

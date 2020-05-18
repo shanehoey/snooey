@@ -57,7 +57,8 @@
 {% endcase %}
 
 <section id="portfolio01" class = "{{ theme.class.section }}" {% if theme.style.section %}style = "{{ theme.style.section }}"{% endif %}>
-    {% if title %}<h3 class="text-center font-weight-bold p-3 {{ theme.class.title }}">{{ title }}</h3>{% endif %}
+    {% if theme.class.container %}<div id="container" class="{{ pagetheme.class.container }}">{% endif %}
+        {% if title %}<h3 class="text-center font-weight-bold p-3 {{ theme.class.title }}">{{ title }}</h3>{% endif %}
     {% if description %}<p class="text-justify mx-auto p-3 {{ theme.class.description }}">{{ description }}</p>{% endif %}
     <div class="row">
         {% for post in collection limit: limit %}
@@ -77,4 +78,5 @@
             </div>
         {% endfor %}
     </div>
+    {% if theme.class.container %}</div>{% endif %}
 </section>

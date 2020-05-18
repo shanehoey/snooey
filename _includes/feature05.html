@@ -53,6 +53,7 @@
 
 <section id="feature05" class="{{ theme.class.section }}" {% if theme.style.section %}style="{{ theme.style.section }}"
     {% endif %}>
+    {% if theme.class.container %}<div id="container" class="{{ pagetheme.class.container }}">{% endif %}
     <div class="row d-flex justify-content-between align-items-center">
         {% for item in featured limit: 1 %}
         <div class="col-md-7 mb-4">
@@ -72,4 +73,5 @@
         </div>
         {% endfor %}
     </div>
+    {% if theme.class.container %}</div>{% endif %}
 </section>

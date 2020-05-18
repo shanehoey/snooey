@@ -27,7 +27,8 @@
 {% endunless %}
 
 <section id = "social" class = "{{ theme.class.section }}" {% if theme.style.section %}style = "{{ theme.style.section }}"{% endif %}>
-{% if collection.title %}<h4 class = "{{ theme.class.title }}">{{ collection.title }}</h4>{% endif %}
+    {% if theme.class.container %}<div id="container" class="{{ pagetheme.class.container }}">{% endif %}
+    {% if collection.title %}<h4 class = "{{ theme.class.title }}">{{ collection.title }}</h4>{% endif %}
 {% if collection.facebook %}<a href = "{{ collection.facebook }}" class = "{{ theme.class.icon }}"><i class = "fab fa-facebook-f {{ size }}"></i></a>{% endif %}
 {% if collection.twitter %}<a href = "{{ collection.twitter }}" class = "{{ theme.class.icon }}" ><i class = "fab fa-twitter {{ size}}"></i></a>{% endif %}
 {% if collection.linkedin %}<a href = "{{ collection.linkedin }}" class = "{{ theme.class.icon }}" ><i class = "fab fa-linkedin-in {{ size}}"></i></a>{% endif %}
@@ -36,4 +37,5 @@
 {% if collection.youtube %}<a href = "{{ collection.youtube }}" class = "{{ theme.class.icon }}" ><i class = "fab fa-youtube {{ size}}"></i></a>{% endif %}
 {% if collection.github %}<a href = "{{ collection.github }}" class = "{{ theme.class.icon }}" ><i class = "fab fa-github {{ size}}"></i></a>{% endif %}
 {% if collection.stackoverflow %}<a href = "{{ collection.stackoverflow }}" class = "{{ theme.class.icon }}" ><i class = "fab fa-stack-overflow {{ size}}"></i></a>{% endif %}
+{% if theme.class.container %}</div>{% endif %}
 </section>

@@ -27,11 +27,13 @@
 {% endunless %}
 
 <footer id="footer02" class="{{ theme.class.section }} p-3" {% if theme.style.section %} style="{{ theme.style.section }}" {% endif %}>
+    {% if theme.class.container %}<div id="container" class="{{ pagetheme.class.container }}">{% endif %}
     <p class="text-reset text-center font-weight-light small">{{ collection.copyright}}<br>
         {% for item in collection.navigation %}
         <a href="{{ item.url}}"
             class="text-reset text-center text-decoration-none font-weight-light px-2 small">{{ item.title }}</a>
         {% endfor %}
     </p>
+    {% if theme.class.container %}</div>{% endif %}
 </footer>
 F
