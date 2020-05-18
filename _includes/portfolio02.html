@@ -31,7 +31,7 @@
 {% assign options = "complete" %}
 {% endunless %}
 
-{% assign theme = site.data.theme.portfolio.[include.theme] %}
+{% assign theme = include.theme %}
 {% unless theme %}
 {% assign theme = site.data.theme.portfolio.[page.theme] %}
 {% endunless %}

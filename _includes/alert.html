@@ -17,7 +17,7 @@
 {% assign icon = theme.icon %}
 {% endunless %}
 
-{% assign theme = site.data.theme.alert.[include.theme] %}
+{% assign theme = include.theme %}
 {% unless theme %}
 {% assign theme = site.data.theme.alert.[page.theme] %}
 {% endunless %}

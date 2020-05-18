@@ -21,7 +21,7 @@
 {% assign collection = site.data.calltoaction.default %}
 {% endunless %}
 
-{% assign theme = site.data.theme.calltoaction.[include.theme] %}
+{% assign theme = include.theme %}
 {% unless theme %}
 {% assign theme = site.data.theme.calltoaction.[page.theme] %}
 {% endunless %}

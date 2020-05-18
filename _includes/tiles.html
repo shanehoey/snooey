@@ -20,7 +20,7 @@
 {% assign collection = site.data.tiles.default %}
 {% endunless %}
 
-{% assign theme = site.data.theme.tiles.[include.theme] %}
+{% assign theme = include.theme %}
 {% unless theme %}
 {% assign theme = site.data.theme.tiles.[page.theme] %}
 {% endunless %}

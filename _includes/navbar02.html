@@ -18,7 +18,7 @@
 {% assign collection = site.data.navbar.default %}
 {% endunless %}
 
-{% assign theme = site.data.theme.navbar.[include.theme] %}
+{% assign theme = include.theme %}
 {% unless theme %}
 {% assign theme = site.data.theme.navbar.[page.theme] %}
 {% endunless %}
