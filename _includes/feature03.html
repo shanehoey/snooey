@@ -45,7 +45,7 @@
 {% assign theme = site.data.theme.feature.default %}
 {% endunless %}
 
-<section id = "feature02" class = "container {{ theme.class.section }}" {% if theme.style.section %}style = "{{ theme.style.section }}"{% endif %}>
+<section id = "feature02" class = "{{ theme.class.section }}" {% if theme.style.section %}style = "{{ theme.style.section }}"{% endif %}>
     {% if title %}<h2 class="text-center pt-4 {{ theme.class.title }}">{{ title }}</h2>{% endif %}
     {% if description %}<p class="text-justify pb-4 {{ theme.class.description }}">{{ description }}</p>{% endif %}
     <div class="row ">
