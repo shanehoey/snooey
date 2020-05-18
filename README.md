@@ -1,14 +1,19 @@
 # Snooey - A Remote Jekyll Theme
 
-Snooey - A simple but extensive Jekyll theme that I use across multiple websites, including [shanehoey.com](https://shanehoey.com)
+*Snooey* - A simple but extensive Jekyll theme that I use across multiple websites, including [shanehoey.com](https://shanehoey.com)
 
-**IMPORTANT** - This theme is always under active development, to ensure that I dont break something on your website please always fork this site, and use your own fork as the remote_theme.
+**IMPORTANT** - This theme is always under active development, to ensure that I don't break something on your website please always fork this site, and use your own fork as the remote_theme. once I reach v1.00 I will create a release that you can use instead.
 
-view a live example [snooey.netlify.com](https://snooey.netlify.com)
+View a live example @ [snooey.com](https://snooey.com)
 
-For instructions on how to use visit [github](https://github.com/shanehoey/snooey-template)
+##  Want more information
 
-### Current Build Status
+This repository just contains the remote theme files only,  refer to [github](https://github.com/snooey-template) for all documentation and example usage
+
+## Known Issues
+
+ * \# TODO Not yet at stable v1.00 release expect breaking changes
+
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/531d26ad-f8c2-412d-900e-e4cfe05603b3/deploy-status)](https://app.netlify.com/sites/snooey/deploys)
 
@@ -17,35 +22,35 @@ For instructions on how to use visit [github](https://github.com/shanehoey/snooe
 
 ### Enhancements  
 
-[] # TODO Enhancement -   v1.1 add plugin jekyll-seo-tag
+ * \# TODO Enhancement -   v1.1 add plugin jekyll-seo-tag
 
-[] # TODO Enhancement -   v1.1 migrate theme to scss
+ * \# TODO Enhancement -   v1.1 migrate theme to scss
 
-[] # TODO Enhancement -   v1.1 remove style attributes 
+ * \# TODO Enhancement -   v1.1 remove style attributes 
 
-[] # TODO Enhancement -   v1.0x _includes/pagination.html
+ * \# TODO Enhancement -   v1.0x _includes/pagination.html
 
-[] # TODO Enhancement -   v1.0x _includes/github.html
+ * \# TODO Enhancement -   v1.0x _includes/github.html
 
-[] # TODO Enhancement -   v1.0x _includes/form.html completed 
+ * \# TODO Enhancement -   v1.0x _includes/form.html completed 
 
-[] # TODO Enhancement -   vx.x _includes/subscribe.html forms
+ * \# TODO Enhancement -   vx.x _includes/subscribe.html forms
 
-[] # TODO Enhancement -   vx.x _includes/steps.html
+ * \# TODO Enhancement -   vx.x _includes/steps.html
 
-[] # TODO Enhancement -   vx.x _includes/faq.html
+ * \# TODO Enhancement -   vx.x _includes/faq.html
 
-[] # TODO Enhancement -   vx.x _includes/counter.html
+ * \# TODO Enhancement -   vx.x _includes/counter.html
 
-[] # TODO Enhancement -   vx.x _includes/list.html
+ * \# TODO Enhancement -   vx.x _includes/list.html
 
-[] # TODO Enhancement -   vx.x _includes/blog.html
+ * \# TODO Enhancement -   vx.x _includes/blog.html
 
-[] # TODO Enhancement -   vx.x _includes/coverpage.html
+ * \# TODO Enhancement -   vx.x _includes/coverpage.html
 
-[] # TODO Enhancement -   vx.x _includes/about.html
+ * \# TODO Enhancement -   vx.x _includes/about.html
 
-[] # TODO Enhancement -   x2.0x Ability to change the description etc on the fly,  eg post.description posts.[include.description] 
+ * \# TODO Enhancement -   x2.0x Ability to change the description etc on the fly,  eg post.description posts.[include.description] 
 
 ### Known Bugs
 
