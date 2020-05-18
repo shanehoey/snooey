@@ -29,7 +29,6 @@
 {% comment %}<!-- remove fixed-top to make it stick to top -->{% endcomment %}
 <header id="navigation">
     <nav id="navbar02" class = "navbar navbar-expand-lg {{ theme.class.section }}" {% if theme.style.section %}style = "{{ theme.style.section }}"{% endif %}>
-        <div class = "container-fluid" >
             {% if collection.url %}<a class="navbar-brand" href="{{ collection.url }}">{% endif %}
             {% if collection.title or collection.icon %}<span>{% endif %}
             {% if collection.icon %}<i class = "{{ collection.icon }} pr-1"></i>{% endif %}
@@ -60,7 +59,6 @@
                 {% endfor %}
                 </ul>
             </div>
-    </div>
     </nav> 
 {% comment %}
 # TODO Bug -  spacing is wrong this is a temp fix

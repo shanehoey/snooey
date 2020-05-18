@@ -27,8 +27,7 @@
 {% endunless %}
 
 <footer id="footer01" class="{{ theme.class.section }} p-3" {% if theme.style.section %}style="{{ theme.style.section }}"{% endif %} >
-        <div class="container">
-                {% if collection.url %}<a href="{{ collection.url }}"
+                  {% if collection.url %}<a href="{{ collection.url }}"
                         class='text-reset text-decoration-none'>{% endif %}
                         {% if collection.title or collection.icon %}<span class="pr-5">{% endif %}
                                 {% if collection.icon %}<i class="{{ collection.icon }} pr-1"></i>{% endif %}
@@ -40,5 +39,4 @@
                 <a href='{{ navitem.url }}'
                         class='text-reset text-decoration-none font-weight-light pr-1'>{{ navitem.title }}</a>
                 {% endfor %}
-        </div>
 </footer>
