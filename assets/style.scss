@@ -1,20 +1,56 @@
+---
 
+---
 $theme1: #3A0CA3; 
 $theme2: #4361EE;
 $theme3: #4CC9F0;
 $theme4: #7209B7;
 $theme5: #f17105;
 
-.bg-default { background-color: $theme1; }
-.bg-theme1 { background-color: $theme1; }
-.bg-theme2 { background-color: $theme2; }
-.bg-theme3 { background-color: $theme3; }
-.bg-theme4 { background-color: $theme4; }
-.bg-theme5 { background-color: $theme5; }
+.bg-default { 
+    background-color: $theme1;
+}
 
-.text-default { color: $theme1; }
-.text-theme1 { color: $theme1; }
-.text-theme2 { color: $theme2; }
-.text-theme3 { color: $theme3; }
-.text-theme4 { color: $theme4; }
-.text-theme5 { color: $theme5; }
+.bg-theme1 { 
+    background-color: $theme1;
+}
+
+.bg-theme2 { 
+    background-color: $theme2;
+ }
+
+.bg-theme3 {
+    background-color: $theme3; 
+}
+
+.bg-theme4 { 
+    background-color: $theme4; 
+}
+
+.bg-theme5 { 
+    background-color: $theme5; 
+}
+
+.text-default {
+    color: $theme1; 
+}
+
+.text-theme1 {
+    color: $theme1; 
+}
+
+.text-theme2 { 
+    color: $theme2; 
+}
+
+.text-theme3 { 
+    color: $theme3; 
+}
+
+.text-theme4 { 
+    color: $theme4; 
+}
+
+.text-theme5 { 
+    color: $theme5;
+ }
