@@ -1,0 +1,26 @@
+---
+---
+
+//TODO @import "accents";
+
+$theme-colors: (
+    accent1: #3A0CA3
+    accent2: #4361EE
+    accent3: #4CC9F0
+    accent4: #7209B7
+    accent5: #f17105
+);
+
+bg-default { background-color: $dark; }
+bg-accent1 { background-color: $accent2; }
+bg-accent2 { background-color: $accent3; }
+bg-accent3 { background-color: $accent4; }
+bg-accent4 { background-color: $accent5; }
+bg-accent5 { background-color: $accent6; }
+
+text-default { color: $dark; }
+text-accent1 { color: $accent2; }
+text-accent2 { color: $accent3; }
+text-accent3 { color: $accent4; }
+text-accent4 { color: $accent5; }
+text-accent5 { color: $accent6; }
