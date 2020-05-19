@@ -10,6 +10,10 @@ layout: default
 	
 -->
 {% endcomment %}
+{% assign pagetheme = site.data.theme.layout[page.theme] %}
+{% unless pagetheme %}
+{% assign pagetheme = site.data.theme.layout.default %}
+{% endunless %}
 <b>{{ pagetheme.class.body }}</b>
 <b>{{ pagetheme.class.section }}</b>
 <b>{{ pagetheme.class.container }}</b>
