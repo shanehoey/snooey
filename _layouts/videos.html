@@ -10,7 +10,9 @@ layout: default
     
 -->
 {% endcomment %}
-
+<b>{{ pagetheme.class.body }}</b>
+<b>{{ pagetheme.class.section }}</b>
+<b>{{ pagetheme.class.container }}</b>
 <section id="videos" {% if pagetheme.class.section %}class="{{pagetheme.class.section }}" {% endif %} {% if pagetheme.style.section %}style="{{ pagetheme.style.section }}" {% endif %}>
     {% if pagetheme.class.container %}<div id="container" class="{{ pagetheme.class.container }}">{% endif %}
     <div class="row">
