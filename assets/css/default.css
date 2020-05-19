@@ -1,12 +1,8 @@
-{% comment %}
-<!--
-    v1.00 assets/css/default.css
 
-# Documentation -  Add to documentation   
-# TODO Investigate - Can I remove these and convert to scss
+/* 
+# TODO - Convert all used to SCSS  
+*/
 
--->
-{% endcomment %}
 
 html,
 body {
