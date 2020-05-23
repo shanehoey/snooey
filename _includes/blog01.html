@@ -26,10 +26,10 @@
 
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = site.data.theme.blog.[page.theme] %}
+{% assign theme = site.data.theme.[page.theme] %}
 {% endunless %}
 {% unless theme %}
-{% assign theme = site.data.theme.blog.default %}
+{% assign theme = site.data.theme.theme1 %}
 {% endunless %}
 
 {% assign options = include.hidden | split:"," %}
@@ -72,31 +72,35 @@
 {% assign column2 = "col-md-8" %}
 {% endcase %}
 
-<section id="blog01" class="{{ theme.class.section }}" {% if theme.style.section %}style="{{ theme.style.section }}"{% endif %}>
-    {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
-    {% if title %}<h2 class="mb-4 pb-2 text-center {{ theme.class.title }}">{{ title }}</h2>{% endif %}
-    {% if description %}<p class="mx-auto mb-5 text-justify {{ theme.class.description }}">{{ description }}</p>
+{% assign section = include.section %}
+{% assign container = include.container %}
+
+<section id="blog01" class="{{ theme.bg.primary }} {{ theme.text.primary }} {{ section }}" >
+    {% if container %}<div id="container" class="{{ container }}">{% endif %}
+    {% if title %}<h2 class="mb-4 pb-2 text-center text-decoration-none {{ theme.text.primary }}">{{ title }}</h2>{% endif %}
+    {% if description %}<p class="mx-auto mb-5 text-justify {{ theme.theme1 }}">{{ description }}</p>
     {% endif %}
     {% for item in collection  limit: {{limit}} %}
     <div class="row">
         <div class="{{ column1 }}">
-            <img src="{{ item.image.horizontal }}" alt="{{ item.excerpt }}" class="{{ theme.class.item.image }}">
+            <img src="{{ item.image.horizontal }}" alt="{{ item.excerpt }}" class="img-fluid">
         </div>
         <div class="{{ column2 }}">
             {% unless options contains "title" %}<a href="{{ item.url }}">
-                <h3 class=" {{ theme.class.item.title }}">{{ item.title }}</h3>
+                <h3 class=" {{ theme.item.title }}">{{ item.title }}</h3>
             </a>{% endunless %}
-            {% unless options contains "subtitle" %}<h5 class="{{ theme.class.item.subtitle }}">{{ item.subtitle }}</h5>
+            {% unless options contains "subtitle" %}<h5 class="{{ theme.text.secondary }}">{{ item.subtitle }}</h5>
             {% endunless %}
-            {% unless options contains "description" %}<p class="{{ theme.class.item.description }}">
-                {{ item.description }}</p>{% endunless %}
+            {% unless options contains "description" %}<p class=" text-justify {{theme.text.primary }}">
+                {{ item.description }}</p>
+            {% endunless %}
             <div class="row">
                 <div class="col-md-9">
-                    {% unless options contains "excerpt" %}<p class="{{ theme.class.item.excerpt }}">{{ item.excerpt }}
+                    {% unless options contains "excerpt" %}<p class="text-small {{ theme.text.secondary }}">{{ item.excerpt }}
                     </p>{% endunless %}
                 </div>
                 <div class="col-md-3">
-                    {% unless options contains "button" %}<a class="{{theme.class.item.btn }}"
+                    {% unless options contains "button" %}<a class="btn btn-sm {{ theme.bg.primary }} {{ theme.text.secondary }}"
                         href="{{ item.url }}">visit {{ item.collection }}</a>{% endunless %}
                 </div>
             </div>
@@ -104,5 +108,5 @@
     </div>
     <hr/>
     {% endfor %}
-    {% if theme.class.container %}</div>{% endif %}
+    {% if container %}</div>{% endif %}
 </section>

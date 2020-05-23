@@ -25,23 +25,28 @@
 
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = site.data.theme.newsfeed.[page.theme] %}
+{% assign theme = site.data.theme.[page.theme] %}
 {% endunless %}
 {% unless theme %}
-{% assign theme = site.data.theme.newsfeed.default %}
+{% assign theme = site.data.theme.theme1 %}
 {% endunless %}
 
-<section id="newsfeed01" class = "{{ theme.class.section }}" {% if theme.style.section %}style = "{{ theme.style.section }}"{% endif %}>
-  {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
-  {% if title %}<h3 class=" {{ theme.class.title }}">{{ title }}</h3>{% endif %}
-  {% if description %}<p class="{{ theme.class.description }}">{{ description }}</p>{% endif %}
+{% assign section = include.section %}
+{% assign container = include.container %}
+
+
+
+<section id="newsfeed01" class="{{ theme.bg.primary }} {{theme.text.primary}} {{ section }}">
+  {% if container %}<div id="container" class="{{ container }}">{% endif %}
+ {% if title %}<h3 class="">{{ title }}</h3>{% endif %}
+  {% if description %}<p class="{{ theme.description }}">{{ description }}</p>{% endif %}
   <div class="row">
       {% for item in collection %}
       {% if forloop.first %}
       <div class="col-lg-6 col-md-12 mb-4">
-        <a href = "{{ item.url }}" class = "text-decoration-none"><img class="{{ theme.class.item.image }}" src = "{{ item.image.horizontal }}" alt = "{{ item.excerpt }}"></a>
-        <a href = "{{ item.url }}" class = "text-decoration-none"><h3 class="{{ theme.class.item.title }}">{{ item.title }}</h3></a>
-        <p class="{{ theme.class.item.description }}">{{ item.description }}</p>
+        <a href = "{{ item.url }}" class = "text-decoration-none"><img class="img-fluid rounded px-3" src = "{{ item.image.horizontal }}" alt = "{{ item.excerpt }}"></a>
+        <a href = "{{ item.url }}" class = "text-decoration-none"><h3 class="{{ theme.item.title }}">{{ item.title }}</h3></a>
+        <p class="text-justify">{{ item.description }}</p>
       </div>
       {% endif %}
       {% endfor %}
@@ -51,18 +56,18 @@
               <div class="row mb-2">
                   <div class = "col-md-3">
                       <a href = "{{ item.url }}" class = "text-decoration-none">
-                          <img class = "{{ theme.class.item.image }}" src = "{{ item.image.horizontal }}" alt = "{{ item.excerpt }}">
+                          <img class = "img-fluid rounded px-3" src = "{{ item.image.horizontal }}" alt = "{{ item.excerpt }}">
                       </a>
                   </div>
                   <div class="col-md-9">
                       <a href = "{{ item.url }}" class = "text-decoration-none">
-                          <h5 class="{{ theme.class.item.title }} m-0">{{ item.title }}</h5>
+                          <h5 class="{{ theme.item.title }} m-0">{{ item.title }}</h5>
                         </a>
-                      <p class="{{ theme.class.item.description }} text-truncate">{{ item.description }}</p>
+                      <p class=" text-decoration-none text-justify text-truncate">{{ item.description }}</p>
                     </div>
               </div>
           {% endfor %}
       </div>
     </div>
-    {% if theme.class.container %}</div>{% endif %}
+    {% if container %}</div>{% endif %}
 </section>

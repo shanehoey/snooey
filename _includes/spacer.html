@@ -8,13 +8,15 @@
   
 -->
 {% endcomment %}
-
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = site.data.theme.spacer.[page.theme] %}
+{% assign theme = site.data.theme.[page.theme] %}
 {% endunless %}
 {% unless theme %}
-{% assign theme = site.data.theme.spacer.default %}
+{% assign theme = site.data.theme.theme1 %}
 {% endunless %}
 
- <Section id = "Spacer" class = "{{ theme.class.section }}" {% if theme.style.section %}style = "{{ theme.style.section }}"{% endif %}></Section>
+{% assign section = include.section %}
+{% assign container = include.container %}
+
+<Section id = "spacer" class="{{ theme.bg.primary }} {{ theme.text.primary}} {{ section }}" ></Section>

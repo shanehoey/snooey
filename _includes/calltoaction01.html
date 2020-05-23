@@ -14,10 +14,10 @@
 
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = site.data.theme.calltoaction.[page.theme] %}
+{% assign theme = site.data.theme.[page.theme] %}
 {% endunless %}
 {% unless theme %}
-{% assign theme = site.data.theme.calltoaction.default %}
+{% assign theme = site.data.theme.theme1 %}
 {% endunless %}
 
 {% assign collection = include.collection %}
@@ -29,17 +29,18 @@
 {% endunless %}
 
 {% assign button = "Read More.." %}
+{% assign section = include.section %}
+{% assign container = include.container %}
 
-<section id="calltoaction01" class="px-0 {{ theme.class.section }}" {% if theme.style.section %}style="{{ theme.style.section }}" {% endif %}>
-{% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
-{% for item in collection  limit: 1 %}
-    <div class="p-4">
-        {% if item.title %}<h3 class="text-center {{ theme.class.title }}">{{ item.title }}</h3>{% endif %}
-        {% if item.subtitle %}<p class="text-center {{ theme.class.subtitle }}">{{ item.subtitle }}</p>{% endif %}
-        {% if item.url %}<p class="text-center m-0"><a class=" {{ theme.class.btn }}"
-                href="{{ item.url }}" role="button">{{ button }}</a></p>
+<section id="calltoaction01" class="{{ theme.bg.primary }} {{ theme.text.primary }} {{ section }}">
+    {% if container %}<div id="container" class="{{ container }}">{% endif %}
+ {% for item in collection  limit: 1 %}
+    <div class="p-4 text-center">
+        {% if item.title %}<h3 class="">{{ item.title }}</h3>{% endif %}
+        {% if item.subtitle %}<p class="">{{ item.subtitle }}</p>{% endif %}
+        {% if item.url %}<a class="btn btn-outline-dark" href="{{ item.url }}" role="button">{{ button }}</a>
         {% endif %}
     </div>
     {% endfor %}
-{% if theme.class.container %}</div>{% endif %}
+{% if container %}</div>{% endif %}
 </section>

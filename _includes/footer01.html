@@ -20,25 +20,25 @@
 
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = site.data.theme.footer.[page.theme] %}
+{% assign theme = site.data.theme.[page.theme] %}
 {% endunless %}
 {% unless theme %}
-{% assign theme = site.data.theme.footer.default %}
+{% assign theme = site.data.theme.theme1 %}
 {% endunless %}
 
-<footer id="footer01" class="{{ theme.class.section }} p-3" {% if theme.style.section %}style="{{ theme.style.section }}"{% endif %} >
-        {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}          
-        {% if collection.url %}<a href="{{ collection.url }}"
-                        class='text-reset text-decoration-none'>{% endif %}
-                        {% if collection.title or collection.icon %}<span class="pr-5">{% endif %}
-                                {% if collection.icon %}<i class="{{ collection.icon }} pr-1"></i>{% endif %}
-                                {% if collection.title %}<span
-                                        class="font-weight-bold">{{ collection.title }}</span>{% endif %}
-                                {% if collection.title or collection.icon %}</span>{% endif %}
-                        {% if collection.url %}</a>{% endif %}
-                {% for navitem in collection.navigation %}
-                <a href='{{ navitem.url }}'
-                        class='text-reset text-decoration-none font-weight-light pr-1'>{{ navitem.title }}</a>
-                {% endfor %}
-                {% if theme.class.container %}</div>{% endif %}
+{% assign section = include.section %}
+{% assign container = include.container %}
+
+<section id="footer01" class="p-4 {{ theme.bg.primary }} {{theme.text.primary}} {{ section }}">
+        {% if container %}<div id="container" class="{{ container }}">{% endif %}
+        {% if collection.url %}<a href="{{ collection.url }}" class='text-reset text-decoration-none'>{% endif %}
+        {% if collection.title or collection.icon %}<span class="pr-5">{% endif %}
+        {% if collection.icon %}<i class="{{ collection.icon }} pr-1"></i>{% endif %}
+        {% if collection.title %}<span class="font-weight-bold">{{ collection.title }}</span>{% endif %}
+        {% if collection.title or collection.icon %}</span>{% endif %}
+        {% if collection.url %}</a>{% endif %}
+        {% for navitem in collection.navigation %}
+                <a href='{{ navitem.url }}' class='text-reset text-decoration-none font-weight-light pr-1'>{{ navitem.title }}</a>
+        {% endfor %}
+        {% if container %}</div>{% endif %}
 </footer>

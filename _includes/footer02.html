@@ -20,20 +20,22 @@
 
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = site.data.theme.footer.[page.theme] %}
+{% assign theme = site.data.theme.[page.theme] %}
 {% endunless %}
 {% unless theme %}
-{% assign theme = site.data.theme.footer.default %}
+{% assign theme = site.data.theme.theme1 %}
 {% endunless %}
 
-<footer id="footer02" class="{{ theme.class.section }} p-3" {% if theme.style.section %} style="{{ theme.style.section }}" {% endif %}>
-    {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
-    <p class="text-reset text-center font-weight-light small">{{ collection.copyright}}<br>
+{% assign section = include.section %}
+{% assign container = include.container %}
+
+<section id="footer02" class="p-4 {{ theme.bg.primary }} {{theme.text.primary}} {{ section }} ">
+    {% if container %}<div id="container" class="{{ container }}">{% endif %}
+           <p class="text-reset text-center font-weight-light small">{{ collection.copyright}}<br>
         {% for item in collection.navigation %}
         <a href="{{ item.url}}"
             class="text-reset text-center text-decoration-none font-weight-light px-2 small">{{ item.title }}</a>
         {% endfor %}
     </p>
-    {% if theme.class.container %}</div>{% endif %}
+    {% if container %}</div>{% endif %}
 </footer>
-F

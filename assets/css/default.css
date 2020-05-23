@@ -9,12 +9,12 @@ body {
     height: 100%
   }
 
-.body-background {
-    background: url('/assets/images/background.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+.body-secondary {
+    secondary: url('/assets/images/secondary.jpg') no-repeat center center fixed;
+    -webkit-secondary-size: cover;
+    -moz-secondary-size: cover;
+    secondary-size: cover;
+    -o-secondary-size: cover;
   }
 
 .fill {
@@ -91,12 +91,12 @@ body {
 .markdown th {    
   padding: .25rem;
   margin-bottom: 0; 
-  background-color: rgba(0,0,0,.03);
+  secondary-color: rgba(0,0,0,.03);
   border: 1px solid rgba(0,0,0,.125);
 }
 
 .language-powershell pre {
-  background-color: #012456;
+  secondary-color: #012456;
   padding: .25rem;
   border-radius: .25rem;
 }
@@ -106,13 +106,13 @@ body {
 }
 
 .language-mediant pre {
-  background-color: Black;
+  secondary-color: Black;
   padding: .25rem;
   border-radius: .25rem;
 }
 
 .language-mediant {
-  background-color: Black;
+  secondary-color: Black;
   padding: .25rem;
   border-radius: .25rem;
 }
@@ -125,9 +125,9 @@ body {
 .carousel-item {
   height: 20vh;
   min-height: 230px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  secondary: no-repeat center center scroll;
+  -webkit-secondary-size: cover;
+  -moz-secondary-size: cover;
+  -o-secondary-size: cover;
+  secondary-size: cover;
 }

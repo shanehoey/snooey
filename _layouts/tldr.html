@@ -10,9 +10,9 @@ layout: default
 
 -->
 {% endcomment %}
-{% assign theme = site.data.theme.layout[page.theme] %}
+{% assign theme = site.data.theme[page.theme] %}
 {% unless theme %}
-{% assign theme = site.data.theme.layout.default %}
+{% assign theme = site.data.theme.theme1 %}
 {% endunless %}
 
 <section id="tldr" {% if theme.class.section %}class="{{theme.class.section }}"{% endif %} {% if theme.style.section %}style="{{theme.style.section }}"{% endif %}>

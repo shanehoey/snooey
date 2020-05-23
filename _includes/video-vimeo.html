@@ -4,8 +4,8 @@
     
 # Documentation -  Add to documentation
     
-    include video-vimeo.html    id = [string]
-                                width = [integer] (default 640)
+    include video-vimeo.html    id     = [string] vimeo idF
+                                width  = [integer] (default 640)
                                 height = [integer] (default 480)
                                 
 -->
@@ -23,6 +23,17 @@
 {% assign height = "480" %}
 {% endunless %}
 
+{% assign theme = include.theme %}
+{% unless theme %}
+{% assign theme = site.data.theme.[page.theme] %}
+{% endunless %}
+{% unless theme %}
+{% assign theme = site.data.theme.theme1 %}
+{% endunless %}
+{% assign section = include.section %}
+{% assign container = include.container %}
+
 {% if include.id %}
-<iframe src="https://player.vimeo.com/video/{{ id }}" width="{{ width }}" height="{{ height }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/{{ id }}" width="{{ width }}" height="{{ height }}" frameborder="0"
+    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 {% endif %}

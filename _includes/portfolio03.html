@@ -3,7 +3,7 @@
     v1.00 _includes/portfolio03.html
 
 # Documentation -  Add to documentation
-# TODO Enhancement -  Needs improvement to layout and theme
+# TODO Enhancement -  Needs improvement to layout and brand
 
     include portfolio02.html    title = [string] (optional)
                                 description = [sting] (optional)
@@ -33,10 +33,10 @@
 
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = site.data.theme.portfolio.[page.theme] %}
+{% assign theme = site.data.theme.[page.theme] %}
 {% endunless %}
 {% unless theme %}
-{% assign theme = site.data.theme.portfolio.default %}
+{% assign theme = site.data.theme.theme1 %}
 {% endunless %}
 
 {% case include.columns %}
@@ -80,10 +80,15 @@
         {% assign column1 = "col-md-0" %}
         {% assign column2 = "col-md-12" %}
     {% endif %}
+
+    {% assign section = include.section %}
+    {% assign container = include.container %}
+
     
-<section id = "portfolio">
-    {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
-    {% for item in collection limit: limit %}
+
+    <section id="portfolio03" class="{{ theme.bg.primary }} {{theme.text.primary}} {{ section }}">
+        {% if container %}<div id="container" class="{{ container }}">{% endif %}
+         {% for item in collection limit: limit %}
         <div class="row">
              <div class="{{ column1 }}">
                 <a href="{{ item.url }}"><img class="img-fluid rounded mb-3 mb-md-0" src="{{ item.image.horizontal }}" alt=""></a>
@@ -98,5 +103,5 @@
         </div>
         <hr/>
     {% endfor %}
-    {% if theme.class.container %}</div>{% endif %}
+    {% if container %}</div>{% endif %}
     </section>

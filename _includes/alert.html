@@ -9,32 +9,51 @@
                         
 -->
 {% endcomment %}
+--- 
+alert:
+    default:
+        class: alert alert-primary alert-dismissible fade show
+         icon:
+    warning:
+        class: alert alert-warning alert alert-dismissible fade show
+        icon: fas fa-exclamation-triangle
+    error:
+        class: alert alert-danger alert-dismissible fade show
+        icon: fas fa-exclamation-square
+    theme1:
+        class: alert text-white brand-bg-unsplash4
+        icon:
+    theme2:
+        class: alert fade show brand-bg-pattern
+        icon: fas fa-rocket pr-1
 
+---
 {% assign message = include.message %}
+
+
+{% assign theme = include.theme %}
+{% unless theme %}
+{% assign theme = page.alert.default %}
+{% endunless %}
 
 {% assign icon = include.icon %}
 {% unless icon %}
 {% assign icon = theme.icon %}
 {% endunless %}
 
-{% assign theme = site.data.theme.alert.[include.theme] %}
-{% unless theme %}
-{% assign theme = site.data.theme.alert.[page.theme] %}
-{% endunless %}
-{% unless theme %}
-{% assign theme = site.data.theme.alert.default %}
-{% endunless %}
+{% assign section = include.section %}
+{% assign container = include.container %}
 
 {% if message %}
-<section id="alert" class="{{ theme.class }}" style="{{ theme.style }}" role="alert">
-    {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
-    {% if icon %} <i class="{{ icon }}"></i>{% endif %}
-    {{ message }}
-    {% if theme.class contains "dismiss" %}
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
+<section id="alert" class="{{ theme.class }}" role="alert">
+    {% if container %}<div id="container" class="{{ container }}">{% endif %}
+        {% if icon %} <i class="{{ icon }}"></i>{% endif %}
+        {{ message }}
+        {% if theme.class contains "dismiss" %}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
     {% endif %}
 </section>
-{% if theme.class.container %}</div>{% endif %}
+{% if container %}</div>{% endif %}
 {% endif %}

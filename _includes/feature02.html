@@ -31,24 +31,28 @@
 
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = site.data.theme.feature.[page.theme] %}
+{% assign theme = site.data.theme.[page.theme] %}
 {% endunless %}
 {% unless theme %}
-{% assign theme = site.data.theme.feature.default %}
+{% assign theme = site.data.theme.theme1 %}
 {% endunless %}
 
-<section id="feature01" class="{{ theme.class.section }}" style="{{ theme.style.section}}">
-    {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
-    {% if title %}<h2 class="mb-4 pb-2 text-center {{ theme.class.title }}">{{ title }}</h2>{% endif %}
-    {% if description %}<p class="mx-auto mb-5 text-justify {{ theme.class.description }}">{{ description }}</p>{% endif %}
+{% assign section = include.section %}
+{% assign container = include.container %}
+
+
+<section id="feature02" class="{{ theme.bg.primary }} {{theme.text.primary}} {{ section }}">
+    {% if container %}<div id="container" class="{{ container }}">{% endif %}
+            {% if title %}<h2 class="mb-4 pb-2 text-center {{ theme.text.secondary }}">{{ title }}</h2>{% endif %}
+    {% if description %}<p class="mx-auto mb-5 text-justify {{ theme.text.primary }}">{{ description }}</p>{% endif %}
     <div class="row text-center d-flex justify-content-center my-5">
         {% for item in collection limit: {{limit}} %}
         <div class="col-lg-6 col-md-6 mb-4">
-            <i class="{{ item.icon }} {{ theme.class.item.icon }} mb-4 "></i>
-            <h5 class="{{ theme.class.item.subtitle }}">{{ item.title }}</h5>
-            <p class="mb-0 {{ theme.class.item.excerpt }}">{{ item.excerpt }}</p>
+            <i class="{{ item.icon }} fa-3x {{ theme.text.secondary }} mb-4 "></i>
+            <h5 class="{{ theme.text.primary }}">{{ item.title }}</h5>
+            <p class="mb-0 {{ theme.text.primary }}">{{ item.excerpt }}</p>
         </div>
         {% endfor %}
     </div>
-    {% if theme.class.container %}</div>{% endif %}
+    {% if container %}</div>{% endif %}
 </section>

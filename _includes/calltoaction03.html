@@ -23,26 +23,29 @@
 
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = site.data.theme.calltoaction.[page.theme] %}
+{% assign theme = site.data.theme.[page.theme] %}
 {% endunless %}
 {% unless theme %}
-{% assign theme = site.data.theme.calltoaction.default %}
+{% assign theme = site.data.theme.theme1 %}
 {% endunless %}
-
 {% assign button = "Read More.." %}
+{% assign section = include.section %}
+{% assign container = include.container %}
 
-<section id="calltoaction03" class="{{ theme.class.section }} p-3" {% if theme.style.section %}style="{{ theme.style.section }}" {% endif %}>
+<section id="calltoaction03" class="{{ theme.bg.primary }} {{theme.text.primary}} {{ section }}">
+    {% if container %}<div id="container" class="{{ container }}">{% endif %}
+
     {% for item in collection  limit: 1 %}
-    {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
-    <div class="row {{ theme.class.div }}">
+    <div class="row ">
         <div class="col-lg-4 mb-lg-0 mb-md-4 align-self-center justify-content-center">
-            <h3 class="{{ theme.class.title }}">{{ item.title }}</h3>
+            <h3 class="">{{ item.title }}</h3>
         </div>
         <div class="col-lg-8">
-            <p class="{{ theme.class.subtitle }}">{{ item.subtitle }}</p>
-            <a class="{{ theme.class.btn }} float-right" href="{{ item.url }}" role="button">{{ button }}</a>
+            <p class="">{{ item.subtitle }}</p>
+            <a class="float-right" href="{{ item.url }}" role="button">{{ button }}</a>
         </div>
     </div>
-    {% if theme.class.container %}</div>{% endif %}
+    
     {% endfor %}
+    {% if container %}</div>{% endif %}
 </section>

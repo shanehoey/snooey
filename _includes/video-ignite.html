@@ -4,8 +4,8 @@
     
 # Documentation -  Add to documentation
     
-    include video-ignite.html   id = [string]
-                                width = [integer] (default 640)
+    include video-ignite.html   id     = [string] (ignite id)
+                                width  = [integer] (default 640)
                                 height = [integer] (default 480)
                                 
 -->
@@ -22,6 +22,16 @@
 {% unless height %}
 {% assign height = "480" %}
 {% endunless %}
+
+{% assign theme = include.theme %}
+{% unless theme %}
+{% assign theme = site.data.theme.[page.theme] %}
+{% endunless %}
+{% unless theme %}
+{% assign theme = site.data.theme.theme1 %}
+{% endunless %}
+{% assign section = include.section %}
+{% assign container = include.container %}
 
 {% if include.id %}
 <iframe ng-if="ctrl.showVideo" width="{{ width }}" height="{{ height }}" ng-src="https://medius.studios.ms/Embed/Video-nc/{{id}}?referrer=MyIgnite-%2Fsessions%2F80462" frameborder="0" allowfullscreen="" ng-i18next="__once__[aria-label:i18next]({title: &quot;Getting hands-on managing Microsoft Teams&quot;}) translate.live-stream.labels.live-stream-for" aria-label="Live stream for Getting hands-on managing Microsoft Teams" src="https://medius.studios.ms/Embed/Video-nc/{{id}}?referrer=MyIgnite-%2Fsessions%2F80462"></iframe>

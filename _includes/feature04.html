@@ -26,17 +26,20 @@
 
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = site.data.theme.feature.[page.theme] %}
+{% assign theme = site.data.theme.[page.theme] %}
 {% endunless %}
 {% unless theme %}
-{% assign theme = site.data.theme.feature.default %}
+{% assign theme = site.data.theme.theme1 %}
 {% endunless %}
 
+{% assign section = include.section %}
+{% assign container = include.container %}
+
 {% for item in collection limit: {{limit}} %}
-<section id = "feature04" class = "p-4 {{ theme.class.section }}" {% if theme.style.section %}style = "{{ theme.style.section }}"{% endif %}>
-    {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
-    {% if item.title %}<h2 class="{{ theme.class.item.title }}">{{ item.title }}</h2>{% endif %}
-    {% if item.description %}<p class="{{ theme.class.item.description }}">{{ item.description }}</p>{% endif %}
-    {% if theme.class.container %}</div>{% endif %}
+<section id="feature04" class="{{ theme.bg.primary }} {{theme.text.primary}} {{ section }}">
+    {% if container %}<div id="container" class="{{ container }}">{% endif %}
+            {% if item.title %}<h2 class="{{ theme.text.primary }}">{{ item.title }}</h2>{% endif %}
+    {% if item.description %}<p class="text-justify {{ theme.text.primary }}">{{ item.description }}</p>{% endif %}
+    {% if container %}</div>{% endif %}
 </section>
 {% endfor %}

@@ -1,0 +1,107 @@
+/* branding */
+
+// brand-images
+$brand-images: () !default;
+$brand-images: map-merge((
+        "unsplash1": $brand-unsplash1,
+        "unsplash2": $brand-unsplash2,
+        "unsplash3": $brand-unsplash3,
+        "unsplash4": $brand-unsplash4,
+        "unsplash5": $brand-unsplash5,
+        "pattern":   $brand-pattern,
+        "background": $brand-background,
+        "horizontal": $brand-horizontal,
+        "vertical": $brand-vertical,
+        "profile": $brand-profile), $brand-images);
+
+// brand-colors
+$brand-colors: () !default;
+$brand-colors: map-merge((
+        "color1": $brand-color1,
+        "color2": $brand-color2,
+        "color3": $brand-color3,
+        "color4": $brand-color4,
+        "color5": $brand-color5,
+        "light": $brand-light,
+        "dark": $brand-dark), $brand-colors);
+
+// brand-icons
+$brand-icons: () !default;
+$brand-icons: map-merge((
+        "icon1": $brand-icon1,
+        "icon2": $brand-icon2,
+        "icon3": $brand-icon3,
+        "icon4": $brand-icon4,
+        "icon5": $brand-icon5), $brand-icons);
+
+/* 
+    .brand-bg-{color}
+*/
+@each $name,$value in $brand-colors {
+    .brand-bg-#{$name} {
+        background-color: $value;
+    }
+}
+
+/* 
+    .brand-bg-{image} 
+*/
+@each $name,$value in $brand-images {
+    .brand-bg-#{$name} {
+        background: url('#{$value}');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+}
+
+/* 
+    .brand-bg-{image}-fixed
+*/
+@each $name,$value in $brand-images {
+    .brand-bg-#{$name}-fixed {
+        background: url('#{$value}/') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+}
+
+/* 
+    .brand-text-{color}
+*/
+@each $name,$value in $brand-colors {
+    .brand-text-#{$name} {
+        color: $value;
+    }
+}
+
+/* 
+    .brand-icon-{icon}
+*/
+@each $name,
+$value in $brand-icons {
+    .brand-icon-#{$name} {
+        content: "${value}";
+        position: absolute;
+    }
+
+}
+
+.brand-pattern-dr {
+    background: url('/assets/images/secondary-pattern.png'), linear-gradient(to left, #4C5657, #253036);
+}
+
+a {
+    color : $brand-color1;
+    text-decoration : none;
+    background-color : transparent;
+}
+
+#breadcrumb a {
+    color : $brand-light;
+    text-decoration : none;
+    background-color : transparent;
+}

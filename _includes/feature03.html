@@ -37,32 +37,35 @@
 {% assign description   =  collection.description %}
 {% endunless %}
 
-{% assign theme         =  include.theme %}
+{% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = site.data.theme.feature.[page.theme] %}
+{% assign theme = site.data.theme.[page.theme] %}
 {% endunless %}
 {% unless theme %}
-{% assign theme = site.data.theme.feature.default %}
+{% assign theme = site.data.theme.theme1 %}
 {% endunless %}
 
-<section id = "feature02" class = "{{ theme.class.section }}" {% if theme.style.section %}style = "{{ theme.style.section }}"{% endif %}>
-    {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
-    {% if title %}<h2 class="text-center pt-4 {{ theme.class.title }}">{{ title }}</h2>{% endif %}
-    {% if description %}<p class="text-justify pb-4 {{ theme.class.description }}">{{ description }}</p>{% endif %}
-    <div class="row ">
+{% assign section = include.section %}
+{% assign container = include.container %}
+
+<section id="feature03" class="{{ theme.bg.primary }} {{theme.text.primary}} {{ section }}">
+    {% if container %}<div id="container" class="{{ container }}">{% endif %}
+           {% if title %}<h2 class="text-center pt-4 {{ theme.text.secondary }}">{{ title }}</h2>{% endif %}
+    {% if description %}<p class="text-justify pb-4 {{ theme.text.primary }}">{{ description }}</p>{% endif %}
+    <div class="row">
         {% for item in collection limit: {{limit}} %}
             <div class = "col-md-4 mb-5 pt-5">
                 <div class = "row">
                     <div class = "col-lg-2 col-md-3 col-2">
-                        <i class = "{{ item.icon }} fa-1x {{ theme.class.item.icon | replace: "fa-1x", "" | replace: "fa-2x", "" | replace: "fa-3x", "" | replace: "fa-4x", "" | replace: "fa-5x", "" }} "></i>
+                        <i class = "{{ item.icon }} fa-1x {{ theme.text.secondary }}"></i>
                     </div>
                     <div class="col-lg-10 col-md-9 col-10">
-                        <h4 class = "{{ theme.class.item.title }}">{{item.title}}</h4>
-                        <p class = "{{ theme.class.item.excerpt }}">{{item.excerpt}}</p>
+                        <h4 class = "{{ theme.text.secondary }}">{{item.title}}</h4>
+                        <p class = "{{ theme.text.primary }}">{{item.excerpt}}</p>
                     </div>
                 </div>
             </div>
         {% endfor %}
     </div>
-    {% if theme.class.container %}</div>{% endif %}
+    {% if container %}</div>{% endif %}
 </section>

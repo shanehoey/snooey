@@ -35,27 +35,31 @@
 
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = site.data.theme.newsfeed.[page.theme] %}
+{% assign theme = site.data.theme.[page.theme] %}
 {% endunless %}
 {% unless theme %}
-{% assign theme = site.data.theme.newsfeed.default %}
+{% assign theme = site.data.theme.theme1 %}
 {% endunless %}
 
-  <section id="newsfeed02" class = "{{ theme.class.section }}" {% if theme.style.section %}style = "{{ theme.style.section }}"{% endif %}>
-    {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
-    {% if title %}<h3 class="text-center font-weight-bold p-3 {{ theme.class.title }}">{{ title }}</h3>{% endif %}
-    {% if description %}<p class="text-justify mx-auto p-3">{{ description }}</p>{% endif %}
+{% assign section = include.section %}
+{% assign container = include.container %}
+
+
+<section id="newsfeed02" class="{{ theme.bg.primary }} {{theme.text.primary}} {{ section }}">
+  {% if container %}<div id="container" class="{{ container }}">{% endif %}
+   {% if title %}<h3 class="text-center font-weight-bold p-3 {{ theme.text.secondary }}">{{ title }}</h3>{% endif %}
+    {% if description %}<p class="text-justify mx-auto p-3 {{ theme.text.primary }}">{{ description }}</p>{% endif %}
     <div class="row p-3">
       <div class="col-lg-6 col-md-12">
         {% for post in collection limit: limit %}
         {% if forloop.first %}
         <a href = "{{ post.url }}" class = "text-decoration-none">
-            <img class="img-fluid" src = "{{ post.image.horizontal }}" alt = "{{ post.excerpt }}">
+            <img class="img-fluid rounded" src = "{{ post.image.horizontal }}" alt = "{{ post.excerpt }}">
         </a>
         <a href = "{{ post.url }}" class = "text-decoration-none">
-            <h3 class="{{ theme.class.title }}">{{ post.title }}</h3>
+            <h3 class="{{ theme.text.secondary }}">{{ post.title }}</h3>
         </a>
-            <p class="{{ theme.class.description }} text-justify">{{ post.description }}</p>
+            <p class="{{ theme.text.primary }} text-justify">{{ post.description }}</p>
         {% else %}
           <div class="row p-3">
               <div class="col-md-3">
@@ -65,27 +69,25 @@
               </div>
               <div class="col-md-9">
                 <a href = "{{ post.url }}" class = "text-decoration-none">
-                  <h5 class="{{ theme.class.title }} m-0">{{ post.title }}</h5>
+                  <h5 class="{{ theme.text.secondary }} m-0">{{ post.title }}</h5>
                 </a>
-                <p class="{{ theme.class.description }} text-truncate">{{ post.description }}</p>
+                <p class="{{ theme.text.primary }} text-truncate">{{ post.description }}</p>
               </div>
           </div>
         {% endif %}
         {% endfor %}
       </div>
-      {% comment %}
-      <!--column2-->
-      {% endcomment %}
+
       <div class="col-lg-6 col-md-12">
           {% for post in collection2 limit: limit %}
           {% if forloop.first %}
           <a href = "{{ post.url }}" class = "text-decoration-none">
-            <img class="img-fluid" src = "{{ post.image.horizontal }}" alt = "{{ post.excerpt }}">
+            <img class="img-fluid rounded" src = "{{ post.image.horizontal }}" alt = "{{ post.excerpt }}">
         </a>
         <a href = "{{ post.url }}" class = "text-decoration-none">
-            <h3 class="{{ theme.class.title }}">{{ post.title }}</h3>
+            <h3 class="{{ theme.text.secondary }}">{{ post.title }}</h3>
         </a>
-            <p class="{{ theme.class.description }} text-justify">{{ post.description }}</p>
+            <p class="{{ theme.text.primary }} text-justify">{{ post.description }}</p>
         {% else %}
       <div class ="row p-3">
         <div class = "col-md-3">
@@ -95,14 +97,14 @@
         </div>
         <div class="col-md-9">
           <a href = "{{ post.url }}" class = "text-decoration-none">
-            <h5 class="{{ theme.class.title }} m-0">{{ post.title }}</h5>
+            <h5 class="{{ theme.text.secondary }} m-0">{{ post.title }}</h5>
           </a>
-          <p class="{{ theme.class.description }} text-truncate">{{ post.description }}</p>
+          <p class="{{ theme.text.primary }} text-truncate">{{ post.description }}</p>
         </div>
     </div>
       {% endif %}
         {% endfor %}
       </div>
     </div>
-    {% if theme.class.container %}</div>{% endif %}
+    {% if container %}</div>{% endif %}
   </section>

@@ -2,7 +2,7 @@
 <!--
     v1.00 _includes/carousel.html
 
-# TODO Enhancement -  Add a page theme 
+# TODO Enhancement -  Add a page brand 
 
     include carousel.html    collection = [object] (optional site.data.carousel.default) 
     
@@ -17,9 +17,20 @@
 {% assign collection = site.data.carousel.default %}
 {% endunless %}
 
-<section id="carousel">
-    {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
-    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+{% assign theme = include.theme %}
+{% unless theme %}
+{% assign theme = site.data.theme.[page.theme] %}
+{% endunless %}
+{% unless theme %}
+{% assign theme = site.data.theme.theme1 %}
+{% endunless %}
+
+{% assign section = include.section %}
+{% assign container = include.container %}
+
+<section id="carousel" class="{{ theme.bg.primary }} {{theme.text.primary}} {{ section }}">
+    {% if container %}<div id="container" class="{{ container }}">{% endif %}
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
         <ol class="carousel-indicators">
             {% for item in collection %}
             {% if forloop.index == 1 %}
@@ -60,5 +71,5 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        {% if theme.class.container %}</div>{% endif %}
+        {% if container %}</div>{% endif %}
 </section>

@@ -10,20 +10,18 @@ layout: default
 	
 -->
 {% endcomment %}
-{% assign theme = site.data.theme.layout[page.theme] %}
+{% assign theme = site.data.theme[page.theme] %}
 {% unless theme %}
-{% assign theme = site.data.theme.layout.default %}
+{% assign theme = site.data.theme.theme1 %}
 {% endunless %}
 
-<section id="code" {% if theme.class.section %}class="{{ theme.class.section }}"{% endif %} {% if theme.style.section %}style="{{ theme.style.section }}"{% endif %}>
-	{% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
-		<div class="row">
-			<div class="col-sm-8" id="main">
-				{{ content }}
-			</div>
-			<div class="col-sm-4" id="sidebar">
-				{% include toc.html html=content class="list-group sticky-top" item_class="list-group-item  list-group-item-action" h_min=2 h_max=2 sanitize=true %}
-			</div>
+<section id="code" >
+	<div class="row">
+		<div class="col-sm-8" id="main">
+			{{ content }}
 		</div>
-		{% if theme.class.container %}</div>"{% endif %}
+		<div class="col-sm-4" id="sidebar">
+			{% include toc.html html=content class="list-group sticky-top" item_class="list-group-item  list-group-item-action" h_min=2 h_max=2 sanitize=true %}
+		</div>
+	</div>
 </section>

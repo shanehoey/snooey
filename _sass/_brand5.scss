@@ -1,0 +1,43 @@
+/* brand5 */
+
+// color
+$brand-color1: rgba(0, 166, 251, 1);
+$brand-color2: rgba(5, 130, 202, 1);
+$brand-color3: rgba(0, 100, 148, 1);
+$brand-color4: rgba(0, 53, 84, 1);
+$brand-color5: rgba(5, 25, 35, 1);
+$brand-light: white !global;
+$brand-dark: black !global;
+
+// gradient
+$brand-gradient-top: linear-gradient(0deg, #00a6fbff, #0582caff, #006494ff, #003554ff, #051923ff);
+$brand-gradient-right: linear-gradient(90deg, #00a6fbff, #0582caff, #006494ff, #003554ff, #051923ff);
+$brand-gradient-bottom: linear-gradient(180deg, #00a6fbff, #0582caff, #006494ff, #003554ff, #051923ff);
+$brand-gradient-left: linear-gradient(270deg, #00a6fbff, #0582caff, #006494ff, #003554ff, #051923ff);
+$brand-gradient-top-right: linear-gradient(45deg, #00a6fbff, #0582caff, #006494ff, #003554ff, #051923ff);
+$brand-gradient-bottom-right: linear-gradient(135deg, #00a6fbff, #0582caff, #006494ff, #003554ff, #051923ff);
+$brand-gradient-top-left: linear-gradient(225deg, #00a6fbff, #0582caff, #006494ff, #003554ff, #051923ff);
+$brand-gradient-bottom-left: linear-gradient(315deg, #00a6fbff, #0582caff, #006494ff, #003554ff, #051923ff);
+$brand-gradient-radial: radial-gradient(#00a6fbff, #0582caff, #006494ff, #003554ff, #051923ff);
+
+// Image
+$brand-unsplash1: "jay5BqVyf5A" !global;
+$brand-unsplash2: "bepwY8khinw" !global;
+$brand-unsplash3: "KdeqA3aTnBY" !global;
+$brand-unsplash4: "8Gl7Ew-q6D8" !global;
+$brand-unsplash5: "vflFGBYCiO8" !global;
+$brand-pattern:   "/assets/images/pattern.png" !global;
+$brand-background: "/assets/images/background.jpg" !global;
+$brand-horizontal: "/assets/images/horizontal.png" !global;
+$brand-square: "/assets/images/square.png" !global;
+$brand-vertical: "/assets/images/vertical.png" !global;
+$brand-profile: "/assets/images/profile.png" !global;
+
+// icons
+$brand-icon1:"/f2c1" !global; // fas fa-id-badge
+$brand-icon2:"/f007" !global; // fas fa-user
+$brand-icon3:"/f0c0" !global; // fas fa-users
+$brand-icon4:"/f2a0" !global; // fas fa-phone-volume
+$brand-icon5:"/f7d9" !global; // rocket 
+
+

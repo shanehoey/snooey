@@ -3,7 +3,7 @@
     v1.00 _includes/portfolio02.html
 
 # Documentation -  Add to documentation
-# TODO Enhancement -  Needs improvement to layout and theme
+# TODO Enhancement -  Needs improvement to layout and brand
 
     include portfolio02.html    title = [string] (optional)
                                 description = [sting] (optional)
@@ -33,10 +33,10 @@
 
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = site.data.theme.portfolio.[page.theme] %}
+{% assign theme = site.data.theme.[page.theme] %}
 {% endunless %}
 {% unless theme %}
-{% assign theme = site.data.theme.portfolio.default %}
+{% assign theme = site.data.theme.theme1 %}
 {% endunless %}
 
 {% case include.columns %}
@@ -56,32 +56,36 @@
     {% assign class = "col-lg-6 mb-4" %}
 {% endcase %}
 
-<section id="portfolio02" class = "{{ theme.class.section }}" {% if theme.style.section %}style = "{{ theme.style.section }}"{% endif %}>
-    {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
-    {% if title %}<h3 class="p-3 {{ theme.class.title }}">{{ title }}</h3>{% endif %}
-    {% if description %}<p class="mx-auto p-3 {{ theme.class.title }}">{{ description }}</p>{% endif %}
+{% assign section = include.section %}
+{% assign container = include.container %}
+
+
+<section id="portfolio02" class="{{ theme.bg.primary }} {{theme.text.primary}} {{ section }}">
+    {% if container %}<div id="container" class="{{ container }}">{% endif %}
+     {% if title %}<h3 class="p-3 {{ theme.title }}">{{ title }}</h3>{% endif %}
+    {% if description %}<p class="mx-auto p-3 {{ theme.title }}">{{ description }}</p>{% endif %}
         {% for post in collection limit: 1 %}
             <div class="row">
                 <div class="col-md-6">
                     <img class="img-fluid" src="{{ post.image.horizontal }}" alt="">
                 </div>
                 <div class="col-md-6">
-                    <h3 class="my-3 {{ theme.class.item.title }}">{{ post.title }}</h3>
-                    {% unless options contains "subtitle" %}<h5 class="{{ theme.class.item.subtitle }} my-3">{{ post.subtitle }}</h5>{% endunless %}
-                    {% unless options contains "description" %}<p class = "{{ theme.class.item.description }}">{{ post.description }}</p>{% endunless %}
-                    {% unless options contains "excerpt" %}<p class = "{{ theme.class.item.excerpt }}">{{ post.excerpt }}</p>{% endunless %}
+                    <h3 class="my-3 {{ theme.item.title }}">{{ post.title }}</h3>
+                    {% unless options contains "subtitle" %}<h5 class="{{ theme.item.subtitle }} my-3">{{ post.subtitle }}</h5>{% endunless %}
+                    {% unless options contains "description" %}<p class = "{{ theme.item.description }}">{{ post.description }}</p>{% endunless %}
+                    {% unless options contains "excerpt" %}<p class = "{{ theme.item.excerpt }}">{{ post.excerpt }}</p>{% endunless %}
                     {% unless options contains "features" %}
-                        <h3 class="{{ theme.class.item.subtitle }} my-3">Features</h3>
+                        <h3 class="{{ theme.item.subtitle }} my-3">Features</h3>
                         <ul>
                         {% for feature in post.features %}
-                            <li class = "{{ theme.class.item.description }}">{{ feature }}</li>
+                            <li class = "{{ theme.item.description }}">{{ feature }}</li>
                         {% endfor %}
                         </ul>
                     {% endunless %}
                 </div>
             </div>
         {% endfor %}
-        {% if theme.class.container %}</div>{% endif %}
+        {% if container %}</div>{% endif %}
 </section>
 
 
