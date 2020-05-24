@@ -12,7 +12,7 @@
 {% assign brand = "brand1" %}
 {% endunless %}
 
-{% assign theme = page.theme %}
+{% assign theme = site.data[page.theme] %}
 {% unless theme %}
 {% assign theme = site.data[brand] %}
 {% endunless %}
