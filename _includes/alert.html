@@ -20,15 +20,15 @@
 {% assign container = include.container %}
 
 {% if message %}
-    <section id="alert" class="{{ section }}" role="alert">
-        {% if container %}<div id="container" class="{{ container }}">{% endif %}
-            {% if icon %} <i class="{{ icon }}"></i>{% endif %}
-            {{ message }}
-            {% if theme.class contains "dismiss" %}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            {% endif %}
-        {% if container %}</div>{% endif %}
-    </section>
+<section id="alert" class="{{ section }}" role="alert">
+    {% if container %}<div id="container" class="{{ container }}">{% endif %}
+        {% if icon %} <i class="{{ icon }}"></i>{% endif %}
+        {{ message }}
+        {% if theme.class contains "dismiss" %}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        {% endif %}
+    {% if container %}</div>{% endif %}
+</section>
 {% endif %}
