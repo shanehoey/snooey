@@ -30,10 +30,9 @@ alert:
 ---
 {% assign message = include.message %}
 
-
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = page.alert.default %}
+{% assign theme = site.page.alert.default %}
 {% endunless %}
 
 {% assign icon = include.icon %}
