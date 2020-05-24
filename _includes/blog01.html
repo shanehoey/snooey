@@ -26,7 +26,7 @@
 
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = themes.brand1 %}
+{% assign theme = themes.default %}
 {% endunless %}
 
 {% assign options = include.hidden | split:"," %}
