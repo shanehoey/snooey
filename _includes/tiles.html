@@ -14,19 +14,17 @@
 
 {% assign collection = include.collection %}
 {% unless collection %}
-{% assign collection = site.data.tiles.[page.theme] %}
+{% assign collection = site.data.tiles.[page.brand] %}
 {% endunless %}
 {% unless collection %}
-{% assign collection = site.data.tiles.default %}
+{% assign collection = site.data.tiles.brand1 %}
 {% endunless %}
 
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = site.data.theme.[page.theme] %}
+{% assign theme = themes.default %}
 {% endunless %}
-{% unless theme %}
-{% assign theme = site.data.theme.theme1 %}
-{% endunless %}
+
 {% assign section = include.section %}
 {% assign container = include.container %}
 

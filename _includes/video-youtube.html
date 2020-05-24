@@ -23,6 +23,11 @@
 {% assign height = "480" %}
 {% endunless %}
 
+{% assign theme = include.theme %}
+{% unless theme %}
+{% assign theme = themes.default %}
+{% endunless %}
+
 {% if include.id %}
 <iframe width="{{ width }}" height="{{ height }}" src="https://www.youtube.com/embed/{{ id }}" frameborder="0" allowfullscreen></iframe>
 {% endif %}

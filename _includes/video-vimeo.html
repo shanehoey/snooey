@@ -25,11 +25,9 @@
 
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = site.data.theme.[page.theme] %}
+{% assign theme = themes.default %}
 {% endunless %}
-{% unless theme %}
-{% assign theme = site.data.theme.theme1 %}
-{% endunless %}
+
 {% assign section = include.section %}
 {% assign container = include.container %}
 

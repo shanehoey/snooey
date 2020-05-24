@@ -15,19 +15,17 @@
 
 {% assign collection = include.collection %}
 {% unless collection %}
-{% assign collection = site.data.calltoaction.[page.theme] %}
+{% assign collection = site.data.calltoaction.[page.brand] %}
 {% endunless %}
 {% unless collection %}
-{% assign collection = site.data.calltoaction.default %}
+{% assign collection = site.data.calltoaction.brand1 %}
 {% endunless %}
 
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = site.data.theme.[page.theme] %}
+{% assign theme = themes.default %}
 {% endunless %}
-{% unless theme %}
-{% assign theme = site.data.theme.theme1 %}
-{% endunless %}
+
 
 {% assign button = "Read More.." %}
 {% assign section = include.section %}

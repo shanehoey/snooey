@@ -14,10 +14,10 @@
 
 {% assign collection  =  include.collection %}
 {% unless collection %}
-{% assign collection = site.data.jumbotron.[page.theme] %}
+{% assign collection = site.data.jumbotron.[page.brand] %}
 {% endunless %}
 {% unless collection %}
-{% assign collection  =  site.data.jumbotron.default %}
+{% assign collection  =  site.data.jumbotron.brand1 %}
 {% endunless %}
 
 {% assign limit       =  include.limit %}
@@ -27,10 +27,7 @@
 
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = site.data.theme.[page.theme] %}
-{% endunless %}
-{% unless theme %}
-{% assign theme = site.data.theme.theme1 %}
+{% assign theme = themes.default %}
 {% endunless %}
 
 {% assign section = include.section %}

@@ -10,8 +10,8 @@ layout: default
 	
 -->
 {% endcomment %}
-<section id="tools" class = "{{ theme.layout.section }}">
-	{% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
+<section id="tools" class = "{{ scheme.layout.section }}">
+	{% if scheme.layout.container %}<div id="container" class="{{ scheme.layout.container }}">{% endif %}
 	<div class="row">
 		<div class="col-sm-8" id="main">
 			{{ content }}
@@ -20,5 +20,5 @@ layout: default
 			{% include toc.html html=content class="list-group sticky-top" item_class="list-group-item  list-group-item-action" h_min=2 h_max=2 sanitize=true %}
 		</div>
 	</div>
-	{% if theme.class.container %}</div>{% endif %}
+	{% if scheme.layout.container %}</div>{% endif %}
 </section>

@@ -11,18 +11,15 @@
 
 {% assign collection = include.collection %}
 {% unless collection %}
-{% assign collection = site.data.carousel.[page.theme] %}
+{% assign collection = site.data.carousel.[page.brand] %}
 {% endunless %}
 {% unless collection %}
-{% assign collection = site.data.carousel.default %}
+{% assign collection = site.data.carousel.brand1 %}
 {% endunless %}
 
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = site.data.theme.[page.theme] %}
-{% endunless %}
-{% unless theme %}
-{% assign theme = site.data.theme.theme1 %}
+{% assign theme = themes.default %}
 {% endunless %}
 
 {% assign section = include.section %}
