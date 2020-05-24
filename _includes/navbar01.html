@@ -36,7 +36,7 @@
             {% comment %}
             <!-- #TODO Bug fix this navbar-brand IF STATEMENT) -->
             {% endcomment %}
-            {% if collection.url %}<a class="navbar-brand {{ theme.text.secondary }}" href="{{ collection.url }}">{% endif %}
+            {% if collection.url %}<a class="navbar-brand {{ theme.text.primary }}" href="{{ collection.url }}">{% endif %}
             {% if collection.title or collection.icon %}<span>{% endif %}
             {% if collection.icon %}<i class="{{ collection.icon }} pr-1"></i>{% endif %}
             {% if collection.title %}{{ collection.title }}{% endif %}

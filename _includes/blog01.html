@@ -89,18 +89,18 @@
             {% unless options contains "title" %}<a href="{{ item.url }}">
                 <h3 class=" {{ theme.item.title }}">{{ item.title }}</h3>
             </a>{% endunless %}
-            {% unless options contains "subtitle" %}<h5 class="{{ theme.text.secondary }}">{{ item.subtitle }}</h5>
+            {% unless options contains "subtitle" %}<h5 class="{{ theme.text.primary }}">{{ item.subtitle }}</h5>
             {% endunless %}
             {% unless options contains "description" %}<p class=" text-justify {{theme.text.primary }}">
                 {{ item.description }}</p>
             {% endunless %}
             <div class="row">
                 <div class="col-md-9">
-                    {% unless options contains "excerpt" %}<p class="text-small {{ theme.text.secondary }}">{{ item.excerpt }}
+                    {% unless options contains "excerpt" %}<p class="text-small {{ theme.text.primary }}">{{ item.excerpt }}
                     </p>{% endunless %}
                 </div>
                 <div class="col-md-3">
-                    {% unless options contains "button" %}<a class="btn btn-sm {{ theme.bg.primary }} {{ theme.text.secondary }}"
+                    {% unless options contains "button" %}<a class="btn btn-sm {{ theme.bg.primary }} {{ theme.text.primary }}"
                         href="{{ item.url }}">visit {{ item.collection }}</a>{% endunless %}
                 </div>
             </div>
