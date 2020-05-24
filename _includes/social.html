@@ -30,7 +30,7 @@
 {% assign container = include.container %}
 
 
-<section id="social" class="{{ theme.bg.primary }} {{theme.text.primary}} {{ section }}">
+<section id="social" class="{{ theme.bg.primary }} {{ theme.text.primary }} {{ section }}">
     {% if container %}<div id="container" class="{{ container }}">{% endif %}
     {% if collection.title %}<h4 class = "{{ theme.text.primary }} p-4">{{ collection.title }}</h4>{% endif %}
     {% if collection.facebook %}<a href = "{{ collection.facebook }}" class = "mx-3 {{ theme.text.secondary }}"><i class = "fab fa-facebook-f fa-4x"></i></a>{% endif %}

@@ -54,7 +54,7 @@
 {% assign items = (items | where: 'categories', include.category) %}
 {% endif %}
 
-<section id="feature01" class="p-3 {{ theme.bg.primary }} {{theme.text.primary}} {{ section }}">
+<section id="feature01" class="p-3 {{ theme.bg.primary }} {{ theme.text.primary }} {{ section }}">
     {% if container %}<div id="container" class="{{ container }}">{% endif %}
         
     {% if title %}<h2 class="{{ theme.text.primary }}">{{ title }}</h2>{% endif %}

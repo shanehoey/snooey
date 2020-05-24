@@ -15,7 +15,7 @@ layout: default
 {% assign theme = site.data.theme.theme1 %}
 {% endunless %}
 
-<section id="page" {% if theme.class.section %}class="{{theme.class.section }}"{% endif %}  {% if theme.style.section %}style="{{theme.style.section }}"{% endif %}>
+<section id="page" class = "{{ theme.layout.section }}">
     {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
         {{ content }}
     {% if theme.class.container %}</div>{% endif %}	

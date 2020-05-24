@@ -15,7 +15,7 @@ layout: default
 {% assign theme = site.data.theme.theme1 %}
 {% endunless %}
 
-<section id="videos" {% if theme.class.section %}class="{{theme.class.section }}" {% endif %} {% if theme.style.section %}style="{{ theme.style.section }}" {% endif %}>
+<section id="videos" class = "{{ theme.layout.section }}">
     {% if theme.class.container %}<div id="container" class="{{ theme.class.container }}">{% endif %}
     <div class="row">
         <div class="col-md-8">

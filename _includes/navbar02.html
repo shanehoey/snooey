@@ -29,6 +29,10 @@
 {% assign section = include.section %}
 {% assign container = include.container %}
 
+{{ brandtheme }}
+{{ brandthemedark }}
+{{ brandthemeimage }}
+
 <header id="navigation">
     <div id="container" class="{{ container }}">   
         <nav id="navbar" class="navbar navbar-expand-lg navbar-dark {% unless include.example %} fixed-top {% endunless %} {{ theme.bg.primary }} {{ theme.text.primary }} {{ section }}">

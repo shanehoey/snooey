@@ -48,7 +48,7 @@
 {% assign section = include.section %}
 {% assign container = include.container %}
 
-<section id="feature03" class="{{ theme.bg.primary }} {{theme.text.primary}} {{ section }}">
+<section id="feature03" class="{{ theme.bg.primary }} {{ theme.text.primary }} {{ section }}">
     {% if container %}<div id="container" class="{{ container }}">{% endif %}
            {% if title %}<h2 class="text-center pt-4 {{ theme.text.secondary }}">{{ title }}</h2>{% endif %}
     {% if description %}<p class="text-justify pb-4 {{ theme.text.primary }}">{{ description }}</p>{% endif %}
