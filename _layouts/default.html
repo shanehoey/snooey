@@ -25,9 +25,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
 </head>
 
-{% assign theme = site.data.theme[page.theme] %}
-{% assign theme-dark = site.data.theme[page.theme | append: "-dark"] %}
-{% assign theme-image = site.data.theme[ page.theme | append: "-image"] %}
+{% assign theme = site.data.theme[(page.theme)] %}
+{% assign theme-dark = site.data.theme[(page.theme | append: "-dark")] %}
+{% assign theme-image = site.data.theme[( page.theme | append: "-image")] %}
 
 
 {% unless theme %}

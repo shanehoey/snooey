@@ -1,14 +1,17 @@
 # Snooey - A Remote Jekyll Theme
 
-*Snooey* - A simple but extensive Jekyll theme that I use across multiple websites, including [shanehoey.com](https://shanehoey.com)
+*Snooey* - A simple but extensive Jekyll theme that features:
+
+* Ability to have different Branding and different themes. 
+* Modular  
 
 **IMPORTANT** - This theme is always under active development, to ensure that I don't break something on your website please always fork this site, and use your own fork as the remote_theme. once I reach v1.00 I will create a release that you can use instead.
 
-View a live example @ [snooey.com](https://snooey.com)
+View a live example @ [snooey.com](https://snooey.com) with multiple brands all running from same site!
 
 ##  Want more information
 
-This repository just contains the remote theme files only,  refer to [github](https://github.com/snooey-template) for all documentation and example usage
+This repository just contains the remote theme files only, refer to [github](https://github.com/snooey-template) for all documentation and example usage
 
 ## Known Issues
 
@@ -23,36 +26,32 @@ This repository just contains the remote theme files only,  refer to [github](ht
 ### Enhancements  
 
  * \# TODO Enhancement -   v1.1 add plugin jekyll-seo-tag
+ 
+ * \# TODO Enhancement -   v1.0x _includes/pagination.html added
 
- * \# TODO Enhancement -   v1.1 migrate theme to scss
+ * \# TODO Enhancement -   v1.0x _includes/github.html added
 
- * \# TODO Enhancement -   v1.1 remove style attributes 
+ * \# TODO Enhancement -   v1.0x _includes/form.html added
 
- * \# TODO Enhancement -   v1.0x _includes/pagination.html
+ * \# TODO Enhancement -   vx.x _includes/subscribe.html added
 
- * \# TODO Enhancement -   v1.0x _includes/github.html
+ * \# TODO Enhancement -   vx.x _includes/steps.html added
 
- * \# TODO Enhancement -   v1.0x _includes/form.html completed 
+ * \# TODO Enhancement -   vx.x _includes/faq.html added
 
- * \# TODO Enhancement -   vx.x _includes/subscribe.html forms
+ * \# TODO Enhancement -   vx.x _includes/counter.html added
 
- * \# TODO Enhancement -   vx.x _includes/steps.html
+ * \# TODO Enhancement -   vx.x _includes/list.html added
 
- * \# TODO Enhancement -   vx.x _includes/faq.html
-
- * \# TODO Enhancement -   vx.x _includes/counter.html
-
- * \# TODO Enhancement -   vx.x _includes/list.html
-
- * \# TODO Enhancement -   vx.x _includes/blog.html
-
- * \# TODO Enhancement -   vx.x _includes/coverpage.html
-
- * \# TODO Enhancement -   vx.x _includes/about.html
+ * \# TODO Enhancement -   vx.x _includes/coverpage.html added
+ 
+ * \# TODO Enhancement -   vx.x _includes/about.html added
 
  * \# TODO Enhancement -   x2.0x Ability to change the description etc on the fly,  eg post.description posts.[include.description] 
 
 ### Known Bugs
+
+* \# BUG not a stable yet still undergoing modifications
 
 
 ## Installation
