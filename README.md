@@ -13,17 +13,14 @@ View a live example @ [snooey.com](https://snooey.com) with multiple brands all 
 
 This repository just contains the remote theme files only, refer to [github](https://github.com/snooey-template) for all documentation and example usage
 
+### Current Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4a073a6e-02dd-40a8-94e0-1bcb2179fa64/deploy-status)](https://app.netlify.com/sites/snooey/deploys)
+
 ## Known Issues
 
  * \# TODO Not yet at stable v1.00 release expect breaking changes
 
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/531d26ad-f8c2-412d-900e-e4cfe05603b3/deploy-status)](https://app.netlify.com/sites/snooey/deploys)
-
-
-### Current Issues
-
-### Enhancements  
+## Enhancements for next version
 
  * \# TODO Enhancement -   v1.1 add plugin jekyll-seo-tag
  
@@ -50,15 +47,6 @@ This repository just contains the remote theme files only, refer to [github](htt
  * \# TODO Investigate -   vx.x _includes/github.html is this still needed?
 
  * \# TODO Enhancement -   x2.0x Ability to change the description etc on the fly,  eg post.description posts.[include.description] 
-
-### Known Bugs
-
-* \# TODO Bug - Not a stable build yet still undergoing modifications
-
-
-## Installation
-
-Add this line to your Jekyll site's `Gemfile`:
 
 
 ## Contributing
