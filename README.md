@@ -17,9 +17,7 @@ This repository just contains the remote theme files only, refer to [github](htt
 
  * \# TODO Not yet at stable v1.00 release expect breaking changes
 
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/531d26ad-f8c2-412d-900e-e4cfe05603b3/deploy-status)](https://app.netlify.com/sites/snooey/deploys)
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4a073a6e-02dd-40a8-94e0-1bcb2179fa64/deploy-status)](https://app.netlify.com/sites/snooey/deploys)
 
 ### Current Issues
 
