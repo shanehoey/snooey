@@ -24,7 +24,7 @@
     <div class="row">
         {% for item in collection %}
         <div class="col-md-4">
-            <div class="card mb-4 shadow-sm {{ section }}" {% if theme.style.section %}style="{{ theme.style.section }}"{% endif %}>
+            <div class="card mb-4 shadow-sm {{ section }}">
                 <div class="card-body">
                     {% if item.title %}<h5 class="card-title {{ theme.title }}">{{ item.title}}</h5>{% endif %}
                     <p class="card-text {{ theme.description }}">{{ item.extract}}</p>

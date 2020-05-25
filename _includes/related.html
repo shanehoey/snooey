@@ -28,13 +28,13 @@
 
 <section id="related" class="{{ theme.bg.primary }} {{ theme.text.primary }} {{ section }}">
   {% if container %}<div id="container" class="{{ container }}">{% endif %}
-  <h3 class="my-4 {{ theme.title }}">{{ title }} <small class = "{{ theme.subtitle }}" >{{ subtitle }}</small></h3>
+  <h3 class="my-4 {{ theme.text.accent1 }}">{{ title }} <small class = "{{ theme.subtitle }}" >{{ subtitle }}</small></h3>
   <div class="row">
     {% for item in collection limit: {{limit}} %}
     <div class="col-md-3 col-sm-6 mb-4">
       <a href="{{ item.url}}" class='text-reset text-decoration-none'>
-        <img class="{{theme.item.image }}" src="{{ item.image.horizontal }}" alt="" />
-        <h4 class="{{theme.item.title }}">{{ item.title }}</h4>
+        <img class="" src="{{ item.image.horizontal }}" alt="" />
+        <h4 class="{{ theme.text.accent1 }}">{{ item.title }}</h4>
       </a>
     </div>
     {% endfor %}
