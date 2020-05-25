@@ -51,7 +51,7 @@ This repository just contains the remote theme files only, refer to [github](htt
 
 ### Known Bugs
 
-* \# BUG not a stable yet still undergoing modifications
+* \# TODO Bug - Not a stable build yet still undergoing modifications
 
 
 ## Installation

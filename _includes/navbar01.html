@@ -31,7 +31,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             {% comment %}
-            <!-- #TODO Bug fix this navbar-brand IF STATEMENT) -->
+            <!-- #TODO Bug - fix this navbar-brand IF STATEMENT) -->
             {% endcomment %}
             {% if collection.url %}<a class="navbar-brand {{ theme.text.primary }}" href="{{ collection.url }}">{% endif %}
             {% if collection.title or collection.icon %}<span>{% endif %}
@@ -63,7 +63,7 @@
         </nav>
     </div>
     {% comment %}
-    # TODO Bug -  spacing is wrong this is a temp fix
+    # TODO Bug - spacing is wrong this is a temp fix
     {% endcomment %}
     {% unless include.example %}<div style = "height:56px;"></div>{%endunless%}
 </header>

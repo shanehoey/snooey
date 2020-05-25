@@ -10,6 +10,17 @@ layout: default
 	
 -->
 {% endcomment %}
+
+{% assign themes = site.data[page.theme] %}
+{% unless themes %}
+{% assign themes = site.data.theme1 %}
+{% endunless %}
+
+{% assign scheme = themes[page.scheme] %}
+{% unless scheme %}
+{% assign scheme = themes.light %}
+{% endunless %}
+
 <section id="code" class = "{{ scheme.layout.section }}">
 	{% if scheme.layout.container %}<div id="container" class="{{ scheme.layout.container }}">{% endif %}
 	<div class="row">
