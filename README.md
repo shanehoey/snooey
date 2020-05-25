@@ -46,6 +46,8 @@ This repository just contains the remote theme files only, refer to [github](htt
  * \# TODO Enhancement -   vx.x _includes/coverpage.html added
  
  * \# TODO Enhancement -   vx.x _includes/about.html added
+ 
+ * \# TODO Investigate -   vx.x _includes/github.html is this still needed?
 
  * \# TODO Enhancement -   x2.0x Ability to change the description etc on the fly,  eg post.description posts.[include.description] 
 
