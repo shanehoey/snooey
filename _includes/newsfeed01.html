@@ -24,23 +24,21 @@
 {% assign section = include.section %}
 {% assign container = include.container %}
 
-
-
 <section id="newsfeed01" class="{{ theme.bg.primary }} {{ theme.text.primary }} {{ section }}">
-  {% if container %}<div id="container" class="{{ container }}">{% endif %}
- {% if title %}<h3 class="">{{ title }}</h3>{% endif %}
-  {% if description %}<p class="{{ theme.description }}">{{ description }}</p>{% endif %}
-  <div class="row">
-      {% for item in collection %}
-      {% if forloop.first %}
-      <div class="col-lg-6 col-md-12 mb-4">
-        <a href = "{{ item.url }}" class = "text-decoration-none"><img class="img-fluid rounded px-3" src = "{{ item.image.horizontal }}" alt = "{{ item.excerpt }}"></a>
-        <a href = "{{ item.url }}" class = "text-decoration-none"><h3 class="{{ theme.item.title }}">{{ item.title }}</h3></a>
-        <p class="text-justify">{{ item.description }}</p>
-      </div>
-      {% endif %}
-      {% endfor %}
-      <!--SECOND-->
+    {% if container %}<div id="container" class="{{ container }}">{% endif %}
+    {% if title %}<h3 class="">{{ title }}</h3>{% endif %}
+    {% if description %}<p class="{{ theme.description }}">{{ description }}</p>{% endif %}
+    <div class="row">
+        {% for item in collection %}
+            {% if forloop.first %}
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <a href = "{{ item.url }}" class = "text-decoration-none"><img class="img-fluid rounded px-3" src = "{{ item.image.horizontal }}" alt = "{{ item.excerpt }}"></a>
+                    <a href = "{{ item.url }}" class = "text-decoration-none"><h3 class="{{ theme.item.title }}">{{ item.title }}</h3></a>
+                    <p class="text-justify">{{ item.description }}</p>
+                </div>
+            {% endif %}
+        {% endfor %}
+      
       <div class="col-lg-6 col-md-12 mb-1">
           {% for item in collection offset: 1  limit: limit %}
               <div class="row mb-2">

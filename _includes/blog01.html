@@ -59,8 +59,8 @@
 
 <section id="blog01" class="{{ theme.bg.primary }} {{ theme.text.primary }} {{ section }}" >
     {% if container %}<div id="container" class="{{ container }}">{% endif %}
-    {% if title %}<h2 class="mb-4 pb-2 text-center text-decoration-none {{ theme.text.primary }}">{{ title }}</h2>{% endif %}
-    {% if description %}<p class="mx-auto mb-5 text-justify {{ theme.theme1 }}">{{ description }}</p>
+    {% if title %}<h2 class="mb-4 pb-2 text-center text-decoration-none">{{ title }}</h2>{% endif %}
+    {% if description %}<p class="mx-auto p-2 mb-3 text-justify ">{{ description }}</p>
     {% endif %}
     {% for item in collection  limit: {{limit}} %}
     <div class="row">
@@ -69,20 +69,20 @@
         </div>
         <div class="{{ column2 }}">
             {% unless options contains "title" %}<a href="{{ item.url }}">
-                <h3 class=" {{ theme.item.title }}">{{ item.title }}</h3>
+                <h3 class=" {{ theme.text.accent1 }}">{{ item.title }}</h3>
             </a>{% endunless %}
-            {% unless options contains "subtitle" %}<h5 class="{{ theme.text.primary }}">{{ item.subtitle }}</h5>
+            {% unless options contains "subtitle" %}<h5 class="">{{ item.subtitle }}</h5>
             {% endunless %}
-            {% unless options contains "description" %}<p class=" text-justify {{theme.text.primary }}">
+            {% unless options contains "description" %}<p class="p-2 text-justify {{ theme.text.primary }}">
                 {{ item.description }}</p>
             {% endunless %}
             <div class="row">
                 <div class="col-md-9">
-                    {% unless options contains "excerpt" %}<p class="text-small {{ theme.text.primary }}">{{ item.excerpt }}
+                    {% unless options contains "excerpt" %}<p class="text-small {{ theme.text.accent3 }}">{{ item.excerpt }}
                     </p>{% endunless %}
                 </div>
                 <div class="col-md-3">
-                    {% unless options contains "button" %}<a class="btn btn-sm {{ theme.bg.primary }} {{ theme.text.primary }}"
+                    {% unless options contains "button" %}<a class="btn btn-sm btn-light {{ theme.bg.primary }} {{ theme.text.primary }}"
                         href="{{ item.url }}">visit {{ item.collection }}</a>{% endunless %}
                 </div>
             </div>

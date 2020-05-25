@@ -20,7 +20,7 @@
 {% assign section = include.section %}
 {% assign container = include.container %}
 
-<section id="footer01" class="mt-auto p-4 {{ theme.bg.primary }} {{ theme.text.primary }} {{ section }}">
+<footer id="footer01" class="mt-auto p-4 {{ theme.bg.primary }} {{ theme.text.primary }} {{ section }}">
         {% if container %}<div id="container" class="{{ container }}">{% endif %}
         {% if collection.url %}<a href="{{ collection.url }}" class='text-reset text-decoration-none'>{% endif %}
         {% if collection.title or collection.icon %}<span class="pr-5">{% endif %}

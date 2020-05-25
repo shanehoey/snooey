@@ -26,7 +26,7 @@
             {% if forloop.last == false %}
                 <li class="breadcrumb-item font-italic  {{ theme.text.primary }} "><a href="{{ url }}" class=" {{ theme.text.primary }} ">{{ split }}</a></li>
             {% else %}
-                <li class="breadcrumb-item active font-italic  {{ theme.text.primary }} "><a href="{{ url }}" class=" {{ theme.text.primary }} ">{{ split }}</a></li>
+                <li class="breadcrumb-item active {{ theme.text.primary }} "><a href="{{ url }}" class=" {{ theme.text.primary }} ">{{ split }}</a></li>
             {% endif %}
             {% endfor %}
         </ol>

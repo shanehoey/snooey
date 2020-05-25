@@ -26,8 +26,8 @@
     {% if container %}<div id="container" class="{{ container }}">{% endif %}
  {% for item in collection  limit: 1 %}
     <div class="p-4 text-center">
-        {% if item.title %}<h3 class="">{{ item.title }}</h3>{% endif %}
-        {% if item.subtitle %}<p class="">{{ item.subtitle }}</p>{% endif %}
+        {% if item.title %}<h3 >{{ item.title }}</h3>{% endif %}
+        {% if item.subtitle %}<p >{{ item.subtitle }}</p>{% endif %}
         {% if item.url %}<a class="btn btn-outline-dark" href="{{ item.url }}" role="button">{{ button }}</a>
         {% endif %}
     </div>
