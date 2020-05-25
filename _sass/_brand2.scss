@@ -6,8 +6,6 @@ $brand-color2: rgba(0, 119, 182, 1);
 $brand-color3: rgba(0, 180, 216, 1);
 $brand-color4: rgba(144, 224, 239, 1);
 $brand-color5: rgba(202, 240, 248, 1);
-$brand-light: white !global;
-$brand-dark: black !global;
 
 // gradient
 $brand-gradient-top: linear-gradient(0deg, #03045eff, #0077b6ff, #00b4d8ff, #90e0efff, #caf0f8ff);
@@ -19,6 +17,10 @@ $brand-gradient-bottom-right: linear-gradient(135deg, #03045eff, #0077b6ff, #00b
 $brand-gradient-top-left: linear-gradient(225deg, #03045eff, #0077b6ff, #00b4d8ff, #90e0efff, #caf0f8ff);
 $brand-gradient-bottom-left: linear-gradient(315deg, #03045eff, #0077b6ff, #00b4d8ff, #90e0efff, #caf0f8ff);
 $brand-gradient-radial: radial-gradient(#03045eff, #0077b6ff, #00b4d8ff, #90e0efff, #caf0f8ff);
+
+// customize
+$brand-light: white !global;
+$brand-dark: black !global;
 
 // Image 
 $brand-unsplash1: "jay5BqVyf5A" !global;

@@ -1,13 +1,13 @@
 /* brand1 */
 
-/* RGB */
+// color 
 $brand-color1: rgba(29, 53, 87, 1);
 $brand-color2: rgba(69, 123, 157, 1);
 $brand-color3: rgba(168, 218, 220, 1);
 $brand-color4: rgba(241, 250, 238, 1);
 $brand-color5: rgba(230, 57, 70, 1);
 
-/* GRADIENT */
+// gradient
 $brand-gradient-top: linear-gradient(0deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
 $brand-gradient-right: linear-gradient(90deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
 $brand-gradient-bottom: linear-gradient(180deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
@@ -17,6 +17,10 @@ $brand-gradient-bottom-right: linear-gradient(135deg, #1d3557ff, #457b9dff, #a8d
 $brand-gradient-top-left: linear-gradient(225deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
 $brand-gradient-bottom-left: linear-gradient(315deg, #1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
 $brand-gradient-radial: radial-gradient(#1d3557ff, #457b9dff, #a8dadcff, #f1faeeff, #e63946ff);
+
+// customize
+$brand-light: white !global;
+$brand-dark: black !global;
 
 // Image 
 $brand-unsplash1: "https://source.unsplash.com/jay5BqVyf5A/" !global;

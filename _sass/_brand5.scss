@@ -20,6 +20,10 @@ $brand-gradient-top-left: linear-gradient(225deg, #00a6fbff, #0582caff, #006494f
 $brand-gradient-bottom-left: linear-gradient(315deg, #00a6fbff, #0582caff, #006494ff, #003554ff, #051923ff);
 $brand-gradient-radial: radial-gradient(#00a6fbff, #0582caff, #006494ff, #003554ff, #051923ff);
 
+// customize
+$brand-light: white !global;
+$brand-dark: black !global;
+
 // Image
 $brand-unsplash1: "jay5BqVyf5A" !global;
 $brand-unsplash2: "bepwY8khinw" !global;
