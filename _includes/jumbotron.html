@@ -27,7 +27,7 @@
 
 {% assign theme = include.theme %}
 {% unless theme %}
-{% assign theme = themes.light %}
+{% assign theme = site.data[page.theme].light %}
 {% endunless %}
 
 {% assign section = include.section %}
