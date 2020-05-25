@@ -18,6 +18,7 @@
 {% assign container = include.container %}
 
 {% capture pageurl %}{{ page.url | remove: "/index.html" }}{% endcapture %}
+{% capture pageurl %}{{ pageurl | remove: ".html" }}{% endcapture %}
 {% assign spliturl = pageurl | split: '/' | shift %}
 
 <section id="breadcrumb" class="{{ theme.bg.primary }} {{ theme.text.primary }} {{ section }}">
