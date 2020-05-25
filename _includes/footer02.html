@@ -26,7 +26,7 @@
 {% assign section = include.section %}
 {% assign container = include.container %}
 
-<section id="footer02" class="p-4 {{ theme.bg.primary }} {{ theme.text.primary }} {{ section }} ">
+<section id="footer02" class="mt-auto p-4 {{ theme.bg.primary }} {{ theme.text.primary }} {{ section }} ">
     {% if container %}<div id="container" class="{{ container }}">{% endif %}
            <p class="text-reset text-center font-weight-light small">{{ collection.copyright}}<br>
         {% for item in collection.navigation %}
