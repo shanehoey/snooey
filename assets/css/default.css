@@ -121,13 +121,3 @@ body {
   color: white;
 }
 
-/* carousel*/
-.carousel-item {
-  height: 20vh;
-  min-height: 230px;
-  secondary: no-repeat center center scroll;
-  -webkit-secondary-size: cover;
-  -moz-secondary-size: cover;
-  -o-secondary-size: cover;
-  secondary-size: cover;
-}
