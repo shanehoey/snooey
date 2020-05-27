@@ -18,7 +18,7 @@ This repository just contains the remote theme files only, refer to [github](htt
 
 ## Known Issues
 
- * \# TODO Not yet at stable v1.00 release expect breaking changes
+ * \# TODO Not yet at stable v1.00 release expect breaking changes without notice
 
 ## Enhancements for next version
 
