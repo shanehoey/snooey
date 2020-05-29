@@ -37,9 +37,9 @@
         <div class="col-lg-3 col-md-6 mb-4">
             {% if item.url %}<a href="{{ item.url }}">{% endif %}
             <i class="{{ item.icon }} fa-4x mb-4 {{ theme.text.primary }} "></i>
-            {% if item.url %}</a> {% endif %}
             <h5 class="{{ theme.text.primary }}">{{ item.title }}</h5>
             <p class="mb-0 {{ theme.text.primary }}">{{ item.excerpt }}</p>
+            {% if item.url %}</a> {% endif %}
         </div>
         {% endfor %}
     </div>
