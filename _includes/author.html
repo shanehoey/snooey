@@ -6,10 +6,7 @@
 
 {% assign collection = include.collection %}
 {% unless collection %}
-{% assign collection = site.data.sponsor.[page.brand] %}
-{% endunless %}
-{% unless collection %}
-{% assign collection = site.data.sponsor.brand1 %}
+{% assign collection = site.data.author.default %}
 {% endunless %}
 
 {% assign theme = include.theme %}
