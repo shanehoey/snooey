@@ -7,18 +7,13 @@ layout: default
 -->
 {% endcomment %}
 
-{% assign themes = site.data[page.theme] %}
-{% unless themes %}
-{% assign themes = site.data.theme1 %}
+{% assign theme = site.data[page.theme][page.scheme] %}
+{% unless theme %}
+{% assign theme = site.data.theme1.light %}
 {% endunless %}
 
-{% assign scheme = themes[page.scheme] %}
-{% unless scheme %}
-{% assign scheme = themes.light %}
-{% endunless %}
-
-<section id="snippets"class = "{{ scheme.layout.section }}">
-	{% if scheme.layout.container %}<div id="container" class="{{ scheme.layout.container }}">{% endif %}
+<section id="snippets"class = "{{ theme.layout.section }}">
+	{% if theme.layout.container %}<div id="container" class="{{ theme.layout.container }}">{% endif %}
 	<div class="row">
 			<div class="col-sm-8" id="main">
 				{{ content }}
@@ -27,5 +22,5 @@ layout: default
 				{% include toc.html html=content class="list-group sticky-top" item_class="list-group-item  list-group-item-action" h_min=2 h_max=2 sanitize=true %}
 			</div>
 		</div>
-		{% if scheme.layout.container %}</div>{% endif %}	
+		{% if theme.layout.container %}</div>{% endif %}	
 </section>
