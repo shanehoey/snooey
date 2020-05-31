@@ -47,7 +47,7 @@
 
 <section id="portfolio01" class="{{ theme.bg.primary }} {{ theme.text.primary }} {{ section }}">
     {% if container %}<div id="container" class="{{ container }}">{% endif %}
-         {% if title %}<h3 class="text-center font-weight-bold p-3 {{ theme.title }}">{{ title }}</h3>{% endif %}
+         {% if title %}<h3 class="text-center p-3 {{ theme.title }}">{{ title }}</h3>{% endif %}
     {% if description %}<p class="text-justify mx-auto p-3 {{ theme.description }}">{{ description }}</p>{% endif %}
     <div class="row">
         {% for post in collection limit: limit %}
