@@ -15,7 +15,7 @@ layout: default
 <section id="videos" class = "{{ theme.layout.section }}">
     {% if theme.layout.container %}<div id="container" class="{{ theme.layout.container }}">{% endif %}
     <div class="row">
-        <div class="col-md-8">
+        <div id="content"  class="col-md-8">
             {% case page.video-provider %}
             {% when "youtube" %}
             {% include video-youtube.html id = page.video-id  %}
@@ -25,7 +25,7 @@ layout: default
             {% include video-vimeo.html id = page.video-id  %}
             {% endcase %}
         </div>
-        <div class="col-md-4">
+        <div id="sidebar"  class="col-md-4">
             <h3 class="my-3">{{ page.title }}</h3>
             <p>{{ page.description }}</p>
             <h3 class="my-3">Details</h3>

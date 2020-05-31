@@ -15,10 +15,10 @@ layout: default
 <section id="post" class = "{{ theme.layout.section }}">
 	{% if theme.layout.container %}<div id="container" class="{{ theme.layout.container }}">{% endif %}
 		<div class="row">
-			<div class="col-sm-8" id="main">
+			<div id="content" class="col-sm-8" >
 				{{ content }}
 			</div>
-			<div class="col-sm-4" id="sidebar">
+			<div id="sidebar" class="col-sm-4" >
 				{% include toc.html html=content class="list-group sticky-top" item_class="list-group-item  list-group-item-action" h_min=2 h_max=2 sanitize=true %}
 			</div>
 		</div>
