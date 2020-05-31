@@ -16,9 +16,9 @@
 {% capture pageurl %}{{ pageurl | remove: ".html" }}{% endcapture %}
 {% assign spliturl = pageurl | split: '/' | shift %}
 
-<section id="breadcrumb" class="{{ theme.bg.primary }} {{ theme.text.primary }} {{ section }}">
+<section id="bread" class="{{ section }}">
     {% if container %}<div id="container" class="{{ container }}">{% endif %}
-        <ol class="breadcrumb {{ theme.bg.primary }} {{ section }}">
+        <ol class="breadcrumb {{ theme.bg.accent2 }} {{ section }}">
             {% assign url = side.baseurl | append: '/' %}
             <li class="breadcrumb-item font-italic"><a href="{{ url }}"><i class="fas fa-home  {{ theme.text.primary }} "></i></a></li>
             {% for split in spliturl %}
