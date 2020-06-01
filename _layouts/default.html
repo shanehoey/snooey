@@ -1,8 +1,11 @@
 {% comment %}
-<!--
-    v1.00 _layouts/default.html
--->
+<!-- v1.00 _layouts/default.html -->
 {% endcomment %}
+
+{% assign brand = page.brand %}
+{% unless brand %}
+{% assign brand = "brand1" %}
+{% endunless %}
 
 {% assign themes = site.data[page.theme] %}
 {% unless themes %}
@@ -15,9 +18,9 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{ page.title }} {{ site.separator}} {{ site.title }}</title>
+    <title>{{ page.title }} {{ site.separator }} {{ site.title }}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="/assets/css/{{ page.brand }}.css"/>
+    <link rel="stylesheet" href="/assets/css/{{ brand }}.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
 </head>
 
