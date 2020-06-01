@@ -14,7 +14,10 @@
 {% capture pageurl %}{{ pageurl | remove: ".html" }}{% endcapture %}
 {% assign spliturl = pageurl | split: '/' | shift %}
 
+{% comment %}
 # TODO change style to css 
+{% endcomment %}
+
 <section id="bread" class="{{ section }}" style="border-radius:0; margin-bottom:0;">
     {% if container %}<div id="container" class="{{ container }}">{% endif %}
         <ol class="breadcrumb {{ theme.bg.accent2 }} {{ section }}" style="border-radius:0; margin-bottom:0;">
