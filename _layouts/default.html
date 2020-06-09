@@ -14,12 +14,12 @@
 
 {% assign scheme = themes[page.scheme] %}
 {% unless scheme %}
-{% assign scheme = themes.scheme.light %}
+{% assign scheme = themes.light %}
 {% endunless %}
 
 {% assign schemealt = themes[page.schemealt] %}
 {% unless schemealt %}
-{% assign schemealt = themes.scheme.dark %}
+{% assign schemealt = themes.dark %}
 {% endunless %}
 
 <!DOCTYPE html>
