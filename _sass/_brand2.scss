@@ -1,4 +1,4 @@
-/* brand5 */
+/* brand2 - docs*/
 
 // color
 $brand-color1: rgba(37, 36, 34, 1);
@@ -19,29 +19,30 @@ $gradient-bottom-left: linear-gradient(315deg, #252422ff, #403d39ff, #ccc5b9ff, 
 $gradient-radial: radial-gradient(#252422ff, #403d39ff, #ccc5b9ff, #fffcf2ff, #eb5e28ff);
 
 // customize
-$brand-light: white !global;
-$brand-dark: black !global;
+$brand-light: white;
+$brand-dark: black;
 
 // Image
-$brand-unsplash1: "https://source.unsplash.com/bepwY8khinw/" !global;  //red phone box
-$brand-unsplash2: "https://source.unsplash.com/toF6uojkBag/" !global;  //docs
-$brand-unsplash3: "https://source.unsplash.com/4T5MTKMrjZg"  !global;  //code
-$brand-unsplash4: "https://source.unsplash.com/0gkw_9fy0eQ/" !global;  //blog
-$brand-unsplash5: "https://source.unsplash.com/vflFGBYCiO8/" !global;  //brisbane
-$brand-unsplash6: "https://source.unsplash.com/jay5BqVyf5A/" !global;  //red phonebox 
-$brand-unsplash7: "https://source.unsplash.com/8Gl7Ew-q6D8/" !global;  //dark water
-$brand-pattern:   "/assets/images/pattern.png" !global;
-$brand-background: "/assets/images/background.jpg" !global;
-$brand-horizontal: "/assets/images/horizontal.png" !global;
-$brand-square: "/assets/images/square.png" !global;
-$brand-vertical: "/assets/images/vertical.png" !global;
-$brand-profile: "/assets/images/profile.png" !global;
+$brand-unsplash1: "https://source.unsplash.com/toF6uojkBag/";  //docs
+$brand-unsplash2: "https://source.unsplash.com/random/";  //
+$brand-unsplash3: "https://source.unsplash.com/random/";  //
+$brand-unsplash4: "https://source.unsplash.com/random/";  //
+$brand-unsplash5: "https://source.unsplash.com/random/";  //
+$brand-unsplash6: "https://source.unsplash.com/random/";  // 
+$brand-unsplash7: "https://source.unsplash.com/bepwY8khinw/";  //shanehoey
+
+$brand-pattern:   "/assets/images/pattern.png";
+$brand-background: "/assets/images/background.jpg";
+$brand-horizontal: "/assets/images/horizontal.png";
+$brand-square: "/assets/images/square.png";
+$brand-vertical: "/assets/images/vertical.png";
+$brand-profile: "/assets/images/profile.png";
 
 // icons
-$brand-icon1:"/f2c1" !global; // fas fa-id-badge
-$brand-icon2:"/f007" !global; // fas fa-user
-$brand-icon3:"/f0c0" !global; // fas fa-users
-$brand-icon4:"/f2a0" !global; // fas fa-phone-volume
-$brand-icon5:"/f7d9" !global; // rocket 
+$brand-icon1:"/f2c1"; // fas fa-id-badge
+$brand-icon2:"/f007"; // fas fa-user
+$brand-icon3:"/f0c0"; // fas fa-users
+$brand-icon4:"/f2a0"; // fas fa-phone-volume
+$brand-icon5:"/f7d9"; // rocket 
 
 

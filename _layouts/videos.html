@@ -5,13 +5,12 @@ layout: default
 <!-- v1.00 _layouts/videos.html -->
 {% endcomment %}
 
-{% assign theme = site.data[page.theme][page.scheme] %}
-{% unless theme %}
-{% assign theme = site.data.theme1.light %}
+{% assign themes = site.data[page.theme] %}
+{% unless themes %}
+{% assign themes = site.data.theme1 %}
 {% endunless %}
 
-<section id="videos" class = "{{ theme.layout.section }}">
-    {% if theme.layout.container %}<div id="container" class="{{ theme.layout.container }}">{% endif %}
+
     <div class="row">
         <div id="content"  class="col-md-8">
             {% case page.video-provider %}
@@ -33,5 +32,6 @@ layout: default
         </div>
     </div>
     {{ content }}
-    {% if theme.layout.container %}</div>{% endif %}
-</section>
+
+    {% include pagination01.html %}
+

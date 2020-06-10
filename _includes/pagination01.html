@@ -1,0 +1,19 @@
+{% comment %}
+<!--  v1.00 _includes/pagination.html -->
+{% endcomment %}
+
+{% assign theme = include.theme %}
+{% unless theme %}
+{% assign theme = site.data[page.theme][page.scheme] %}
+{% endunless %}
+
+<nav aria-label="...">
+    <ul class="pagination">
+        {% if page.previous %}
+        <li class="page-item"><a class="page-link" href="{{ page.previous.url }}"><< {{ page.previous.title }}</a></li>
+        {% endif %}
+        {% if page.next %}
+        <li class="page-item"><a class="page-link" href="{{ page.next.url }}">{{ page.next.title }} >></a></li>
+        {% endif %}
+    </ul>
+</nav>

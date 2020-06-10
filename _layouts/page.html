@@ -5,13 +5,6 @@ layout: default
 <!-- v1.00 _layouts/page.html -->
 {% endcomment %}
 
-{% assign theme = site.data[page.theme][page.scheme] %}
-{% unless theme %}
-{% assign theme = site.data.theme1.light %}
-{% endunless %}
+{% assign themes = site.data[page.theme] %}
 
-<section id="page" class = "{{ theme.layout.section }}">
-    {% if theme.layout.container %}<div id="container" class="{{ theme.layout.container }}">{% endif %}
-        {{ content }}
-    {% if theme.layout.container %}</div>{% endif %}	
-</section>
+{{ content }}
