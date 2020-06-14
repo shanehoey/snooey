@@ -39,6 +39,7 @@
       
       <div class="col-lg-6 col-md-12 mb-1">
           {% for item in collection offset: 1  limit: limit %}
+          {% unless post.hidden %}
               <div class="row mb-2">
                   <div class = "col-md-3">
                       <a href = "{{ item.url }}" class = "text-decoration-none">
@@ -52,6 +53,7 @@
                       <p class=" text-decoration-none text-justify text-truncate">{{ item.description }}</p>
                     </div>
               </div>
+              {% endunless %}
           {% endfor %}
       </div>
     </div>

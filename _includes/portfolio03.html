@@ -72,6 +72,7 @@
 <section id="portfolio03" class="{{ theme.bg.primary }} {{ theme.text.primary }} {{ section }}">
     {% if container %}<div id="container" class="{{ container }}">{% endif %}
         {% for item in collection limit: limit %}
+        {% unless post.hidden %}
     <div class="row">
             <div class="{{ column1 }}">
             <a href="{{ item.url }}"><img class="img-fluid rounded mb-3 mb-md-0" src="{{ item.image.horizontal }}" alt=""></a>
@@ -85,6 +86,7 @@
         </div>
     </div>
     <hr/>
+    {% end unless %}
 {% endfor %}
 {% if container %}</div>{% endif %}
 </section>

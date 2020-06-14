@@ -36,6 +36,7 @@
     <div class="row p-3">
       <div class="col-lg-6 col-md-12">
         {% for post in collection limit: limit %}
+        {% unless post.hidden %}
         {% if forloop.first %}
         <a href = "{{ post.url }}" class = "text-decoration-none">
             <img class="img-fluid rounded" src = "{{ post.image.horizontal }}" alt = "{{ post.excerpt }}">
@@ -60,6 +61,7 @@
           </div>
         {% endif %}
         {% endfor %}
+        {% endunless %}
       </div>
 
       <div class="col-lg-6 col-md-12">

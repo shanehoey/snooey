@@ -40,6 +40,7 @@
     {% if description %}<p class="text-justify pb-4 {{ theme.text.primary }}">{{ description }}</p>{% endif %}
     <div class="row">
         {% for item in collection limit: {{limit}} %}
+        {% unless post.hidden %}
             <div class = "col-md-4 mb-5 pt-5">
                 <div class = "row">
                     <div class = "col-lg-2 col-md-3 col-2">
@@ -51,6 +52,7 @@
                     </div>
                 </div>
             </div>
+        {% endunless %}
         {% endfor %}
     </div>
     {% if container %}</div>{% endif %}
