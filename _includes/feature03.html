@@ -5,6 +5,9 @@
 
 {% assign collection = include.collection %}
 {% unless collection %}
+{% assign collection  = paginator.posts %}
+{% endunless %}
+{% unless collection %}
 {% assign collection = site.data.feature.[page.brand] %}
 {% endunless %}
 {% unless collection %}

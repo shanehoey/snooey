@@ -2,12 +2,15 @@
 <!-- v1.00 _includes/feature04.html -->
 {% endcomment %}
 
-{% assign collection  =  include.collection %}
+{% assign collection = include.collection %}
+{% unless collection %}
+{% assign collection  = paginator.posts %}
+{% endunless %}
 {% unless collection %}
 {% assign collection = site.data.feature.[page.brand] %}
 {% endunless %}
 {% unless collection %}
-{% assign collection  =  site.data.feature.brand1 %}
+{% assign collection = site.data.feature.brand1 %}
 {% endunless %}
 
 {% assign limit       =  include.limit %}

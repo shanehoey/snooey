@@ -4,6 +4,9 @@
 
 {% assign collection = include.collection %}
 {% unless collection %}
+{% assign collection  = paginator.posts %}
+{% endunless %}
+{% unless collection %}
 {% assign collection = site.posts %}
 {% endunless %}
 
@@ -55,11 +58,13 @@
 {% assign section = include.section %}
 {% assign container = include.container %}
 
+
+
+
 <section id="blog01" class="{{ theme.bg.primary }} {{ theme.text.primary }} {{ section }}" >
     {% if container %}<div id="container" class="{{ container }}">{% endif %}
     {% if title %}<h2 class="mb-4 pb-2 text-center text-decoration-none">{{ title }}</h2>{% endif %}
-    {% if description %}<p class="mx-auto p-2 mb-3 text-justify ">{{ description }}</p>
-    {% endif %}
+    {% if description %}<p class="mx-auto p-2 mb-3 text-justify ">{{ description }}</p>{% endif %}
     {% for item in collection  limit: {{limit}} %}
     <div class="row">
         <div class="{{ column1 }}">
@@ -88,5 +93,17 @@
     </div>
     <hr/>
     {% endfor %}
+    {% if paginator.total_pages > 1 %}
+    <ul>
+    {% if paginator.previous_page %}
+    <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer Posts</a></li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li>
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older Posts</a></li>{% endif %}
+    </ul>
+    {% endif %}
     {% if container %}</div>{% endif %}
 </section>
+
+

@@ -2,14 +2,16 @@
 <!-- v1.00  _includes/feature05.html -->
 {% endcomment %}
 
-{% assign featured = include.featured %}
-{% unless featured %}
-{% assign featured = site.data.feature.[page.brand] %}
+{% assign collection = include.collection %}
+{% unless collection %}
+{% assign collection  = paginator.posts %}
+{% endunless %}
+{% unless collection %}
+{% assign collection = site.data.feature.[page.brand] %}
 {% endunless %}
 {% unless collection %}
 {% assign collection = site.data.feature.brand1 %}
 {% endunless %}
-
 
 {% assign collection = include.collection %}
 {% unless collection %}
