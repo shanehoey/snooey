@@ -45,7 +45,6 @@
 {% assign section = include.section %}
 {% assign container = include.container %}
 
-
 <section id="portfolio01" class="{{ theme.bg.primary }} {{ theme.text.primary }} {{ section }}">
     {% if container %}<div id="container" class="{{ container }}">{% endif %}
          {% if title %}<h3 class="text-center p-3 {{ theme.title }}">{{ title }}</h3>{% endif %}
@@ -58,8 +57,8 @@
                     {% unless options contains "overlay" %}<h5 class="card-img-overlay card-title text-white text-center">{{ post.title }}</h5>{% endunless %}
                     {% unless options contains "image" %}</a>{% endunless %}
                     {% unless options contains "title" -or "subtitle" -or "description" -or "excerpt" -or "button" %}<div class="card-body">{% endunless %}
-                    {% unless options contains "title" %}<a href="{{ post.url }}"><h3 class="card-title {{ theme.item.title }}">{{ post.title }}</h3></a>{% endunless %}
-                    {% unless options contains "subtitle" %}<h5 class="card-title {{ theme.item.subtitle }}">{{ post.subtitle }}</h5>{% endunless %}
+                    {% unless options contains "title" %}<a href="{{ post.url }}"><h6 class="card-title {{ theme.item.title }}">{{ post.title }}</h6></a>{% endunless %}
+                    {% unless options contains "subtitle" %}<h6 class="card-title {{ theme.item.subtitle }}">{{ post.subtitle }}</h6>{% endunless %}
                     {% unless options contains "description" %}<p class="card-text text-justify {{ theme.item.description }}">{{ post.description }}</p>{% endunless %}
                     {% unless options contains "excerpt" %}<p class="card-text text-justify font-weight-lighter {{ theme.item.excerpt] }}">{{ post.excerpt }}</p>{% endunless %}
                     {% unless options contains "button" %}<a class="{{ theme.item.btn }}" href="{{ post.url }}">visit {{ post.collection }}</a>{% endunless %}
@@ -68,9 +67,7 @@
             </div>
         {% endfor %}
     </div>
-
     {% if paginator %}{% include paginator01.html %}{% endif %}
-
     {% if container %}</div>{% endif %}
 </section>
 

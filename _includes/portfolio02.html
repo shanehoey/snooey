@@ -9,7 +9,10 @@
 
 {% assign collection = include.collection %}
 {% unless collection %}
-{% assign collection = site.posts %}
+{% assign collection  = paginator.posts %}
+{% endunless %}
+{% unless collection %}
+{% assign collection = site.[page.type] %}
 {% endunless %}
 
 {% assign options = include.hidden | split:"," %}
@@ -68,6 +71,7 @@
                 </div>
             </div>
         {% endfor %}
+        {% if paginator %}{% include paginator01.html %}{% endif %}
         {% if container %}</div>{% endif %}
 </section>
 
