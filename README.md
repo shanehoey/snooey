@@ -24,8 +24,6 @@ This repository just contains the remote theme files only, refer to [github](htt
 
  * \# TODO Enhancement -   v1.1 add plugin jekyll-seo-tag
  
- * \# TODO Enhancement -   v1.0x _includes/pagination.html added
-
  * \# TODO Enhancement -   v1.0x _includes/github.html added
 
  * \# TODO Enhancement -   v1.0x _includes/form.html added
