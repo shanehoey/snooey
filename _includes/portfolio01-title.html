@@ -53,7 +53,7 @@
         {% for post in collection limit: limit %}
             <div class="{{ class }}">
                 <div class="card h-100">
-                    {% unless options contains "image" %}<a href="{{ post.url }}"><img class="image-fluid card-img-top " src="{{ post.image.default }}"/>{% endunless %}
+                    {% unless options contains "image" %}<a href="{{ post.url }}"><img class="image-fluid card-img-top " src="{{ post.image.default }}" alt="{{ post.image.title }}"/>{% endunless %}
                     {% unless options contains "overlay" %}<h5 class="card-img-overlay card-title text-white text-center">{{ post.title }}</h5>{% endunless %}
                     {% unless options contains "image" %}</a>{% endunless %}
                     {% unless options contains "title" -or "subtitle" -or "description" -or "excerpt" -or "button" %}<div class="card-body">{% endunless %}
