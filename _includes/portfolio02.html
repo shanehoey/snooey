@@ -53,7 +53,7 @@
         {% for post in collection limit: 1 %}
             <div class="row">
                 <div class="col-md-6">
-                    <img class="img-fluid" src="{{ post.image.default }}"  alt="{{ post.image.title }}">
+                    <img class="img-fluid" src="{{ post.image.default }}"  alt="{{ post.title }}">
                 </div>
                 <div class="col-md-6">
                     <h3 class="my-3 {{ theme.item.title }}">{{ post.title }}</h3>
