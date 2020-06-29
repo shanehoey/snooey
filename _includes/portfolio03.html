@@ -75,20 +75,22 @@
 <section id="portfolio03" class="{{ theme.bg.primary }} {{ theme.text.primary }} {{ section }}">
     {% if container %}<div id="container" class="{{ container }}">{% endif %}
         {% for item in collection limit: limit %}
-    <div class="row">
-            <div class="{{ column1 }}">
-            <a href="{{ item.url }}"><img class="img-fluid rounded mb-3 mb-md-0" src="{{ item.image.default }}"  alt="{{ post.title }}"></a>
-        </div>
-        <div class="{{ column2 }}">
-            <h3 class="card-title"><a href="{{ item.url }}">{{ item.title }}</a></h3>
-            <h5 class="card-title">{{ item.subtitle }}</h5>
-            <p class="card-text text-justify">{{ item.description }}</p>
-            <p class="card-text text-justify font-weight-lighter">{{ item.excerpt }}</p>
-            <a class="btn btn-primary" href="{{ item.url }}">visit {{ item.collection }}</a>
-        </div>
-    </div>
-    <hr/>
-{% endfor %}
-{% if paginator %}{% include paginator01.html %}{% endif %}
+        {% unless post.hidden %}
+            <div class="row">
+                    <div class="{{ column1 }}">
+                    <a href="{{ item.url }}"><img class="img-fluid rounded mb-3 mb-md-0" src="{{ item.image.default }}"  alt="{{ post.title }}"></a>
+                </div>
+                <div class="{{ column2 }}">
+                    <h3 class="card-title"><a href="{{ item.url }}">{{ item.title }}</a></h3>
+                    <h5 class="card-title">{{ item.subtitle }}</h5>
+                    <p class="card-text text-justify">{{ item.description }}</p>
+                    <p class="card-text text-justify font-weight-lighter">{{ item.excerpt }}</p>
+                    <a class="btn btn-primary" href="{{ item.url }}">visit {{ item.collection }}</a>
+                </div>
+            </div>
+            <hr/>
+        {% endunless %}
+    {% endfor %}
+    {% if paginator %}{% include paginator01.html %}{% endif %}
 {% if container %}</div>{% endif %}
 </section>

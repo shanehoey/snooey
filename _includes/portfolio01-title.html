@@ -51,6 +51,7 @@
     {% if description %}<p class="text-justify mx-auto p-3 {{ theme.description }}">{{ description }}</p>{% endif %}
     <div class="row">
         {% for post in collection limit: limit %}
+        {% unless post.hidden %}
             <div class="{{ class }}">
                 <div class="card h-100">
                     {% unless options contains "image" %}<a href="{{ post.url }}"><img class="image-fluid card-img-top " src="{{ post.image.default }}" alt="{{ post.title }}"/>{% endunless %}
@@ -65,6 +66,7 @@
                     {% unless options contains "title" -or "subtitle" -or "description" -or "excerpt" -or "button" %}</div>{% endunless %}
                 </div>
             </div>
+        {% endunless %}
         {% endfor %}
     </div>
     {% if paginator %}{% include paginator01.html %}{% endif %}

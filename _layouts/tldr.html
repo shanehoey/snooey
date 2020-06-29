@@ -10,7 +10,6 @@ layout: default
 {% assign themes = site.data.theme1 %}
 {% endunless %}
 
-
 <div class="row p-3">
 	<div id="content" class="col-sm-8">
 
@@ -25,23 +24,23 @@ layout: default
 			.selected { background-color: black; text-color: white }
 		</style>
 
-<div>
-	{% if paginator.previous_section %}
-		{% assign prev = paginator.previous_section %}
-		{% if prev == "Untitled" %}
-			{% assign prev = "Previous"%}
-		{% endif %}
-		&laquo; <a href="{{ paginator.previous_path }}">{{ prev }}</a>
-	{% endif %}
-	{% if paginator.previous_section and paginator.next_section %} | {% endif %}
-	{% if paginator.next_section %}
-		{% assign next = paginator.next_section %}
-		{% if next == "Untitled" %}
-			{% assign next = "Next"%}
-		{% endif %}
-		<a href="{{ paginator.next_path }}">{{ next }}</a> &raquo;
-	{% endif %}
-</div>
+		<div>
+			{% if paginator.previous_section %}
+				{% assign prev = paginator.previous_section %}
+				{% if prev == "Untitled" %}
+					{% assign prev = "Previous"%}
+				{% endif %}
+				&laquo; <a href="{{ paginator.previous_path }}">{{ prev }}</a>
+			{% endif %}
+			{% if paginator.previous_section and paginator.next_section %} | {% endif %}
+			{% if paginator.next_section %}
+				{% assign next = paginator.next_section %}
+				{% if next == "Untitled" %}
+					{% assign next = "Next"%}
+				{% endif %}
+				<a href="{{ paginator.next_path }}">{{ next }}</a> &raquo;
+			{% endif %}
+		</div>
 
 		{% if paginator.page_trail %}
 			<ul class="pager">

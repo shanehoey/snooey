@@ -51,6 +51,7 @@
      {% if title %}<h3 class="p-3 {{ theme.title }}">{{ title }}</h3>{% endif %}
     {% if description %}<p class="mx-auto p-3 {{ theme.title }}">{{ description }}</p>{% endif %}
         {% for post in collection limit: 1 %}
+            {% unless post.hidden %}
             <div class="row">
                 <div class="col-md-6">
                     <img class="img-fluid" src="{{ post.image.default }}"  alt="{{ post.title }}">
@@ -70,6 +71,7 @@
                     {% endunless %}
                 </div>
             </div>
+            {% endunless %}
         {% endfor %}
         {% if paginator %}{% include paginator01.html %}{% endif %}
         {% if container %}</div>{% endif %}
